@@ -1,49 +1,18 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { urlFor } from "@/lib/sanity";
 import Image from "next/image";
 
-const blogPosts = [
-  {
-    title: "Future Tech Exploring The Latest Gadgets",
-    author: "Your Name",
-    date: "Nov 18, 2025",
-    description:
-      "On The Other Hand, We Denounce With Righteous Indignation And Dislike Men Who Are So Beguiled Any......",
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    title: "Future Tech Exploring The Latest Gadgets",
-    author: "Your Name",
-    date: "Nov 18, 2025",
-    description:
-      "On The Other Hand, We Denounce With Righteous Indignation And Dislike Men Who Are So Beguiled Any......",
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    title: "Future Tech Exploring The Latest Gadgets",
-    author: "Your Name",
-    date: "Nov 18, 2025",
-    description:
-      "On The Other Hand, We Denounce With Righteous Indignation And Dislike Men Who Are So Beguiled Any......",
-    image: "/placeholder.svg?height=200&width=200",
-  },
-  {
-    title: "Future Tech Exploring The Latest Gadgets",
-    author: "Your Name",
-    date: "Nov 18, 2025",
-    description:
-      "On The Other Hand, We Denounce With Righteous Indignation And Dislike Men Who Are So Beguiled Any......",
-    image: "/placeholder.svg?height=200&width=200",
-  },
-];
 
-export default function BlogsAndCaseStudies() {
+export default function BlogsAndCaseStudies(props:any) {
+
+  const {cards,title} = props
   return (
     <div className="container mx-auto px-4 py-8 ">
       <h1 className="text-3xl font-bold mb-8 text-center">
-        Blogs and Case Studies
+      {title}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {blogPosts.map((post, index) => (
+        {cards.map((post:any, index:any) => (
           <Card
             key={index}
             className="border-none  overflow-hidden rounded-none"
@@ -51,7 +20,7 @@ export default function BlogsAndCaseStudies() {
             <div className="flex flex-col sm:flex-row">
               <div className="relative w-full sm:w-1/3 h-48 sm:h-auto">
                 <Image
-                  src={post.image}
+                  src={urlFor(post.image).url()}
                   alt={post.title}
                   layout="fill"
                   objectFit="cover"
@@ -62,11 +31,11 @@ export default function BlogsAndCaseStudies() {
               </div>
               <CardContent className="p-4 sm:w-2/3">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="text-sm ">{post.author}</span>
+                  <span className="text-sm ">{post.name}</span>
                   <span className="text-sm ">{post.date}</span>
                 </div>
-                <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-                <p className="text-sm ">{post.description}</p>
+                <h2 className="text-xl font-semibold mb-2">{post.heading}</h2>
+                <p className="text-sm ">{post.paragraph}</p>
               </CardContent>
             </div>
           </Card>

@@ -42,7 +42,7 @@ export default defineType({
           type: "text",
         }),
         defineField({
-          name: "backgroundImage",
+          name: "image",
           title: "Background Image",
           type: "image",
           options: {
@@ -114,7 +114,7 @@ export default defineType({
         defineField({
           name: "servicesParagraph",
           title: "Services paragraph",
-          type: "string",
+          type: "text",
         }),
         defineField({
           name: "ServicesCard",
@@ -158,106 +158,116 @@ export default defineType({
       ],
     }),
 
-   defineField({
-    name:"consultingServices",
-    title:"Consulting Services",
-    type:"object",
-    fields:[
-      defineField({
-        name: "heading",
-        title: "Heading",
-        type: "string",
-      }),
-      defineField({
-        name: "paragraph",
-        title: "Paragraph",
-        type: "string",
-      }),
-  
-      defineField({
-        name: "card",
-        title: "Card ",
-        type: "array",
-        of: [
-          {
-            type: "object",
-            fields: [
-              defineField({
-                name: "heading",
-                title: "Consulting heading ",
-                type: "string",
-              }),
-              defineField({
-                name: "paragraph",
-                title: "Consulting Service Paragraph",
-                type: "text",
-              }),
-              defineField({
-                name: "consultingServiceAction",
-                title: "Consulting Service Button",
-                type: "object",
-                fields: [
-                  defineField({
-                    name: "text",
-                    title: "Button Text",
-                    type: "string",
-                  }),
-                  defineField({
-                    name: "link",
-                    title: "Button Link",
-                    type: "url",
-                  }),
-                ],
-              }),
-            ],
-          },
-        ],
-      }),
+    defineField({
+      name: "consultingServices",
+      title: "Consulting Services",
+      type: "object",
+      fields: [
+        defineField({
+          name: "heading",
+          title: "Heading",
+          type: "string",
+        }),
+        defineField({
+          name: "paragraph",
+          title: "Paragraph",
+          type: "string",
+        }),
 
-    ]
-   }),
-    defineField({name:"blogs",title:"Blogs",type:"object",fields:[
-      defineField({
-        name: "blogTitle",
-        title: "Blogs Title",
-        type: "string",
-      }),
-  
-      defineField({
-        name: "blogsCard",
-        title: "Blogs Card ",
-        type: "array",
-        of: [
-          {
-            type: "object",
-            fields: [
-              defineField({
-                name: "heading",
-                title: "Blog heading ",
-                type: "string",
-              }),
-              defineField({
-                name: "paragraph",
-                title: "Blog Paragraph",
-                type: "text",
-              }),
-              defineField({
-                name: "name",
-                title: "Your Name",
-                type: "string",
-              }),
-              defineField({
-                name: "date",
-                title: "Blog Date",
-                type: "date",
-                validation: (Rule) => Rule.required(),
-              }),
-            ],
-          },
-        ],
-      }),
+        defineField({
+          name: "card",
+          title: "Card ",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                defineField({
+                  name: "heading",
+                  title: "Consulting heading ",
+                  type: "string",
+                }),
+                defineField({
+                  name: "paragraph",
+                  title: "Consulting Service Paragraph",
+                  type: "text",
+                }),
+                defineField({
+                  name: "consultingServiceAction",
+                  title: "Consulting Service Button",
+                  type: "object",
+                  fields: [
+                    defineField({
+                      name: "text",
+                      title: "Button Text",
+                      type: "string",
+                    }),
+                    defineField({
+                      name: "link",
+                      title: "Button Link",
+                      type: "url",
+                    }),
+                  ],
+                }),
+              ],
+            },
+          ],
+        }),
+      ],
+    }),
+    defineField({
+      name: "blogs",
+      title: "Blogs",
+      type: "object",
+      fields: [
+        defineField({
+          name: "blogTitle",
+          title: "Blogs Title",
+          type: "string",
+        }),
 
-    ]})
- 
+        defineField({
+          name: "blogsCard",
+          title: "Blogs Card ",
+          type: "array",
+          of: [
+            {
+              type: "object",
+              fields: [
+                defineField({
+                  name: "heading",
+                  title: "Blog heading ",
+                  type: "string",
+                }),
+                defineField({
+                  name: "paragraph",
+                  title: "Blog Paragraph",
+                  type: "text",
+                }),
+                defineField({
+                  name: "name",
+                  title: "Your Name",
+                  type: "string",
+                }),
+                defineField({
+                  name: "date",
+                  title: "Blog Date",
+                  type: "date",
+                  validation: (Rule) => Rule.required(),
+                }),
+                defineField({
+                  name: "image",
+                  title: "Image ",
+                  type: "image",
+                  options: {
+                    hotspot: true,
+                  },
+                }),
+              ],
+            },
+          ],
+        }),
+      ],
+    }),
   ],
 });

@@ -3,22 +3,25 @@ import { FC } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { urlFor } from "@/lib/sanity";
 
 interface HeroSectionProps {
   className?: string;
   title?: string;
-  paragraph?: string;
-  buttonText?: string;
-  onButtonClick?: () => void;
+  paragraph?: any;
+  subtitle?: string;
+  // buttonText?: string;
+  // onButtonClick?: () => void;
   experienceYears?: number;
+  imgUrl: any;
 }
 
 const HeroSection: FC<HeroSectionProps> = ({
   className,
   title = "Crafting tomorrow, AI today",
   paragraph = "Transform Unstructured and Structured Data into Actionable Insights. Specializing in extracting value from unstructured data like text, images, and documents through advanced AI techniques, including Natural Language Processing (NLP), Machine Learning (ML), Generative AI (Gen AI), and Deep Learning (DL).",
-  buttonText = "CONTACT US",
-  onButtonClick = () => {},
+  imgUrl,
+  subtitle,
   experienceYears = 12,
 }) => {
   return (
@@ -26,7 +29,7 @@ const HeroSection: FC<HeroSectionProps> = ({
       <div className=" flex ">
         <div className="flex flex-col justify-center space-y-2 lg:border-b-2 border-[#00AEEF]">
           <p className="subtle-text font-semibold ">
-            Expert AI, ML, NLP, and Gen AI Consultancy
+            {subtitle}
           </p>
           <div className="space-y-5">
             <h1 className="h1  space-y-2 ">
@@ -46,10 +49,8 @@ const HeroSection: FC<HeroSectionProps> = ({
             </h1>
             <p className="max-w-[600px] subtle-text ">{paragraph}</p>
           </div>
-          <div className=" gap-2 min-[400px]:flex-row">
-            <Button onClick={onButtonClick} className="btn ">
-              {buttonText}
-            </Button>
+          <div className=" gap-2 min-[400px]:flex-row py-4 ">
+            <Button className="btn">CONTACT US</Button>
           </div>
         </div>
         {/* <div className="flex items-end justify-center flex-col lg:flex-row    ">
@@ -78,7 +79,7 @@ const HeroSection: FC<HeroSectionProps> = ({
       </div>
 
       <div className=" relative">
-        <Image src="/hero.png" width={753} height={680} alt="hero" />
+        <Image src={urlFor(imgUrl).url()} width={753} height={680} alt="hero" />
         <div className=" lg:absolute bottom-0 bg-black lg:w-[50%] lg:p-4 p-6 ">
           <h1 className="h1 text-white">{experienceYears}+</h1>
           <p className="paragraph text-white">Years of Experience</p>

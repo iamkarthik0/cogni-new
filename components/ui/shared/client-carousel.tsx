@@ -8,17 +8,22 @@ import {
 } from "@/components/ui/carousel"
 import { useEffect } from "react"
 import Image from "next/image"
+import { urlFor } from "@/lib/sanity"
 
-const clients = [
-  { name: "ntrillo", logo: "/client.png" },
-  { name: "MES", logo: "/placeholder.svg?height=50&width=150" },
-  { name: "GGZ", logo: "/placeholder.svg?height=50&width=150" },
-  { name: "EL ELCO Lighting", logo: "/placeholder.svg?height=50&width=150" },
-  { name: "Circular Logo", logo: "/placeholder.svg?height=50&width=150" },
-  { name: "Appl", logo: "/placeholder.svg?height=50&width=150" },
-]
+// ClientCarouselProps
 
-export default function ClientCarousel() {
+// const clients = [
+//   { name: "ntrillo", logo: "/client.png" },
+//   { name: "MES", logo: "/placeholder.svg?height=50&width=150" },
+//   { name: "GGZ", logo: "/placeholder.svg?height=50&width=150" },
+//   { name: "EL ELCO Lighting", logo: "/placeholder.svg?height=50&width=150" },
+//   { name: "Circular Logo", logo: "/placeholder.svg?height=50&width=150" },
+//   { name: "Appl", logo: "/placeholder.svg?height=50&width=150" },
+// ]
+
+
+export default function ClientCarousel(props:any) {
+  const {clients} = props
   const [api, setApi] = React.useState<any>()
 
   useEffect(() => {
@@ -43,12 +48,12 @@ export default function ClientCarousel() {
         }}
       >
         <CarouselContent className="-ml-0 flex ">
-          {clients.map((client, index) => (
+          {clients.map((client:any, index:any) => (
             <CarouselItem key={index} className="pl-0 md:basis-1/2 lg:basis-1/4 border">
               <div className="flex items-center justify-center p-4 h-24 border-r last:border-r-0">
                 <Image
-                  src={client.logo}
-                  alt={client.name}
+                  src={urlFor(client.client).url()}
+                  alt={index}
                   width={150}
                   height={50}
                   className="max-w-full h-auto max-h-full object-contain"
