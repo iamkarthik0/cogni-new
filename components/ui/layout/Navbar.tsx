@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { ResponsiveImage } from "./ResponsiveImage";
+import { ResponsiveImage } from "../shared/ResponsiveImage";
 import { Button } from "../button";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -18,8 +18,8 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <>
-      <div className=" px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto py-6 flex justify-between items-center">
+    <div className="top-0  sticky  bg-white z-50 w-full">
+      <div className=" px-4 sm:px-6 lg:px-8 container mx-auto py-6 flex justify-between items-center">
         <div className=" ">
           <ResponsiveImage
             src="/logo.png"
@@ -77,12 +77,12 @@ const Navbar = () => {
           </div>
           <div className="pt-4 pb-3 border-t border-border">
             <div className="px-2 space-y-1">
-            <Button className="btn ">GET STARTED</Button>
+              <Button className="btn ">GET STARTED</Button>
             </div>
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

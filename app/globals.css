@@ -158,7 +158,9 @@ body {
   @apply text-sm sm:text-base text-gray-600;
 }
 .btn {
-  @apply bg-gradient-to-r bg-gradient-to-r from-[#0055A7] to-[#00AEEF] rounded-full 
+  @apply bg-gradient-to-r  from-[#0055A7] to-[#00AEEF] rounded-full 
+}.btn-hover {
+  @apply bg-white
 }
 @layer base {
   * {
