@@ -7,10 +7,11 @@ import { client } from "@/lib/sanity";
 import StatisticsBanner from "@/components/ui/shared/StaticBanner";
 import AISolutionsSection from "@/components/ui/shared/AISolutionsSection";
 import DataScienceServices from "@/components/ui/shared/DataScienceService";
-import DataScienceConsulting from "@/components/ui/shared/DataScienceConsulting";
+
 import BlogsAndCaseStudies from "@/components/ui/shared/blogs-and-case-studies";
 import ClientCarousel from "@/components/ui/shared/client-carousel";
 import { landingQuery } from "@/lib/query";
+import DataScienceConsulting from "@/components/ui/layout/DataScienceConsulting";
 
 
 
