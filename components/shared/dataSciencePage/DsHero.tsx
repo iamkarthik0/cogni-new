@@ -18,6 +18,7 @@ const DsHero = (props: any) => {
           {servicesImage.map((src: any, index: any) => (
             <div key={index} className="w-10 h-10 relative">
               <Image
+              
                 src={urlFor(src.image).url()}
                 alt={`Service ${index + 1}`}
                 layout="fill"

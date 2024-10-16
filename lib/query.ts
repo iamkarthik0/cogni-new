@@ -31,8 +31,7 @@ export const dsQuery = `*[_type == "dataScience"][0]{
       }
   }`;
 
-
-  export const landingQuery = `*[_type == "landingPage"][0]{
+export const landingQuery = `*[_type == "landingPage"][0]{
     title,
     slug,
     hero{
@@ -81,5 +80,32 @@ export const dsQuery = `*[_type == "dataScience"][0]{
           date,
           image
         }
+      }
+  }`;
+
+export const genAIQuery = `*[_type == "GenAiService"][0]{
+    title,
+    slug,
+    hero{
+      heading,
+      subheading,
+      paragraph,
+      image,
+    
+    },
+      aiServices{
+      title,
+      
+      paragraph,
+ ServicesCard[]{
+heading,
+paragraph,
+image,
+order,
+
+ }
+      
+    
+
       }
   }`;

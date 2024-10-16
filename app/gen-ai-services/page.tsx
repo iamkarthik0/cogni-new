@@ -1,18 +1,22 @@
 import { Button } from "@/components/ui/button";
-import DataScienceConsulting from "@/components/ui/layout/DataScienceConsulting";
-import Navbar from "@/components/ui/layout/Navbar";
-import GenerativeAiServices from "@/components/ui/shared/GenerativeAiServices";
 
-import { landingQuery } from "@/lib/query";
+import { genAIQuery, landingQuery } from "@/lib/query";
 import { client } from "@/lib/sanity";
 
 import Image from "next/image";
 import React from "react";
 
-const page = async() => {
+import Navbar from "@/components/layout/Navbar";
+import GenerativeAiServices from "@/components/shared/genAiPage/GenerativeAiServices";
+import DataService from "@/components/shared/genAiPage/DataService";
+import BlogsAndUseCases from "@/components/layout/BlogAndUseCase";
+import ContactCard from "@/components/layout/ContactCard";
+import Footer from "@/components/layout/Footer";
 
+const page = async () => {
+  const data = await client.fetch(genAIQuery);
+  const result = await client.fetch(landingQuery);
 
-    const data = await client.fetch(landingQuery);
   return (
     <div className=" w-full h-full">
       <Navbar />
@@ -43,21 +47,29 @@ const page = async() => {
               <Image
                 src="/ai-service.png"
                 alt="Person using computer with data visualizations"
-                layout="fill"
-                objectFit="cover"
+                fill
+                className="object-cover"
               />
             </div>
           </div>
         </div>
 
-      <div className=" pt-16 lg:pt-32">
-      <DataScienceConsulting services={data.consultingServices} />
+        <div className=" pt-16 lg:pt-32">
+          {/* <DataScienceConsulting services={data.consultingServices} /> */}
+        </div>
+
+        <div>
+          <GenerativeAiServices data={data.aiServices} />
+        </div>
+
+        <div>
+          <DataService serviceCard={result.services.ServicesCard} />
+        </div>
       </div>
 
-      <div>
-        <GenerativeAiServices/>
-      </div>
-      </div>
+      <BlogsAndUseCases />
+      <ContactCard />
+      <Footer />
     </div>
   );
 };

@@ -53,7 +53,7 @@ export default function ClientCarousel(props:any) {
               <div className="flex items-center justify-center p-4 h-24 border-r last:border-r-0">
                 <Image
                   src={urlFor(client.client).url()}
-                  alt={index}
+                  alt="car"
                   width={150}
                   height={50}
                   className="max-w-full h-auto max-h-full object-contain"

@@ -21,7 +21,7 @@ export default function BlogsAndCaseStudies(props:any) {
               <div className="relative w-full sm:w-1/3 h-48 sm:h-auto">
                 <Image
                   src={urlFor(post.image).url()}
-                  alt={post.title}
+                  alt="title"
                   layout="fill"
                   objectFit="cover"
                 />

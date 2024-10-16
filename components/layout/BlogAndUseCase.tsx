@@ -37,9 +37,9 @@ const BlogItem: React.FC<BlogItemProps> = ({ title, description, image }) => (
       <Image
         src="/"
         alt={title}
-        layout="fill"
-        objectFit="cover"
-        className="bg-[#1B255E] "
+        fill
+       
+        className="bg-[#1B255E]  object-cover"
       />
     </div>
     <h3 className="font-semibold text-lg mb-2">{title}</h3>

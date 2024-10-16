@@ -1,8 +1,8 @@
 import { defineType, defineField } from "sanity";
 
 export default defineType({
-  name: "dataScience",
-  title: "DataScience Page",
+  name: "GenAiService",
+  title: "GenAiService Page",
   type: "document",
   fields: [
     defineField({
@@ -79,6 +79,11 @@ export default defineType({
                 defineField({
                   name: "heading",
                   title: "Service Card Heading",
+                  type: "string",
+                }),
+                defineField({
+                  name: "order",
+                  title: "Order",
                   type: "string",
                 }),
                 defineField({

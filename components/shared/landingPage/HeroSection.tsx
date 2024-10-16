@@ -2,7 +2,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+
 import { urlFor } from "@/lib/sanity";
 
 interface HeroSectionProps {
@@ -17,7 +17,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection: FC<HeroSectionProps> = ({
-  className,
+
   title = "Crafting tomorrow, AI today",
   paragraph = "Transform Unstructured and Structured Data into Actionable Insights. Specializing in extracting value from unstructured data like text, images, and documents through advanced AI techniques, including Natural Language Processing (NLP), Machine Learning (ML), Generative AI (Gen AI), and Deep Learning (DL).",
   imgUrl,
@@ -53,29 +53,7 @@ const HeroSection: FC<HeroSectionProps> = ({
             <Button className="btn">CONTACT US</Button>
           </div>
         </div>
-        {/* <div className="flex items-end justify-center flex-col lg:flex-row    ">
-            <div className="relative flex  w-[400px] h-[480px] lg:w-[753px] lg:h-[580px] ">
-              <Image
-                src="/hero.png"
-                alt="AI Robot"
-                layout="fill"
-                objectFit="cover"
-                className=""
-                priority
-              />
-              <div className="hidden lg:block lg:absolute  lg:bottom-0 left-0 bg-black bg-opacity-90 p-8 lg:w-[60%] rounded ">
-                <h1 className="h1 text-white">{experienceYears}+</h1>
-                <p className="paragraph text-white">Years of Experience</p>
-                <p className=' space-y-2 text-white text-sm w-full'>Placerat quis libero et diam tellus lectus sagittis quisque hendrerit. Ipsum tincidunt.</p>
-              </div>
-          
-            </div>
-            <div className="lg:hidden w-full  lg:bottom-0 left-0 bg-black bg-opacity-90 p-8 lg:w-[60%] rounded ">
-                <h1 className="h1 text-white">{experienceYears}+</h1>
-                <p className="paragraph text-white">Years of Experience</p>
-                <p className=' space-y-2 text-white text-sm w-full'>Placerat quis libero et diam tellus lectus sagittis quisque hendrerit. Ipsum tincidunt.</p>
-              </div>
-          </div> */}
+       
       </div>
 
       <div className=" relative ">

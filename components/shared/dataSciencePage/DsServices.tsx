@@ -2,12 +2,12 @@ import React from "react";
 import Image from "next/image";
 import { urlFor } from "@/lib/sanity";
 
-const ServiceCard = ({ paragraph, heading, image }) => (
+const ServiceCard = ({ paragraph, heading, image }:any) => (
   <div className="bg-white overflow-hidden">
     <div className="relative h-48">
       <Image
         src={urlFor(image).url()}
-        alt={heading}
+        alt="heading"
         layout="fill"
         objectFit="cover"
       />

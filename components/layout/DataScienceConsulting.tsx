@@ -6,9 +6,9 @@ export default function DataScienceConsulting(props:any) {
 
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 pt-8">
       <h1 className="h2  text-center mb-3">{heading}</h1>
-      <p className="text-center mb-12 subtle-text">{paragraph}</p>
+      <p className="text-center mb-12 subtle-text">{paragraph || ""}</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {card.map((service:any, index:any) => (
           <Card 
