@@ -32,8 +32,8 @@ export default function AISolutionsSection(props:AISolutionsSectionProps) {
                 src={urlFor(imgUrl).url()}
                 alt="People using VR headsets with holographic displays"
                 layout="fill"
-                objectFit="cover"
-                className="rounded-md"
+               
+                className="rounded-md object-cover"
                 priority
               />
             </div>

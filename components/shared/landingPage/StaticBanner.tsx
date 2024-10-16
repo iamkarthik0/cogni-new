@@ -20,9 +20,11 @@ const StatisticsBanner = ({
   ],
 }) => {
   return (
+    
+    <div  className="container mx-auto px-4 sm:px-6 lg:px-8">
     <div
       className={cn(
-        "bg-[#0055A7] rounded-lg p-6 text-white container mx-auto lg:my-4 py-6 lg:py-12"
+        "bg-[#0055A7] rounded-lg p-6 text-white lg:my-4 py-6 lg:py-12"
       )}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -33,6 +35,7 @@ const StatisticsBanner = ({
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

@@ -3,7 +3,8 @@ import ContactCard from "@/components/layout/ContactCard";
 import DataScienceConsulting from "@/components/layout/DataScienceConsulting";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
-import CustomMlService from "@/components/shared/ml-dl-servicePage/customMlService";
+import CustomMlService from "@/components/shared/ml-dl-servicePage/CustomMlService";
+
 import MlExpert from "@/components/shared/ml-dl-servicePage/MlExpert";
 import { Button } from "@/components/ui/button";
 import { landingQuery } from "@/lib/query";

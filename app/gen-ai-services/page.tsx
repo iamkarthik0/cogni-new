@@ -68,7 +68,9 @@ const page = async () => {
       </div>
 
       <BlogsAndUseCases />
-      <ContactCard />
+      <div className="pt-12 lg:py-24">
+          <ContactCard />
+        </div>
       <Footer />
     </div>
   );

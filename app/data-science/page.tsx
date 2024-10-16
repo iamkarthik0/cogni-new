@@ -20,7 +20,9 @@ const page = async () => {
       <DsHero data={data.hero} />
       <DsServices data={data.services} />
       <BlogsAndUseCases />
-      <ContactCard />
+      <div className="pt-12 lg:py-24">
+          <ContactCard />
+        </div>
       <Footer />
     </div>
   );

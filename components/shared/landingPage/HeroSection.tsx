@@ -9,7 +9,7 @@ interface HeroSectionProps {
   className?: string;
   title?: string;
   paragraph?: any;
-  subtitle?: string;
+  subtitle?: string; 
   // buttonText?: string;
   // onButtonClick?: () => void;
   experienceYears?: number;
@@ -25,6 +25,7 @@ const HeroSection: FC<HeroSectionProps> = ({
   experienceYears = 12,
 }) => {
   return (
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-0">
     <div className=" lg:border-b-2 border-[#00AEEF] container mx-auto justify-between flex flex-col lg:flex-row  ">
       <div className=" flex ">
         <div className="flex flex-col justify-center space-y-2  ">
@@ -67,6 +68,7 @@ const HeroSection: FC<HeroSectionProps> = ({
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

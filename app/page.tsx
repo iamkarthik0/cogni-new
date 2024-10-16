@@ -47,7 +47,9 @@ export default async function Home() {
         title={data.blogs.blogTitle}
       />
 
-      <ContactCard />
+<div className="pt-12 lg:py-24">
+          <ContactCard />
+        </div>
 
       <Footer />
     </div>
