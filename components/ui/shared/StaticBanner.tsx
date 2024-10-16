@@ -11,8 +11,7 @@ interface StatisticsBannerProps {
   statistics: Statistic[];
 }
 
-const StatisticsBanner: FC<StatisticsBannerProps> = ({
-  className,
+const StatisticsBanner = ({
   statistics = [
     { value: "50+", label: "Successful Client Implementation" },
     { value: "10+", label: "Generative AI-Powered Solutions" },
@@ -23,8 +22,7 @@ const StatisticsBanner: FC<StatisticsBannerProps> = ({
   return (
     <div
       className={cn(
-        "bg-[#0055A7] rounded-lg p-6 text-white container mx-auto lg:my-4 py-6 lg:py-12",
-        className
+        "bg-[#0055A7] rounded-lg p-6 text-white container mx-auto lg:my-4 py-6 lg:py-12"
       )}
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

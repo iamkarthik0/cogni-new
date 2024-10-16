@@ -3,7 +3,7 @@ import Image from "next/image";
 import { urlFor } from "@/lib/sanity";
 
 const DsHero = (props: any) => {
-  const { heading, subheading, image, servicesImage } = props.data;
+  const { heading, subheading, image, servicesImage, paragraph } = props.data;
 
   return (
     <div className="container mx-auto px-4 py-8 flex flex-col lg:flex-row gap-24 border-b-[1px] border-[#00AEEF] ">
@@ -11,14 +11,7 @@ const DsHero = (props: any) => {
         <div>
           <h2 className="subtle-text py-4 ">{subheading}</h2>
           <h1 className="h1">{heading}</h1>
-          <p className=" subtle-text py-4">
-            We specialize in providing comprehensive consulting and
-            implementation solutions in Data Science, Machine Learning, Deep
-            Learning, and Artificial Intelligence. Whether you're at the
-            inception of your project or seeking expert guidance at any stage,
-            our team is here to assist you. For unparalleled data science
-            services and advice, please reach out to us.
-          </p>
+          <p className=" subtle-text py-4">{paragraph}</p>
         </div>
 
         <div className=" flex gap-6 ">

@@ -25,9 +25,9 @@ const HeroSection: FC<HeroSectionProps> = ({
   experienceYears = 12,
 }) => {
   return (
-    <div className=" px-4 md:px-6 container mx-auto  flex flex-col lg:flex-row ">
+    <div className=" lg:border-b-2 border-[#00AEEF] container mx-auto justify-between flex flex-col lg:flex-row  ">
       <div className=" flex ">
-        <div className="flex flex-col justify-center space-y-2 lg:border-b-2 border-[#00AEEF]">
+        <div className="flex flex-col justify-center space-y-2  ">
           <p className="subtle-text font-semibold ">
             {subtitle}
           </p>
@@ -78,7 +78,7 @@ const HeroSection: FC<HeroSectionProps> = ({
           </div> */}
       </div>
 
-      <div className=" relative">
+      <div className=" relative ">
         <Image src={urlFor(imgUrl).url()} width={753} height={680} alt="hero" />
         <div className=" lg:absolute bottom-0 bg-black lg:w-[50%] lg:p-4 p-6 ">
           <h1 className="h1 text-white">{experienceYears}+</h1>

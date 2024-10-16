@@ -5,6 +5,7 @@ import { Button } from "../button";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 const navItems = [
   { name: "Industries", href: "/" },
   { name: "Services", href: "/Services" },
@@ -21,10 +22,11 @@ const Navbar = () => {
     <div className="top-0  sticky  bg-white z-50 w-full">
       <div className=" px-4 sm:px-6 lg:px-8 container mx-auto py-6 flex justify-between items-center">
         <div className=" ">
-          <ResponsiveImage
+          <Image
             src="/logo.png"
             alt="logo"
-            className=" w-[182px] h-[100px]"
+          width={100} height={100}
+              className=" w-[130px] h-[70px] lg:w-[182px] lg:h-[100px]"
           />
         </div>
 

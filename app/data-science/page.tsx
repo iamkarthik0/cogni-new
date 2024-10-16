@@ -4,47 +4,14 @@ import Footer from "@/components/ui/layout/Footer";
 import Navbar from "@/components/ui/layout/Navbar";
 import DsHero from "@/components/ui/shared/DsHero";
 import DsServices from "@/components/ui/shared/DsServices";
+import { dsQuery } from "@/lib/query";
 import { client } from "@/lib/sanity";
 import React from "react";
-const query = `*[_type == "dataScience"][0]{
-  title,
-  slug,
-  hero{
-    heading,
-    subheading,
-    image,
-       servicesImage[]{
-         image
-         }
-  },
-    services{
-    title,
-    ServicesCard[]{
-    heading,
-    paragraph,
-    image
-    }
-  
-  },
-   
 
-    
-
-     blogs {
-      blogTitle,
-      blogsCard[] {
-        heading,
-        paragraph,
-        name,
-        date,
-        image
-      }
-    }
-}`;
 
 const page = async () => {
-  const data = await client.fetch(query);
-  
+  const data = await client.fetch(dsQuery);
+  console.log(data.hero);
   return (
     <div className=" w-full h-full">
       <Navbar />

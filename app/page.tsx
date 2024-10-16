@@ -10,61 +10,12 @@ import DataScienceServices from "@/components/ui/shared/DataScienceService";
 import DataScienceConsulting from "@/components/ui/shared/DataScienceConsulting";
 import BlogsAndCaseStudies from "@/components/ui/shared/blogs-and-case-studies";
 import ClientCarousel from "@/components/ui/shared/client-carousel";
+import { landingQuery } from "@/lib/query";
 
-const query = `*[_type == "landingPage"][0]{
-  title,
-  slug,
-  hero{
-    heading,
-    subheading,
-    paragraph,
-    image
-  },
-    hero2{
-    heading,
-   
-    paragraph,
-    backgroundImage
-  },
-    ourclient[]{
-    client
-  },
-  services {
-      services,
-      servicesParagraph,
-      ServicesCard[] {
-        heading,
-        paragraph,
-        serviceAction {
-          text,
-          link
-        }
-      }
-    },
- consultingServices {
-      heading,
-      paragraph,
-      card[] {
-        heading,
-        paragraph,
-    
-      }
-    },
 
-     blogs {
-      blogTitle,
-      blogsCard[] {
-        heading,
-        paragraph,
-        name,
-        date,
-        image
-      }
-    }
-}`;
 
 export default async function Home() {
-  const data = await client.fetch(query);
+  const data = await client.fetch(landingQuery);
 
   return (
     <div className="w-full h-full">
@@ -76,7 +27,7 @@ export default async function Home() {
         title={data.hero.heading}
       />
       <InlineContact />
-      <StatisticsBanner />
+      <StatisticsBanner  />
       <AISolutionsSection
         paragraph={data.hero2.paragraph}
         imgUrl={data.hero2.backgroundImage}
