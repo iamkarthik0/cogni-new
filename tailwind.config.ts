@@ -63,7 +63,7 @@ const config: Config = {
   			'5xl': ['3rem', { lineHeight: '1' }]
   		},
   		spacing: {
-  			'0.5': '0.125rem',	
+  			'0.5': '0.125rem',
   			'1.5': '0.375rem',
   			'2.5': '0.625rem',
   			'3.5': '0.875rem'
@@ -80,6 +80,28 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
+  		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
   		}
   	}
   },

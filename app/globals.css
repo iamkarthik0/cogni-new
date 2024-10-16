@@ -135,7 +135,7 @@ body {
 }
 
 .h1 {
-  @apply text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl;
+  @apply text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl ;
 }
 
 .h2 {
@@ -155,7 +155,7 @@ body {
 }
 
 .subtle-text {
-  @apply text-sm sm:text-base text-gray-600;
+  @apply text-sm sm:text-base text-[#1E1E1E]
 }
 .btn {
   @apply bg-gradient-to-r  from-[#0055A7] to-[#00AEEF] rounded-full 

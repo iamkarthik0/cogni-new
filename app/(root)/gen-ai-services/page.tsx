@@ -1,17 +1,13 @@
 import { Button } from "@/components/ui/button";
-
 import { genAIQuery, landingQuery } from "@/lib/query";
 import { client } from "@/lib/sanity";
-
 import Image from "next/image";
 import React from "react";
-
-import Navbar from "@/components/layout/Navbar";
 import GenerativeAiServices from "@/components/shared/genAiPage/GenerativeAiServices";
 import DataService from "@/components/shared/genAiPage/DataService";
 import BlogsAndUseCases from "@/components/layout/BlogAndUseCase";
 import ContactCard from "@/components/layout/ContactCard";
-import Footer from "@/components/layout/Footer";
+
 
 const page = async () => {
   const data = await client.fetch(genAIQuery);
@@ -19,7 +15,7 @@ const page = async () => {
 
   return (
     <div className=" w-full h-full">
-      <Navbar />
+   
       <div className=" container  mx-auto px-4 sm:px-6 lg:px-8  ">
         <div className=" w-full flex flex-col lg:flex-row ">
           <div className="flex flex-col justify-between lg:w-1/2  gap-6 py-8 lg:pt-8">
@@ -71,7 +67,7 @@ const page = async () => {
       <div className="pt-12 lg:py-24">
           <ContactCard />
         </div>
-      <Footer />
+    
     </div>
   );
 };

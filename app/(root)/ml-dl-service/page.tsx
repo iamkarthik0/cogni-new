@@ -1,10 +1,7 @@
 import BlogsAndUseCases from "@/components/layout/BlogAndUseCase";
 import ContactCard from "@/components/layout/ContactCard";
 import DataScienceConsulting from "@/components/layout/DataScienceConsulting";
-import Footer from "@/components/layout/Footer";
-import Navbar from "@/components/layout/Navbar";
 import CustomMlService from "@/components/shared/ml-dl-servicePage/CustomMlService";
-
 import MlExpert from "@/components/shared/ml-dl-servicePage/MlExpert";
 import { Button } from "@/components/ui/button";
 import { landingQuery } from "@/lib/query";
@@ -16,7 +13,7 @@ const page = async () => {
   const data = await client.fetch(landingQuery);
   return (
     <>
-      <Navbar />
+   
 
       <div className=" container mx-auto px-4 sm:px-6 lg:px-8">
         {/* ---------------------------Hero Section--------------------- */}
@@ -81,7 +78,7 @@ const page = async () => {
 
 
       </div>
-      <Footer/>
+   
     </>
   );
 };

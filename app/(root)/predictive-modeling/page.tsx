@@ -1,8 +1,6 @@
 import BlogsAndUseCases from "@/components/layout/BlogAndUseCase";
 import ContactCard from "@/components/layout/ContactCard";
 import DataScienceConsulting from "@/components/layout/DataScienceConsulting";
-import Footer from "@/components/layout/Footer";
-import Navbar from "@/components/layout/Navbar";
 import CustomPredictive from "@/components/shared/predictiveModelingPage/CustomPredictive";
 import { Button } from "@/components/ui/button";
 import { landingQuery } from "@/lib/query";
@@ -14,7 +12,6 @@ const page = async () => {
   const data = await client.fetch(landingQuery);
   return (
     <>
-    <Navbar/>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* ---------------------------Hero Section--------------------- */}
         <div className=" w-full flex flex-col lg:flex-row gap-4 ">
@@ -99,15 +96,14 @@ const page = async () => {
           </div>
         </div>
       </div>
-      
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* ------------------------- Custom Predictive section------------------- */}
         <div className=" pt-10 lg:pt-16">
           <CustomPredictive />
         </div>
-      {/* ---------------BlogUseCase Component--------------- */}
-      <div className="pt-12 lg:pt-16">
+        {/* ---------------BlogUseCase Component--------------- */}
+        <div className="pt-12 lg:pt-16">
           <BlogsAndUseCases />
         </div>
 
@@ -115,10 +111,7 @@ const page = async () => {
         <div className="py-12 lg:py-24">
           <ContactCard />
         </div>
-
-
       </div>
-      <Footer/>
     </>
   );
 };

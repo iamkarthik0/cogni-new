@@ -1,11 +1,7 @@
-
-
-
-
 import { client } from "@/lib/sanity";
 
 import { landingQuery } from "@/lib/query";
-import Footer from "@/components/layout/Footer";
+
 import ContactCard from "@/components/layout/ContactCard";
 import BlogsAndCaseStudies from "@/components/shared/landingPage/blogs-and-case-studies";
 import DataScienceConsulting from "@/components/layout/DataScienceConsulting";
@@ -15,17 +11,12 @@ import AISolutionsSection from "@/components/shared/landingPage/AISolutionsSecti
 import StatisticsBanner from "@/components/shared/landingPage/StaticBanner";
 import InlineContact from "@/components/shared/landingPage/InlineContact";
 import HeroSection from "@/components/shared/landingPage/HeroSection";
-import Navbar from "@/components/layout/Navbar";
-
-
-
 
 export default async function Home() {
   const data = await client.fetch(landingQuery);
 
   return (
-    <div className="w-full h-full" >
-      <Navbar />
+    <div className="w-full h-full">
       <HeroSection
         imgUrl={data.hero.image}
         subtitle={data.hero.subheading}
@@ -33,13 +24,13 @@ export default async function Home() {
         title={data.hero.heading}
       />
       <InlineContact />
-      <StatisticsBanner  />
+      <StatisticsBanner />
       <AISolutionsSection
-        paragraph={data.hero2.paragraph} 
+        paragraph={data.hero2.paragraph}
         imgUrl={data.hero2.backgroundImage}
         heading={data.hero2.heading}
       />
-      <ClientCarousel  clients={data.ourclient} />
+      <ClientCarousel clients={data.ourclient} />
       <DataScienceServices serviceCard={data.services.ServicesCard} />
       <DataScienceConsulting services={data.consultingServices} />
       <BlogsAndCaseStudies
@@ -47,11 +38,9 @@ export default async function Home() {
         title={data.blogs.blogTitle}
       />
 
-<div className="pt-12 lg:py-24">
-          <ContactCard />
-        </div>
-
-      <Footer />
+      <div className="pt-12 lg:py-24">
+        <ContactCard />
+      </div>
     </div>
   );
 }

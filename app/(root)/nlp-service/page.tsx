@@ -1,8 +1,6 @@
 import BlogsAndUseCases from "@/components/layout/BlogAndUseCase";
 import ContactCard from "@/components/layout/ContactCard";
 import DataScienceConsulting from "@/components/layout/DataScienceConsulting";
-import Footer from "@/components/layout/Footer";
-import Navbar from "@/components/layout/Navbar";
 import { Button } from "@/components/ui/button";
 import { landingQuery } from "@/lib/query";
 import { client } from "@/lib/sanity";
@@ -13,7 +11,7 @@ const page = async () => {
   const data = await client.fetch(landingQuery);
   return (
     <>
-      <Navbar />
+      
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* ---------------------------Hero Section--------------------- */}
         <div className=" w-full flex flex-col lg:flex-row ">
@@ -35,7 +33,7 @@ const page = async () => {
                 src="/nlp.png"
                 alt="Person using computer with data visualizations"
                 fill
-                className="object-cover rounded-none"
+                className="object-cover rounded-none" 
               />
             </div>
           </div>
@@ -81,7 +79,7 @@ const page = async () => {
       </div>
     
 
-      <Footer />
+      
     </>
   );
 };

@@ -16,14 +16,14 @@ const page = async () => {
  
   return (
     <div className=" w-full h-full">
-      <Navbar />
+    
       <DsHero data={data.hero} />
       <DsServices data={data.services} />
       <BlogsAndUseCases />
       <div className="pt-12 lg:py-24">
           <ContactCard />
         </div>
-      <Footer />
+   
     </div>
   );
 };
