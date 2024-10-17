@@ -71,7 +71,7 @@ const page = async () => {
               insights, intelligent cataloging, ensuring data quality and trust,
               testing, and deployment. By leveraging AI/ML-based digital
               accelerators and strategic partnerships, we help you scale your
-              data efforts, keeping pace with the demands of today's fast-moving
+              data efforts, keeping pace with the demands of today&apos;s fast-moving
               business environment. Accelerate your data journey with Cogninest
               AI to achieve the speed, scale, and value your business needs.
             </p>
