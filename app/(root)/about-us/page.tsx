@@ -1,3 +1,4 @@
+import OurApproach from "@/components/shared/aboutUs/OurApproach";
 import WhoWeAre from "@/components/shared/aboutUs/WhoWeAre";
 import Image from "next/image";
 import React from "react";
@@ -38,6 +39,14 @@ const page = () => {
       <div className=" pt-16 lg:pt-20">
         <WhoWeAre />
       </div>
+      {/* 
+      ---------------------------------- Our vision ------------------------------- */}
+
+      <div className="pt-16 lg:pt-20 px-9 pb-16 lg:pb-32">
+        <OurApproach/>
+
+      </div>
+
     </div>
   );
 };
