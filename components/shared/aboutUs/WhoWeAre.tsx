@@ -81,7 +81,7 @@ const WhoWeAre = () => {
               width={400}
               height={428}
               quality={75}
-              className="w-auto h-[428px]"
+              className="w-auto h-[428px]  aspect-square"
             />
           </div>
 

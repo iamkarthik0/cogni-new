@@ -45,12 +45,12 @@ const page = async () => {
           </div>
 
           <div className=" lg:w-1/2  flex justify-center items-center">
-            <div className="relative h-[367px] w-[549px] aspect-square rounded-xl overflow-hidden ">
+            <div className="relative w-full aspect-square overflow-hidden ">
               <Image
                 src="/predictive.png"
                 alt="Person using computer with data visualizations"
                 fill
-                className="object-cover rounded-none"
+                className=" aspect-square "
               />
             </div>
           </div>

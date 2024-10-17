@@ -22,20 +22,20 @@ const page = async () => {
             </div>
           </div>
 
-          <div className=" lg:w-1/2  flex justify-end items-end">
-            <div className="relative w-[500px] h-[455px] aspect-square rounded-xl overflow-hidden ">
+          <div className=" lg:w-1/2  flex lg:justify-end lg:items-end">
+            <div className="relative w-full  aspect-square   ">
               <Image
                 src="/data-eng.png"
                 alt="Person using computer with data visualizations"
                 fill
-                className="object-cover rounded-none"
+                className=" rounded-none aspect-square "
               />
             </div>
           </div>
         </div>
         {/* ---------------------------Section Second--------------------- */}
 
-        <div className=" flex flex-col gap-8 ">
+        <div className=" flex flex-col gap-8  pt-16 lg:pt-20">
           <div>
             <h1 className=" h1 leading-[34px] lg:leading-[74px]">
               Accelerate generation and adoption of actionable insights through
