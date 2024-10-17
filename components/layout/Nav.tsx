@@ -28,14 +28,21 @@ import {
 import { Button } from "@/components/ui/button";
 
 const menuItems = [
-  { title: "Industries", href: "/", isHeader: true },
+  {
+    title: "Industries",
+    href: "/industries",
+    dropdown: [
+      
+      { title: "Healthcare", href: "/healthcare" },
+      { title: "Pharma", href: "/pharma" },
+    ],
+  },
   {
     title: "Services",
     href: "/services",
     dropdown: [
       { title: "DataEngineering", href: "/data-engineering" },
       { title: "Predictive", href: "/predictive-modeling" },
-
       { title: "Gen AI Services", href: "/gen-ai-services" },
       { title: "ML and DL Services", href: "/ml-dl-service" },
       { title: "Data Science Services", href: "/data-science" },
@@ -63,11 +70,9 @@ const Nav = () => {
               <>
                 <AccordionTrigger
                   className={`${
-                    item.isHeader
-                      ? "text-sky-500 font-bold text-lg"
-                      : isActive(item.href)
-                        ? "text-[#00AEEF]"
-                        : "text-gray-600"
+                    isActive(item.href)
+                      ? "text-[#00AEEF]"
+                      : "text-gray-600"
                   }`}
                 >
                   {item.title}
@@ -93,11 +98,9 @@ const Nav = () => {
             ) : (
               <AccordionTrigger
                 className={`${
-                  item.isHeader
-                    ? "text-sky-500 font-bold text-lg"
-                    : isActive(item.href)
-                      ? "text-[#00AEEF]"
-                      : "text-gray-600"
+                  isActive(item.href)
+                    ? "text-[#00AEEF]"
+                    : "text-gray-600"
                 }`}
               >
                 <Link href={item.href} className="w-full text-left">
@@ -112,7 +115,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-white  sticky top-0 z-50">
+    <nav className="bg-white sticky top-0 z-50">
       <div className="px-4 sm:px-6 lg:px-8 container mx-auto">
         <div className="flex justify-between items-center">
           <div className="flex items-center py-4">
@@ -128,32 +131,32 @@ const Nav = () => {
           </div>
 
           {/* Desktop menu */}
-          <div className="hidden lg:flex items-center space-x-4 ">
+          <div className="hidden lg:flex items-center space-x-4">
             <NavigationMenu>
               <NavigationMenuList>
                 {menuItems.map((item) => (
-                  <NavigationMenuItem key={item.title} >
+                  <NavigationMenuItem key={item.title}>
                     {item.dropdown ? (
                       <>
                         <NavigationMenuTrigger
-                          className={`font-semibold  focus:bg-[#F2F2F2]  subtle-text ${
+                          className={`font-semibold focus:bg-[#F2F2F2] subtle-text ${
                             isActive(item.href)
-                              ? "text-[#00AEEF]  "
+                              ? "text-[#00AEEF]"
                               : "text-gray-600"
                           }`}
                         >
                           {item.title}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
-                          <ul className="grid w-[250px] gap-3 p-4 md:w-[400px] md:grid-cols-2 ">
+                          <ul className="grid w-[250px] gap-3 p-4 md:w-[400px] md:grid-cols-2">
                             {item.dropdown.map((dropdownItem) => (
                               <li key={dropdownItem.title}>
                                 <NavigationMenuLink asChild>
                                   <Link
                                     href={dropdownItem.href}
-                                    className={`block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors  ${
+                                    className={`block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors ${
                                       isActive(dropdownItem.href)
-                                        ? "bg-[#F2F2F2] text-[#00AEEF] "
+                                        ? "bg-[#F2F2F2] text-[#00AEEF]"
                                         : "hover:bg-[#F2F2F2] hover:text-accent-foreground"
                                     } focus:bg-[#F2F2F2] focus:text-accent-foreground`}
                                   >
@@ -170,9 +173,9 @@ const Nav = () => {
                     ) : (
                       <Link
                         href={item.href}
-                        className={`font-semibold  px-3 py-2 rounded-md  no-underline ${
+                        className={`font-semibold px-3 py-2 rounded-md no-underline ${
                           isActive(item.href)
-                            ? " text-[#00AEEF] "
+                            ? "text-[#00AEEF]"
                             : "subtle-text"
                         }`}
                       >
@@ -203,7 +206,7 @@ const Nav = () => {
                     <MobileMenu />
                   </div>
                   <div className="p-6 border-t border-gray-200">
-                    <Button className="w-full btn  py-2 px-4 rounded">
+                    <Button className="w-full btn py-2 px-4 rounded">
                       GET STARTED
                     </Button>
                   </div>

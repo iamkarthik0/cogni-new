@@ -107,8 +107,13 @@ const pase = () => {
           </p>
         </div>
 
-        <div className="lg:w-1/2 relative aspect-square  h-[437px]">
-          <Image src="/aifor.png" alt="aifor" fill className="w-[549px]" />
+        <div className="lg:w-1/2 relative aspect-square  h-[300px] lg:h-[437px]">
+          <Image
+            src="/aifor.png"
+            alt="aifor"
+            fill
+            className="w-[549px] aspect-square"
+          />
         </div>
       </div>
 
