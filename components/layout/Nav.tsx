@@ -35,6 +35,8 @@ const menuItems = [
       
       { title: "Healthcare", href: "/healthcare" },
       { title: "Pharma", href: "/pharma" },
+      { title: " CPG-Industry", href: "/cpg-industry" },
+     
     ],
   },
   {
