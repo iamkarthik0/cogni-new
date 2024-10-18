@@ -19,7 +19,7 @@ const page = async () => {
         {/* ---------------------------Hero Section--------------------- */}
         <div className=" w-full flex flex-col lg:flex-row ">
           <div className="flex flex-col  justify-center lg:w-1/2  gap-6 py-8 lg:pt-8">
-            <p className="subtle-text">We will provide</p>
+            {/* <p className="subtle-text">We will provide</p> */}
             <h1 className="h1">Machine Learning</h1>
             <p className="subtle-text">
               From Data Crunching to Actionable Insights—Machine Learning
@@ -72,7 +72,7 @@ const page = async () => {
         </div>
 
         {/* ---------------ContactCard Component--------------- */}
-        <div className="pt-12 lg:pt-24">
+        <div className="py-12 lg:py-24">
           <ContactCard />
         </div>
 

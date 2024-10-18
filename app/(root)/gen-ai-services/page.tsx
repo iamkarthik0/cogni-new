@@ -19,7 +19,7 @@ const page = async () => {
       <div className=" container  mx-auto px-4 sm:px-6 lg:px-8  ">
         <div className=" w-full flex flex-col lg:flex-row ">
           <div className="flex flex-col justify-between lg:w-1/2  gap-6 py-8 lg:pt-8">
-            <p className="subtle-text">We will provide</p>
+            {/* <p className="subtle-text">We will provide</p> */}
             <h1 className="h1">
               Embrace transformation’s newest frontier: Generative AI
             </h1>

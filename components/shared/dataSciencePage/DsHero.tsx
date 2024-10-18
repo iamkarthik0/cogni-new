@@ -9,7 +9,7 @@ const DsHero = (props: any) => {
     <div className="container mx-auto px-4 py-8 flex flex-col lg:flex-row gap-24 border-b-[1px] border-[#00AEEF] ">
       <div className=" lg:w-1/2 flex flex-col lg:justify-around  gap-24 lg:gap-0 ">
         <div>
-          <h2 className="subtle-text py-4 ">{subheading}</h2>
+          {/* <h2 className="subtle-text py-4 ">{subheading}</h2> */}
           <h1 className="h1">{heading}</h1>
           <p className=" subtle-text py-4">{paragraph}</p>
         </div>

@@ -16,7 +16,7 @@ const page = async () => {
         {/* ---------------------------Hero Section--------------------- */}
         <div className=" w-full flex flex-col lg:flex-row gap-4 ">
           <div className="flex flex-col  justify-center lg:w-1/2  gap-6 py-8 lg:pt-8">
-            <p className="subtle-text">We will provide</p>
+            {/* <p className="subtle-text">We will provide</p> */}
             <h1 className="h1">Predictive Analytics Services and Solutions</h1>
             <p className="subtle-text font-semibold">
               Transform Your Data Into Predictive Insights With Our Custom

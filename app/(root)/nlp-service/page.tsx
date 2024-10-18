@@ -16,7 +16,7 @@ const page = async () => {
         {/* ---------------------------Hero Section--------------------- */}
         <div className=" w-full flex flex-col lg:flex-row ">
           <div className="flex flex-col  justify-center lg:w-1/2  gap-6 py-8 lg:pt-8">
-            <p className="subtle-text">We will provide</p>
+            {/* <p className="subtle-text">We will provide</p> */}
             <h1 className="h1">Natural Language Processing Services</h1>
             <p className="subtle-text w-3/4">
               Enable your apps and products to understand human language better
