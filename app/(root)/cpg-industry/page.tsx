@@ -3,6 +3,7 @@ import ContactCard from "@/components/layout/ContactCard";
 import FeatureCard from "@/components/layout/FeatureCard";
 import CpgHero from "@/components/shared/cpg-industry/CpgHero";
 import MarketingMixSection from "@/components/shared/cpg-industry/MarketingMixSection";
+import Image from "next/image";
 
 import React from "react";
 
@@ -56,32 +57,39 @@ const page = () => {
         <MarketingMixSection />
       </div>
 
-      <div className=" py-12 lg:py-16">
-   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {features.map((data, index) => (
-            <>
-              <FeatureCard
-              key={index}
-                variant={data.variant}
-                title={data.title}
-                description={data.description}
-              />
-            </>
-          ))}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12  pt-16 lg:pt-24">
+        <h1 className="text-center h1 max-w-5xl mx-auto ">Revolutionize Your Business Growth with GenAI</h1>
+        <div className=" w-full aspect-square relative h-[220px] md:h-[320px] lg:h-[516px]">
+          <Image src="/cpg-growth.png" fill alt="health" />
         </div>
       </div>
-   </div>
 
       <div className=" py-12 lg:py-16">
-        <BlogsAndUseCases/>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
+          <h1 className=" h1 pb-16 ">Why Choose Cogninest AI? </h1>
+          <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {features.map((data, index) => (
+              <>
+                <FeatureCard
+                  key={index}
+                  variant={data.variant}
+                  title={data.title}
+                  description={data.description}
+                />
+              </>
+            ))}
+          </div>
+        </div>
       </div>
 
-          <div className=" py-12 lg:py-16">
-            <ContactCard/>
-          </div>
+      <div className=" py-12 lg:py-16">
+        <BlogsAndUseCases />
+      </div>
 
-
+      <div className=" py-12 lg:py-16">
+        <ContactCard />
+      </div>
     </>
   );
 };

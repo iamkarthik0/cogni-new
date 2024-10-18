@@ -32,11 +32,10 @@ const menuItems = [
     title: "Industries",
     href: "/industries",
     dropdown: [
-      
       { title: "Healthcare", href: "/healthcare" },
       { title: "Pharma", href: "/pharma" },
       { title: " CPG-Industry", href: "/cpg-industry" },
-     
+      { title: " Media", href: "/media" },
     ],
   },
   {
@@ -72,9 +71,7 @@ const Nav = () => {
               <>
                 <AccordionTrigger
                   className={`${
-                    isActive(item.href)
-                      ? "text-[#00AEEF]"
-                      : "text-gray-600"
+                    isActive(item.href) ? "text-[#00AEEF]" : "text-gray-600"
                   }`}
                 >
                   {item.title}
@@ -100,9 +97,7 @@ const Nav = () => {
             ) : (
               <AccordionTrigger
                 className={`${
-                  isActive(item.href)
-                    ? "text-[#00AEEF]"
-                    : "text-gray-600"
+                  isActive(item.href) ? "text-[#00AEEF]" : "text-gray-600"
                 }`}
               >
                 <Link href={item.href} className="w-full text-left">
@@ -176,9 +171,7 @@ const Nav = () => {
                       <Link
                         href={item.href}
                         className={`font-semibold px-3 py-2 rounded-md no-underline ${
-                          isActive(item.href)
-                            ? "text-[#00AEEF]"
-                            : "subtle-text"
+                          isActive(item.href) ? "text-[#00AEEF]" : "subtle-text"
                         }`}
                       >
                         {item.title}
