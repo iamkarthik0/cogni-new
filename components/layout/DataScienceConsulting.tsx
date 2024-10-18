@@ -11,9 +11,9 @@ export default function DataScienceConsulting(props:any) {
   });
 
   return (
-    <div className="container mx-auto px-4 pt-8" ref={ref}>
+    <div className="container mx-auto px-4 py-12 lg:py-24" ref={ref}>
       <motion.h1 
-        className="h2 text-center mb-3"
+        className="h2 text-center mb-6"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
@@ -21,7 +21,7 @@ export default function DataScienceConsulting(props:any) {
         {heading}
       </motion.h1>
       <motion.p 
-        className="text-center mb-12 subtle-text"
+        className="text-center mb-12 subtle-text max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -42,12 +42,12 @@ export default function DataScienceConsulting(props:any) {
             transition={{ duration: 0.5, delay: 0.1 * index }}
           >
             <Card 
-              className={`group bg-[#D9D9D9] hover:bg-[#0055A7] transition-all duration-300 ease-in-out cursor-pointer rounded-none`}
+              className={`group bg-[#D9D9D9] hover:bg-[#0055A7] transition-all duration-300 ease-in-out cursor-pointer rounded-none h-full flex flex-col`}
             >
               <CardHeader>
                 <CardTitle className="text-xl font-semibold group-hover:text-white transition-colors duration-300 ease-in-out">{service.heading}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow">
                 <p className="text-sm group-hover:text-white transition-colors duration-300 ease-in-out">{service.paragraph}</p>
               </CardContent>
             </Card>

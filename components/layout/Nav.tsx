@@ -89,8 +89,8 @@ const Nav = () => {
                     {item.dropdown.map((dropdownItem) => (
                       <motion.div
                         key={dropdownItem.title}
-                        whileHover={{ scale: 1.05, rotate: 2 }}
-                        whileTap={{ scale: 0.95, rotate: -2 }}
+                        whileHover={{ scale: 1.05, rotate: 2, x: 5 }}
+                        whileTap={{ scale: 0.95, rotate: -2, x: -5 }}
                       >
                         <Link
                           href={dropdownItem.href}
@@ -136,8 +136,9 @@ const Nav = () => {
           <div className="flex items-center py-4">
             <Link href="/" className="flex-shrink-0">
               <motion.div
-                whileHover={{ scale: 1.05, rotate: 5 }}
-                whileTap={{ scale: 0.95, rotate: -5 }}
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileTap={{ scale: 0.9, rotate: -5 }}
+                transition={{ type: "spring", stiffness: 300, damping: 10 }}
               >
                 <Image
                   src="/logo.png"
@@ -172,8 +173,9 @@ const Nav = () => {
                             {item.dropdown.map((dropdownItem) => (
                               <motion.li
                                 key={dropdownItem.title}
-                                whileHover={{ scale: 1.05, x: 5 }}
-                                whileTap={{ scale: 0.95, x: -5 }}
+                                whileHover={{ scale: 1.05, x: 5, y: -2 }}
+                                whileTap={{ scale: 0.95, x: -5, y: 2 }}
+                                transition={{ type: "spring", stiffness: 400, damping: 10 }}
                               >
                                 <NavigationMenuLink asChild>
                                   <Link
@@ -198,6 +200,7 @@ const Nav = () => {
                       <motion.div 
                         whileHover={{ scale: 1.05, y: -2 }} 
                         whileTap={{ scale: 0.95, y: 2 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
                       >
                         <Link
                           href={item.href}
@@ -216,6 +219,7 @@ const Nav = () => {
             <motion.div 
               whileHover={{ scale: 1.05, rotate: 2 }} 
               whileTap={{ scale: 0.95, rotate: -2 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
               <Button className="btn">GET STARTED</Button>
             </motion.div>
@@ -228,6 +232,7 @@ const Nav = () => {
                 <motion.button
                   whileHover={{ scale: 1.1, rotate: 180 }}
                   whileTap={{ scale: 0.9, rotate: -180 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   className="mobile-menu-button p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
                 >
                   <Menu className="h-6 w-6" />
@@ -241,9 +246,13 @@ const Nav = () => {
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   className="flex flex-col h-full"
                 >
-                  <div className="p-4 bg-[#00AEEF] font-bold text-white text-xl">
+                  <motion.div 
+                    className="p-4 bg-[#00AEEF] font-bold text-white text-xl"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
                     <span>Menu</span>
-                  </div>
+                  </motion.div>
                   <div className="flex-grow p-6 overflow-y-auto">
                     <MobileMenu />
                   </div>
@@ -251,6 +260,7 @@ const Nav = () => {
                     <motion.div 
                       whileHover={{ scale: 1.05, rotate: 2 }} 
                       whileTap={{ scale: 0.95, rotate: -2 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     >
                       <Button className="w-full btn py-2 px-4 rounded">
                         GET STARTED
@@ -258,7 +268,13 @@ const Nav = () => {
                     </motion.div>
                   </div>
                   <SheetClose className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
-                    <X className="h-8 w-8 text-white" />
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 90 }}
+                      whileTap={{ scale: 0.9, rotate: -90 }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
+                      <X className="h-8 w-8 text-white" />
+                    </motion.div>
                     <span className="sr-only">Close</span>
                   </SheetClose>
                 </motion.div>
