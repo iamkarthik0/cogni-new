@@ -9,12 +9,12 @@ interface Statistic {
   label: string;
 }
 
-interface StatisticsBannerProps {
-  className?: string;
-  statistics: Statistic[];
-}
+// interface StatisticsBannerProps {
+//   className?: string;
+//   statistics: Statistic[];
+// }
 
-const StatisticsBanner: FC<StatisticsBannerProps> = ({
+const StatisticsBanner = ({
   statistics = [
     { value: "50+", label: "Successful Client Implementation" },
     { value: "10+", label: "Generative AI-Powered Solutions" },

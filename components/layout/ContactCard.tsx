@@ -38,7 +38,7 @@ export default function ContactCard() {
           initial={{ y: 20, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-        >
+        > 
           <Button className="btn hover:scale-105 transition-transform duration-300">
             CONTACT US
           </Button>
