@@ -26,6 +26,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { motion, AnimatePresence } from "framer-motion";
 
 const menuItems = [
   {
@@ -78,21 +79,32 @@ const Nav = () => {
                   {item.title}
                 </AccordionTrigger>
                 <AccordionContent>
-                  <div className="pl-4 space-y-2">
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.3 }}
+                    className="pl-4 space-y-2"
+                  >
                     {item.dropdown.map((dropdownItem) => (
-                      <Link
+                      <motion.div
                         key={dropdownItem.title}
-                        href={dropdownItem.href}
-                        className={`block p-2 text-sm ${
-                          isActive(dropdownItem.href)
-                            ? "text-[#00AEEF]"
-                            : "subtle-text hover:text-gray-800"
-                        } hover:bg-gray-100 rounded-md`}
+                        whileHover={{ scale: 1.05, rotate: 2 }}
+                        whileTap={{ scale: 0.95, rotate: -2 }}
                       >
-                        {dropdownItem.title}
-                      </Link>
+                        <Link
+                          href={dropdownItem.href}
+                          className={`block p-2 text-sm ${
+                            isActive(dropdownItem.href)
+                              ? "text-[#00AEEF]"
+                              : "subtle-text hover:text-gray-800"
+                          } hover:bg-gray-100 rounded-md`}
+                        >
+                          {dropdownItem.title}
+                        </Link>
+                      </motion.div>
                     ))}
-                  </div>
+                  </motion.div>
                 </AccordionContent>
               </>
             ) : (
@@ -113,18 +125,28 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-white sticky top-0 z-50">
+    <motion.nav
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
+      className="bg-white sticky top-0 z-50"
+    >
       <div className="px-4 sm:px-6 lg:px-8 container mx-auto">
         <div className="flex justify-between items-center">
           <div className="flex items-center py-4">
             <Link href="/" className="flex-shrink-0">
-              <Image
-                src="/logo.png"
-                alt="Logo"
-                width={182}
-                height={100}
-                className="w-auto h-[50px] md:h-[100px]"
-              />
+              <motion.div
+                whileHover={{ scale: 1.05, rotate: 5 }}
+                whileTap={{ scale: 0.95, rotate: -5 }}
+              >
+                <Image
+                  src="/logo.png"
+                  alt="Logo"
+                  width={182}
+                  height={100}
+                  className="w-auto h-[50px] md:h-[100px]"
+                />
+              </motion.div>
             </Link>
           </div>
 
@@ -148,7 +170,11 @@ const Nav = () => {
                         <NavigationMenuContent>
                           <ul className="grid w-[250px] gap-3 p-4 md:w-[400px] md:grid-cols-2">
                             {item.dropdown.map((dropdownItem) => (
-                              <li key={dropdownItem.title}>
+                              <motion.li
+                                key={dropdownItem.title}
+                                whileHover={{ scale: 1.05, x: 5 }}
+                                whileTap={{ scale: 0.95, x: -5 }}
+                              >
                                 <NavigationMenuLink asChild>
                                   <Link
                                     href={dropdownItem.href}
@@ -163,38 +189,58 @@ const Nav = () => {
                                     </div>
                                   </Link>
                                 </NavigationMenuLink>
-                              </li>
+                              </motion.li>
                             ))}
                           </ul>
                         </NavigationMenuContent>
                       </>
                     ) : (
-                      <Link
-                        href={item.href}
-                        className={`font-semibold px-3 py-2 rounded-md no-underline ${
-                          isActive(item.href) ? "text-[#00AEEF]" : "subtle-text"
-                        }`}
+                      <motion.div 
+                        whileHover={{ scale: 1.05, y: -2 }} 
+                        whileTap={{ scale: 0.95, y: 2 }}
                       >
-                        {item.title}
-                      </Link>
+                        <Link
+                          href={item.href}
+                          className={`font-semibold px-3 py-2 rounded-md no-underline ${
+                            isActive(item.href) ? "text-[#00AEEF]" : "subtle-text"
+                          }`}
+                        >
+                          {item.title}
+                        </Link>
+                      </motion.div>
                     )}
                   </NavigationMenuItem>
                 ))}
               </NavigationMenuList>
             </NavigationMenu>
-            <Button className="btn">GET STARTED</Button>
+            <motion.div 
+              whileHover={{ scale: 1.05, rotate: 2 }} 
+              whileTap={{ scale: 0.95, rotate: -2 }}
+            >
+              <Button className="btn">GET STARTED</Button>
+            </motion.div>
           </div>
 
           {/* Mobile menu */}
           <div className="lg:hidden flex items-center">
             <Sheet>
               <SheetTrigger asChild>
-                <button className="mobile-menu-button p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
+                <motion.button
+                  whileHover={{ scale: 1.1, rotate: 180 }}
+                  whileTap={{ scale: 0.9, rotate: -180 }}
+                  className="mobile-menu-button p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
+                >
                   <Menu className="h-6 w-6" />
-                </button>
+                </motion.button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] p-0">
-                <div className="flex flex-col h-full">
+                <motion.div
+                  initial={{ x: 300, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: 300, opacity: 0 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  className="flex flex-col h-full"
+                >
                   <div className="p-4 bg-[#00AEEF] font-bold text-white text-xl">
                     <span>Menu</span>
                   </div>
@@ -202,21 +248,26 @@ const Nav = () => {
                     <MobileMenu />
                   </div>
                   <div className="p-6 border-t border-gray-200">
-                    <Button className="w-full btn py-2 px-4 rounded">
-                      GET STARTED
-                    </Button>
+                    <motion.div 
+                      whileHover={{ scale: 1.05, rotate: 2 }} 
+                      whileTap={{ scale: 0.95, rotate: -2 }}
+                    >
+                      <Button className="w-full btn py-2 px-4 rounded">
+                        GET STARTED
+                      </Button>
+                    </motion.div>
                   </div>
                   <SheetClose className="rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
                     <X className="h-8 w-8 text-white" />
                     <span className="sr-only">Close</span>
                   </SheetClose>
-                </div>
+                </motion.div>
               </SheetContent>
             </Sheet>
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
