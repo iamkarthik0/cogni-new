@@ -1,8 +1,6 @@
 
 import BlogsAndUseCases from "@/components/layout/BlogAndUseCase";
 import ContactCard from "@/components/layout/ContactCard";
-import Footer from "@/components/layout/Footer";
-import Navbar from "@/components/layout/Navbar";
 import DsHero from "@/components/shared/dataSciencePage/DsHero";
 import DsServices from "@/components/shared/dataSciencePage/DsServices";
 

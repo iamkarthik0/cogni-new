@@ -1,4 +1,4 @@
-import DataScienceConsulting from "@/components/layout/DataScienceConsulting";
+
 import FeatureCard from "@/components/layout/FeatureCard";
 import MediaCard from "@/components/layout/MediaCard";
 import MediaEntertainment from "@/components/shared/mediaPage/MediaEntertainment";

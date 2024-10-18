@@ -1,4 +1,3 @@
-import { urlFor } from "@/lib/sanity";
 import Image from "next/image";
 import React from "react";
 
