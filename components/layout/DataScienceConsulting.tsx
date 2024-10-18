@@ -1,29 +1,59 @@
+"use client"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
 
 export default function DataScienceConsulting(props:any) {
-
-  const {heading,paragraph,card} = props.services; 
-
+  const {heading, paragraph, card} = props.services;
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
   return (
-    <div className="container mx-auto px-4 pt-8">
-      <h1 className="h2  text-center mb-3">{heading}</h1>
-      <p className="text-center mb-12 subtle-text">{paragraph || ""}</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="container mx-auto px-4 pt-8" ref={ref}>
+      <motion.h1 
+        className="h2 text-center mb-3"
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.5 }}
+      >
+        {heading}
+      </motion.h1>
+      <motion.p 
+        className="text-center mb-12 subtle-text"
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        {paragraph || ""}
+      </motion.p>
+      <motion.div 
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
         {card.map((service:any, index:any) => (
-          <Card 
-            key={index} 
-            className={`group bg-[#D9D9D9]  hover:bg-[#0055A7] transition-all duration-300 ease-in-out cursor-pointer rounded-none`}
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.5, delay: 0.1 * index }}
           >
-            <CardHeader>
-              <CardTitle className="text-xl font-semibold group-hover:text-white transition-colors duration-300 ease-in-out">{service.heading}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm group-hover:text-white transition-colors duration-300 ease-in-out">{service.paragraph}</p>
-            </CardContent>
-          </Card>
+            <Card 
+              className={`group bg-[#D9D9D9] hover:bg-[#0055A7] transition-all duration-300 ease-in-out cursor-pointer rounded-none`}
+            >
+              <CardHeader>
+                <CardTitle className="text-xl font-semibold group-hover:text-white transition-colors duration-300 ease-in-out">{service.heading}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm group-hover:text-white transition-colors duration-300 ease-in-out">{service.paragraph}</p>
+              </CardContent>
+            </Card>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }
