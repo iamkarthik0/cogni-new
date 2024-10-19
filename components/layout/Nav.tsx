@@ -39,8 +39,9 @@ const menuItems = [
       { title: " Media", href: "/media" },
       { title: " Retail", href: "/retail" },
       { title: "AI-Manufacturing", href: "/ai-manufacturing" },
-      { title: "AI-Manufacturing", href: "/ai-manufacturing" },
+
       { title: "Energy-Industry", href: "/energy-industry" },
+      { title: "AI-Finance", href: "/ai-finance" },
     ],
   },
   {

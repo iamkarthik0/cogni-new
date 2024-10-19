@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import * as z from "zod"
-import { Button } from "@/components/ui/button"
+import * as React from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -12,15 +12,15 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Checkbox } from "@/components/ui/checkbox"
-import { motion } from "framer-motion"
-import { submitContactForm } from "@/lib/action"
-import { useToast } from "@/hooks/use-toast"
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { motion } from "framer-motion";
+import { submitContactForm } from "@/lib/action";
+import { useToast } from "@/hooks/use-toast";
 
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/toaster";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -41,10 +41,10 @@ const formSchema = z.object({
   agree: z.boolean().refine((val) => val === true, {
     message: "You must agree to the terms.",
   }),
-})
+});
 
 export default function ContactForm() {
-  const { toast } = useToast()
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -55,26 +55,28 @@ export default function ContactForm() {
       description: "",
       agree: false,
     },
-  })
+  });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const result = await submitContactForm(values)
-    console.log(result)
-    
+    const result = await submitContactForm(values);
+    console.log(result);
+
     if (result.success) {
       toast({
         title: "Success",
-        description: "Your form has been submitted successfully.",
+        description:
+          "Thank you for getting in touch! We've received your message and will reach out to you soon",
         duration: 5000,
-      })
-      form.reset()
+      });
+      form.reset();
     } else {
       toast({
         title: "Error",
-        description: "There was an error submitting your form. Please try again.",
+        description:
+          "There was an error submitting your form. Please try again.",
         variant: "destructive",
         duration: 5000,
-      })
+      });
     }
   }
 
@@ -90,15 +92,12 @@ export default function ContactForm() {
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
               control={form.control}
-              name="name" 
+              name="name"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Name</FormLabel>
                   <FormControl>
-                    <Input 
-                      {...field} 
-                      className="bg-[#F3F3F3] rounded-none"
-                    />
+                    <Input {...field} className="bg-[#F3F3F3] rounded-none" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -111,10 +110,7 @@ export default function ContactForm() {
                 <FormItem>
                   <FormLabel>Business Name</FormLabel>
                   <FormControl>
-                    <Input 
-                      {...field} 
-                      className="bg-[#F3F3F3] rounded-none"
-                    />
+                    <Input {...field} className="bg-[#F3F3F3] rounded-none" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -127,10 +123,7 @@ export default function ContactForm() {
                 <FormItem>
                   <FormLabel>Phone</FormLabel>
                   <FormControl>
-                    <Input 
-                      {...field} 
-                      className="bg-[#F3F3F3] rounded-none"
-                    />
+                    <Input {...field} className="bg-[#F3F3F3] rounded-none" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -143,10 +136,7 @@ export default function ContactForm() {
                 <FormItem>
                   <FormLabel>Business Email</FormLabel>
                   <FormControl>
-                    <Input 
-                      {...field} 
-                      className="bg-[#F3F3F3] rounded-none"
-                    />
+                    <Input {...field} className="bg-[#F3F3F3] rounded-none" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -159,9 +149,9 @@ export default function ContactForm() {
                 <FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
-                    <Textarea 
-                      className="resize-none bg-[#F3F3F3] rounded-none" 
-                      {...field} 
+                    <Textarea
+                      className="resize-none bg-[#F3F3F3] rounded-none"
+                      {...field}
                     />
                   </FormControl>
                   <FormMessage />
@@ -180,18 +170,21 @@ export default function ContactForm() {
                     />
                   </FormControl>
                   <div className="space-y-1 leading-none">
-                    <FormLabel>
-                      I agree to receive marketing emails
-                    </FormLabel>
+                    <FormLabel>I agree to receive marketing emails</FormLabel>
                   </div>
                 </FormItem>
               )}
             />
-            <Button type="submit" className="lg:max-w-1/2 text-left bg-[#0055A7] px-6 ">Get in Touch</Button>
+            <Button
+              type="submit"
+              className="lg:max-w-1/2 text-left bg-[#0055A7] px-6 "
+            >
+              Get in Touch
+            </Button>
           </form>
         </Form>
       </motion.div>
       <Toaster />
     </>
-  )
+  );
 }

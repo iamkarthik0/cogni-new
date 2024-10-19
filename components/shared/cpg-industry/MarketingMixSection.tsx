@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-const MarketingMixSection = () => {
+const MarketingMixSection = (props:any) => {
   const features = [
     "Optimized Marketing Mix Analysis",
     "Optimized Pricing and Promotion Solutions",

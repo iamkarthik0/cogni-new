@@ -34,7 +34,7 @@ const ContactInfo = () => {
           <h3 className="font-bold h4">Follow Us</h3>
           <div className='py-4 flex space-x-4'>
             {/* <FacebookIcon className="text-white" /> */}
-            <Link href="https://www.linkedin.com/company/cogninest-ai/"><LinkedinIcon height={35} width={35}  className=' cursor-pointer text-gray-500 hover:scale-110'/></Link>
+            <Link href="https://www.linkedin.com/company/cogninest-ai/"><LinkedinIcon height={25} width={25}  className=' cursor-pointer text-gray-500 hover:scale-110'/></Link>
           
             {/* <YoutubeIcon className="text-white" />
             <InstagramIcon className="text-white" /> */}
