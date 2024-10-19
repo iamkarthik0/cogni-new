@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  
   FormField,
   FormItem,
   FormLabel,
@@ -18,6 +17,10 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { motion } from "framer-motion"
+import { submitContactForm } from "@/lib/action"
+import { useToast } from "@/hooks/use-toast"
+
+import { Toaster } from "@/components/ui/toaster"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -41,6 +44,7 @@ const formSchema = z.object({
 })
 
 export default function ContactForm() {
+  const { toast } = useToast()
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -53,122 +57,141 @@ export default function ContactForm() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
-    // Handle form submission here
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    const result = await submitContactForm(values)
+    console.log(result)
+    
+    if (result.success) {
+      toast({
+        title: "Success",
+        description: "Your form has been submitted successfully.",
+        duration: 5000,
+      })
+      form.reset()
+    } else {
+      toast({
+        title: "Error",
+        description: "There was an error submitting your form. Please try again.",
+        variant: "destructive",
+        duration: 5000,
+      })
+    }
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="max-w-lg mx-auto p-6 bg-white rounded-lg "
-    >
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <FormField
-            control={form.control}
-            name="name" 
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Name</FormLabel>
-                <FormControl>
-                  <Input 
-                    {...field} 
-                    className="bg-[#F3F3F3] rounded-none"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="businessName"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Business Name</FormLabel>
-                <FormControl>
-                  <Input 
-                    {...field} 
-                    className="bg-[#F3F3F3] rounded-none"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="phone"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Phone</FormLabel>
-                <FormControl>
-                  <Input 
-                    {...field} 
-                    className="bg-[#F3F3F3] rounded-none"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="businessEmail"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Business Email</FormLabel>
-                <FormControl>
-                  <Input 
-                    {...field} 
-                    className="bg-[#F3F3F3] rounded-none"
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="description"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Description</FormLabel>
-                <FormControl>
-                  <Textarea 
-                    className="resize-none bg-[#F3F3F3] rounded-none" 
-                    {...field} 
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="agree"
-            render={({ field }) => (
-              <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-                <FormControl>
-                  <Checkbox
-                    checked={field.value}
-                    onCheckedChange={field.onChange}
-                  />
-                </FormControl>
-                <div className="space-y-1 leading-none">
-                  <FormLabel>
-                    I agree to receive marketing emails
-                  </FormLabel>
-                </div>
-              </FormItem>
-            )}
-          />
-          <Button type="submit" className="lg:max-w-1/2 text-left bg-[#0055A7] px-6 ">Get in Touch</Button>
-        </form>
-      </Form>
-    </motion.div>
+    <>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-lg mx-auto p-6 bg-white rounded-lg "
+      >
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <FormField
+              control={form.control}
+              name="name" 
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Name</FormLabel>
+                  <FormControl>
+                    <Input 
+                      {...field} 
+                      className="bg-[#F3F3F3] rounded-none"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="businessName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Business Name</FormLabel>
+                  <FormControl>
+                    <Input 
+                      {...field} 
+                      className="bg-[#F3F3F3] rounded-none"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone</FormLabel>
+                  <FormControl>
+                    <Input 
+                      {...field} 
+                      className="bg-[#F3F3F3] rounded-none"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="businessEmail"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Business Email</FormLabel>
+                  <FormControl>
+                    <Input 
+                      {...field} 
+                      className="bg-[#F3F3F3] rounded-none"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="description"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Description</FormLabel>
+                  <FormControl>
+                    <Textarea 
+                      className="resize-none bg-[#F3F3F3] rounded-none" 
+                      {...field} 
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="agree"
+              render={({ field }) => (
+                <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                  <FormControl>
+                    <Checkbox
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                    />
+                  </FormControl>
+                  <div className="space-y-1 leading-none">
+                    <FormLabel>
+                      I agree to receive marketing emails
+                    </FormLabel>
+                  </div>
+                </FormItem>
+              )}
+            />
+            <Button type="submit" className="lg:max-w-1/2 text-left bg-[#0055A7] px-6 ">Get in Touch</Button>
+          </form>
+        </Form>
+      </motion.div>
+      <Toaster />
+    </>
   )
 }
