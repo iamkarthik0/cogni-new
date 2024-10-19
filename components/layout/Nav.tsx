@@ -221,7 +221,7 @@ const Nav = () => {
               whileTap={{ scale: 0.95, rotate: -2 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <Button className="btn">GET STARTED</Button>
+            <Link href="/contact-us">  <Button className="btn">GET STARTED</Button></Link>
             </motion.div>
           </div>
 
