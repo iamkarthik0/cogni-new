@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from 'lucide-react'
+import Link from 'next/link'
 
 const ContactInfo = () => {
   return (
@@ -20,7 +22,7 @@ const ContactInfo = () => {
         </div>
         <div className='space-y-1'>
           <h3 className="font-bold h4">Customer Support</h3>
-          <p className="paragraph text-[#7D7D7D] font-bold">info@cognisest.ai</p>
+          <p className="paragraph text-[#7D7D7D] font-bold">sales@cogninest.ai</p>
         </div>
       </div>
       
@@ -30,8 +32,12 @@ const ContactInfo = () => {
         </div>
         <div>
           <h3 className="font-bold h4">Follow Us</h3>
-          <div className='py-2'>
-            <Image src="/infoicon.png" alt="Info Icon" width={200} height={34} className="text-white" />
+          <div className='py-4 flex space-x-4'>
+            {/* <FacebookIcon className="text-white" /> */}
+            <Link href="https://www.linkedin.com/company/cogninest-ai/"><LinkedinIcon height={35} width={35}  className=' cursor-pointer text-gray-500 hover:scale-110'/></Link>
+          
+            {/* <YoutubeIcon className="text-white" />
+            <InstagramIcon className="text-white" /> */}
           </div>
         </div>
       </div>

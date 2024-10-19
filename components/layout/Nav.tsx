@@ -41,19 +41,18 @@ const menuItems = [
       { title: "AI-Manufacturing", href: "/ai-manufacturing" },
       { title: "AI-Manufacturing", href: "/ai-manufacturing" },
       { title: "Energy-Industry", href: "/energy-industry" },
-     
     ],
   },
   {
     title: "Services",
     href: "/services",
     dropdown: [
+      { title: "Gen AI Services", href: "/gen-ai-services" },
+      { title: "NLP Services", href: "/nlp-service" },
+      { title: "Data Science Services", href: "/data-science" },
+      { title: "ML and DL Services", href: "/ml-dl-service" },
       { title: "DataEngineering", href: "/data-engineering" },
       { title: "Predictive", href: "/predictive-modeling" },
-      { title: "Gen AI Services", href: "/gen-ai-services" },
-      { title: "ML and DL Services", href: "/ml-dl-service" },
-      { title: "Data Science Services", href: "/data-science" },
-      { title: "NLP Services", href: "/nlp-service" },
     ],
   },
   { title: "Case Studies", href: "/case-studies" },
@@ -96,19 +95,18 @@ const Nav = () => {
                         whileHover={{ scale: 1.05, rotate: 2, x: 5 }}
                         whileTap={{ scale: 0.95, rotate: -2, x: -5 }}
                       >
-                    
-                      <SheetClose asChild> 
-                      <Link
-                          href={dropdownItem.href}
-                          className={`block p-2 text-sm ${
-                            isActive(dropdownItem.href)
-                              ? "text-[#00AEEF]"
-                              : "subtle-text hover:text-gray-800"
-                          } hover:bg-gray-100 rounded-md`}
-                        >
-                          {dropdownItem.title}
-                        </Link>
-                      </SheetClose>
+                        <SheetClose asChild>
+                          <Link
+                            href={dropdownItem.href}
+                            className={`block p-2 text-sm ${
+                              isActive(dropdownItem.href)
+                                ? "text-[#00AEEF]"
+                                : "subtle-text hover:text-gray-800"
+                            } hover:bg-gray-100 rounded-md`}
+                          >
+                            {dropdownItem.title}
+                          </Link>
+                        </SheetClose>
                       </motion.div>
                     ))}
                   </motion.div>
@@ -182,7 +180,11 @@ const Nav = () => {
                                 key={dropdownItem.title}
                                 whileHover={{ scale: 1.05, x: 5, y: -2 }}
                                 whileTap={{ scale: 0.95, x: -5, y: 2 }}
-                                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                                transition={{
+                                  type: "spring",
+                                  stiffness: 400,
+                                  damping: 10,
+                                }}
                               >
                                 <NavigationMenuLink asChild>
                                   <Link
@@ -204,15 +206,21 @@ const Nav = () => {
                         </NavigationMenuContent>
                       </>
                     ) : (
-                      <motion.div 
-                        whileHover={{ scale: 1.05, y: -2 }} 
+                      <motion.div
+                        whileHover={{ scale: 1.05, y: -2 }}
                         whileTap={{ scale: 0.95, y: 2 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
                       >
                         <Link
                           href={item.href}
                           className={`font-semibold px-3 py-2 rounded-md no-underline ${
-                            isActive(item.href) ? "text-[#00AEEF]" : "subtle-text"
+                            isActive(item.href)
+                              ? "text-[#00AEEF]"
+                              : "subtle-text"
                           }`}
                         >
                           {item.title}
@@ -223,12 +231,15 @@ const Nav = () => {
                 ))}
               </NavigationMenuList>
             </NavigationMenu>
-            <motion.div 
-              whileHover={{ scale: 1.05, rotate: 2 }} 
+            <motion.div
+              whileHover={{ scale: 1.05, rotate: 2 }}
               whileTap={{ scale: 0.95, rotate: -2 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-            <Link href="/contact-us">  <Button className="btn">GET STARTED</Button></Link>
+              <Link href="/contact-us">
+                {" "}
+                <Button className="btn">GET STARTED</Button>
+              </Link>
             </motion.div>
           </div>
 
@@ -253,7 +264,7 @@ const Nav = () => {
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   className="flex flex-col h-full"
                 >
-                  <motion.div 
+                  <motion.div
                     className="p-4 bg-[#00AEEF] font-bold text-white text-xl"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -264,10 +275,14 @@ const Nav = () => {
                     <MobileMenu />
                   </div>
                   <div className="p-6 border-t border-gray-200">
-                    <motion.div 
-                      whileHover={{ scale: 1.05, rotate: 2 }} 
+                    <motion.div
+                      whileHover={{ scale: 1.05, rotate: 2 }}
                       whileTap={{ scale: 0.95, rotate: -2 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
                     >
                       <Button className="w-full btn py-2 px-4 rounded">
                         GET STARTED
@@ -278,7 +293,11 @@ const Nav = () => {
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: 90 }}
                       whileTap={{ scale: 0.9, rotate: -90 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
                     >
                       <X className="h-8 w-8 text-white" />
                     </motion.div>

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import {
   Form,
   FormControl,
-  FormDescription,
+  
   FormField,
   FormItem,
   FormLabel,
@@ -29,6 +29,9 @@ const formSchema = z.object({
   phone: z.string().min(10, {
     message: "Phone number must be at least 10 digits.",
   }),
+  businessEmail: z.string().email({
+    message: "Invalid Email ",
+  }),
   description: z.string().min(10, {
     message: "Description must be at least 10 characters.",
   }),
@@ -44,6 +47,7 @@ export default function ContactForm() {
       name: "",
       businessName: "",
       phone: "",
+      businessEmail: "",
       description: "",
       agree: false,
     },
@@ -101,6 +105,22 @@ export default function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Phone</FormLabel>
+                <FormControl>
+                  <Input 
+                    {...field} 
+                    className="bg-[#F3F3F3] rounded-none"
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="businessEmail"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Business Email</FormLabel>
                 <FormControl>
                   <Input 
                     {...field} 
