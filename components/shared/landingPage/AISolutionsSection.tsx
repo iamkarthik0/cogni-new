@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { urlFor } from '@/lib/sanity'
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 interface AISolutionsSectionProps {
   heading?: string,
@@ -55,7 +56,7 @@ export default function AISolutionsSection(props: AISolutionsSectionProps) {
               variants={fadeInUpVariants}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Button className='btn hover:scale-105 transition-transform duration-300'>EXPLORE MORE</Button>
+              <Link href="/" ><Button className='btn hover:scale-105 transition-transform duration-300'>EXPLORE MORE</Button></Link>
             </motion.div>
           </div>
           <motion.div 

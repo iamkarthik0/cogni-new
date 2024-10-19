@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const GenAIHero = () => {
   return (
@@ -41,7 +42,9 @@ const GenAIHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
         >
+          <Link href="/contact-us">
           <Button className="btn">CONTACT US</Button>
+          </Link>
         </motion.div>
       </motion.div>
 

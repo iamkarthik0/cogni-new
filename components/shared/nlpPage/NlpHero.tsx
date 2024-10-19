@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import React, { useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
+import Link from 'next/link'
 
 const NlpHero = () => {
   const controls = useAnimation()
@@ -50,7 +51,9 @@ const NlpHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
+          <Link href="/contact-us"> 
           <Button className="btn">CONTACT US</Button>
+          </Link>
         </motion.div>
       </motion.div>
 

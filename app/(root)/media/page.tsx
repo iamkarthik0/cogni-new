@@ -5,6 +5,7 @@ import MediaEntertainment from "@/components/shared/mediaPage/MediaEntertainment
 import { Button } from "@/components/ui/button";
 import { landingQuery } from "@/lib/query";
 import { client } from "@/lib/sanity";
+import Link from "next/link";
 import React from "react";
 
 const page = async () => {
@@ -103,9 +104,11 @@ const page = async () => {
             boost viewer engagement, streamline operations, or unlock new
             revenue streams, Cogninest AI is your partner in innovation.
           </p>
+          <Link href="/contact-us">
           <Button className="btn text-center text-wrap py-7 lg:py-0">
             Contact us today to start your transformation journey!
           </Button>
+          </Link>
         </div>
       </div>
     </>

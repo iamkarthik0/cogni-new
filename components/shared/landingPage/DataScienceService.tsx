@@ -1,6 +1,7 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 
 interface ServiceCardProps {
@@ -15,14 +16,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ heading, paragraph }) => {
   });
 
   return (
-    <motion.div 
+    <motion.div
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.5 }}
       className="group p-6 rounded-lg bg-gray-100 hover:bg-[#0055A7] transition-all duration-300 flex flex-col h-full"
     >
-      <motion.h3 
+      <motion.h3
         className="text-xl font-semibold mb-4 group-hover:text-white"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -30,7 +31,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ heading, paragraph }) => {
       >
         {heading}
       </motion.h3>
-      <motion.p 
+      <motion.p
         className="mb-4 group-hover:text-white flex-grow"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -38,22 +39,24 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ heading, paragraph }) => {
       >
         {paragraph}
       </motion.p>
-      <motion.div 
+      <motion.div
         className="mt-auto"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <Button className="btn group-hover:from-white-500  group-hover:from-[#ffff] group-hover:to-[#ffff]   group-hover:text-[#0055A7] transition-all duration-300">
-          EXPLORE MORE
-        </Button>
+        <Link href="/">
+          <Button className="btn group-hover:from-white-500  group-hover:from-[#ffff] group-hover:to-[#ffff]   group-hover:text-[#0055A7] transition-all duration-300">
+            EXPLORE MORE
+          </Button>
+        </Link>
       </motion.div>
     </motion.div>
   );
 };
 
 export default function DataScienceServices(props: any) {
-  const {serviceCard} = props
+  const { serviceCard } = props;
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -62,14 +65,14 @@ export default function DataScienceServices(props: any) {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
       <div className="container px-4 md:px-6 mx-auto">
-        <motion.div 
-          ref={ref} 
+        <motion.div
+          ref={ref}
           className="flex flex-col items-center text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
         >
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -77,7 +80,7 @@ export default function DataScienceServices(props: any) {
           >
             Data Science Services
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="mt-4 max-w-[85%] text-gray-500 md:text-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -93,13 +96,13 @@ export default function DataScienceServices(props: any) {
             representatives, enabling more accurate and efficient outcomes.
           </motion.p>
         </motion.div>
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          {serviceCard.map((service:any, index:any) => (
+          {serviceCard.map((service: any, index: any) => (
             <ServiceCard key={index} {...service} />
           ))}
         </motion.div>

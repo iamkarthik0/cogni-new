@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { landingQuery } from "@/lib/query";
 import { client } from "@/lib/sanity";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const page = async () => {
@@ -35,7 +36,9 @@ const page = async () => {
             commercial world of today
           </h4>
           <div>
+          <Link href="/contact-us">
             <Button className="btn ">CONTACT US</Button>
+            </Link>
           </div>
         </div>
 

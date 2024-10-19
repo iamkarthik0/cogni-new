@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { landingQuery } from "@/lib/query";
 import { client } from "@/lib/sanity";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const page = async () => {
@@ -92,7 +93,9 @@ const page = async () => {
             project with our experts, contact us today.
           </p>
           <div>
+          <Link href="/contact-us">
             <Button className="btn">REACH OUT TO US</Button>
+            </Link>
           </div>
         </div>
       </div>

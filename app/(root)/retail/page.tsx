@@ -3,6 +3,7 @@ import RetailHero from "@/components/shared/retailPage/RetailHero";
 import RetailStrategy from "@/components/shared/retailPage/RetailStrategy";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const page = () => {
@@ -122,9 +123,11 @@ const page = () => {
               schedule a consultation and discover how we can help you achieve
               your goals.
             </p>
+            <Link href="/contact-us">
             <Button className="btn text-center text-wrap py-7 lg:py-0">
             Contact us today to start your transformation journey!
             </Button>
+            </Link>
           </div>
         </div>
       </div>

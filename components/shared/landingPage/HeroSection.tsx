@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { urlFor } from "@/lib/sanity";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface HeroSectionProps {
   className?: string;
@@ -78,7 +79,8 @@ const HeroSection: FC<HeroSectionProps> = ({
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.5 }}
             >
-              <Button className="btn">CONTACT US</Button>
+              
+              <Link href="/contact-us"><Button className="btn">CONTACT US</Button></Link>
             </motion.div>
           </div>
         </motion.div>

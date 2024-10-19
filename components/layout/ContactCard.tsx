@@ -1,6 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import Link from "next/link";
 import { useInView } from "react-intersection-observer"
 
 export default function ContactCard() {
@@ -39,9 +40,11 @@ export default function ContactCard() {
           animate={inView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
           transition={{ delay: 0.6, duration: 0.5 }}
         > 
+         <Link href="/contact-us">
           <Button className="btn hover:scale-105 transition-transform duration-300">
             CONTACT US
           </Button>
+          </Link>
         </motion.div>
       </div>
     </motion.div>

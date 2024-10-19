@@ -1,6 +1,7 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 
 interface ServiceCardProps {
@@ -44,9 +45,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ heading, paragraph }) => {
         transition={{ delay: 0.4, duration: 0.5 }}
         className="mt-auto"
       >
-        <Button className="btn group-hover:from-white-500  group-hover:from-[#ffff] group-hover:to-[#ffff]   group-hover:text-[#0055A7] transition-all duration-300">
-          EXPLORE MORE
-        </Button>
+        <Link href="/">
+          <Button className="btn group-hover:from-white-500  group-hover:from-[#ffff] group-hover:to-[#ffff]   group-hover:text-[#0055A7] transition-all duration-300">
+            EXPLORE MORE
+          </Button>
+        </Link>
       </motion.div>
     </motion.div>
   );

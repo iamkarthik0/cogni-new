@@ -3,6 +3,7 @@ import BlogsCards from "@/components/shared/blogPage/BlogsCard";
 import Filter from "@/components/shared/blogPage/Filter";
 import { Button } from "@/components/ui/button";
 import { getData } from "@/lib/getData";
+import Link from "next/link";
 
 import React from "react";
 
@@ -50,7 +51,9 @@ const page = async ({
           </h1>
 
           <div>
+            <Link href="contact-us">
             <Button className="btn">CONTACT US</Button>
+            </Link>
           </div>
         </div>
       </div>

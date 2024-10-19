@@ -2,6 +2,7 @@
 import React from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import Link from 'next/link'
 
 export default function InlineContact() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -22,9 +23,11 @@ export default function InlineContact() {
         placeholder="Enter your Email"
         className="flex-1 rounded-xl bg-[#F1F1F1] h-12"
       />
+       <Link href="/contact-us">
       <Button type="submit" className="btn">
         CONTACT US
       </Button>
+      </Link>
     </form>
   )
 }

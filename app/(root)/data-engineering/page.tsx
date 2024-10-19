@@ -1,6 +1,7 @@
 import BlogCard from "@/components/shared/dataEngineering/BlogCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const page = async () => {
@@ -131,7 +132,9 @@ const page = async () => {
               <h1>Engineer a robust data foundation with us</h1>
 
               <div>
+              <Link href="/contact-us">
                 <Button className="btn">CONTACT US</Button>
+                </Link>
               </div>
 
         </div>

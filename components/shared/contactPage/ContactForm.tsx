@@ -17,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
+import { motion } from "framer-motion"
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -54,7 +55,12 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white rounded-lg ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="max-w-lg mx-auto p-6 bg-white rounded-lg "
+    >
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField
@@ -143,6 +149,6 @@ export default function ContactForm() {
           <Button type="submit" className="lg:max-w-1/2 text-left bg-[#0055A7] px-6 ">Get in Touch</Button>
         </form>
       </Form>
-    </div>
+    </motion.div>
   )
 }

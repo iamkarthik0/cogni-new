@@ -1,6 +1,7 @@
 import BlogCard from "@/components/shared/dataEngineering/BlogCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const page = () => {
@@ -256,7 +257,8 @@ const page = () => {
               Speak to one of our industry specialists about how Artificial
               Intelligence can help solve your impossible problem
             </p>
-            <Button className="btn  ">CONTACT US</Button>
+            <Link href="/contact-us">
+            <Button className="btn  ">CONTACT US</Button></Link>
           </div>
         </div>
       </div>
