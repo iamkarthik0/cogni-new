@@ -26,7 +26,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const menuItems = [
   {
@@ -92,7 +92,9 @@ const Nav = () => {
                         whileHover={{ scale: 1.05, rotate: 2, x: 5 }}
                         whileTap={{ scale: 0.95, rotate: -2, x: -5 }}
                       >
-                        <Link
+                    
+                      <SheetClose asChild> 
+                      <Link
                           href={dropdownItem.href}
                           className={`block p-2 text-sm ${
                             isActive(dropdownItem.href)
@@ -102,6 +104,7 @@ const Nav = () => {
                         >
                           {dropdownItem.title}
                         </Link>
+                      </SheetClose>
                       </motion.div>
                     ))}
                   </motion.div>
