@@ -12,7 +12,7 @@ const ContactInfo = () => {
         </div>
         <div className='space-y-1'>
           <h3 className="font-bold h4">Customer Support</h3>
-          <p className="paragraph text-[#7D7D7D] font-bold">info@cognisest.ai</p>
+          <p className="paragraph text-[#7D7D7D] font-bold">sales@cogninest.ai</p>
         </div>
       </div>
       
