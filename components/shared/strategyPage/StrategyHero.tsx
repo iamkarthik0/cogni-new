@@ -34,7 +34,7 @@ const StrategyHero = () => {
       </div>
 
       <div className=" p-8 lg:p-16 space-y-8 ">
-        <h1 className=" h1">
+        <h1 className=" h1">  
           Artificial Intelligence & Machine Learning Strategy
         </h1>
 
