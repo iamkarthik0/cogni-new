@@ -54,6 +54,11 @@ const menuItems = [
       { title: "ML and DL Services", href: "/ml-dl-service" },
       { title: "Data Engineering", href: "/data-engineering" },
       { title: "Predictive Analytics", href: "/predictive-modeling" },
+      { title: "Chat GPT Integration", href: "/gpt-integration" },
+      { title: "Document AI Services", href: "/document-ai-services" },
+     
+
+     
     ],
   },
   { title: "Case Studies", href: "/case-studies" },

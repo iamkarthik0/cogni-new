@@ -8,7 +8,7 @@ const DocumentHero = () => {
     <div>
       <div className=" flex  flex-col  lg:flex-row gap-6">
         <div className="flex justify-center flex-col  lg:max-w-1/2  space-y-5 pt-8 lg:pt-0">
-          <p className="subtle-text">Finance & Insurance</p>
+    
           <h1 className=" h1 lg:max-w-2xl">
             {" "}
             Empower Your Business with our Cutting-Edge Document Intelligence
