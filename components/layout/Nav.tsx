@@ -135,7 +135,7 @@ const Nav = () => {
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 120 }}
-      className="bg-white sticky top-0 z-50"
+      className=""
     >
       <div className="px-4 sm:px-6 lg:px-8 container mx-auto">
         <div className="flex justify-between items-center">

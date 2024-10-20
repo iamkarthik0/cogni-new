@@ -27,7 +27,7 @@ const WhoWeAre = () => {
           }}
         >
           <motion.div 
-            className="flex lg:w-1/2 px-4 lg:px0 justify-center items-center w-full lg:order-first order-last"
+            className="flex lg:w-1/2 px-4 lg:px-0 justify-center items-center w-full lg:order-first order-last"
             variants={fadeInUpVariants}
             transition={{ duration: 0.5 }}
           >

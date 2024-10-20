@@ -9,7 +9,9 @@ const layout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <main>
     
-      <Nav/>
+     <div className=" max-w-screen-2xl bg-white  sticky top-0 z-50 mx-auto">
+     <Nav/>
+     </div>
 
       {children}
       <Toaster />
