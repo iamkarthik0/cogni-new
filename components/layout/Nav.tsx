@@ -56,6 +56,8 @@ const menuItems = [
       { title: "Predictive Analytics", href: "/predictive-modeling" },
       { title: "Chat GPT Integration", href: "/gpt-integration" },
       { title: "Document AI Services", href: "/document-ai-services" },
+      { title: "Cloud Consultant ", href: "/cloud-consultant" },
+      { title: "Computer Vision", href: "/computer-vision" },
      
 
      
