@@ -58,6 +58,7 @@ const menuItems = [
       { title: "Document AI Services", href: "/document-ai-services" },
       { title: "Cloud Consultant ", href: "/cloud-consultant" },
       { title: "Computer Vision", href: "/computer-vision" },
+      { title: "Deep Learning", href: "/deep-learning" },
      
 
      
