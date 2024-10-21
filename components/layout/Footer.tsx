@@ -6,17 +6,9 @@ import Image from "next/image";
 import { Facebook, Twitter, Instagram, Mail } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import FooterForm from "./FooterForm";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: Implement your subscribe logic here
-    console.log("Subscribed with email:", email);
-    setEmail("");
-  };
-
   return (
     <footer className="bg-[#054475] text-white border-t  mx-auto">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-7xl">
@@ -66,59 +58,77 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/"
+                  href="/gen-ai-services"
                   className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium"
                 >
-                  Predictive Modelling
+                  Gen AI Service
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/nlp-service"
                   className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium"
                 >
-                  Gen AI​
+                  NLP Services
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/data-science"
                   className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium"
+                >
+                  Data Science Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/data-engineering"
+                  className=" text-sm text-white line-clamp-5 hover:text-[#00AEEF] hover:font-medium"
+                >
+                  Data Engineering
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/predictive-modeling"
+                  className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium"
+                >
+                  Predictive Analytics
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/gpt-integration"
+                  className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium "
                 >
                   Chat GPT Integration
                 </Link>
               </li>
+
               <li>
                 <Link
-                  href="/"
-                  className=" text-sm text-white line-clamp-5 hover:text-[#00AEEF] hover:font-medium"
+                  href="/document-ai-services"
+                  className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium "
                 >
-                  Natural Language Processing
+                  Document AI Services
                 </Link>
               </li>
 
               <li>
                 <Link
-                  href="/"
+                  href="/cloud-consultant"
+                  className=" text-sm text-white  hover:text-[#00AEEF] hover:font-medium  "
+                >
+                  Cloud Consultant
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/computer-vision"
                   className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium"
-                >
-                  Machine Learning
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/"
-                  className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium "
-                >
-                  Data Science
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/"
-                  className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium "
                 >
                   Computer Vision
                 </Link>
@@ -126,64 +136,102 @@ export default function Footer() {
 
               <li>
                 <Link
-                  href="/"
-                  className=" text-sm text-white  hover:text-[#00AEEF] hover:font-medium  "
+                  href="/deep-learning"
+                  className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium"
                 >
-                  Big Data
+                  Deep Learning
+                </Link>
+              </li>
+
+         
+
+              <li>
+                <Link
+                  href="/next-gen"
+                  className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium"
+                >
+              Next-Gen Data Solutions
                 </Link>
               </li>
 
               <li>
                 <Link
-                  href="/"
+                  href="/idp"
                   className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium"
                 >
-                  Cloud Consultant
+                 IDP
                 </Link>
               </li>
             </ul>
           </div>
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Blogs</h3>
+            <h3 className="text-lg font-semibold">Industry</h3>
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/"
+                  href="/healthcare"
                   className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium"
                 >
-                  Blog 1
+                  HealthCare
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/pharma"
                   className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium"
                 >
-                  Blog 1
+                  Pharma
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/cpg-industry"
                   className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium"
                 >
-                  Blog 1
+                  CPG-Industry
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/media"
                   className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium"
                 >
-                  Blog 1
+                  Media
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/"
+                  href="/retail"
                   className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium "
                 >
-                  Blog 1
+                  Retail
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/ai-manufacturing"
+                  className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium "
+                >
+                  Manufacturing
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/energy-industry"
+                  className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium "
+                >
+                  Energy
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/ai-finance"
+                  className=" text-sm text-white hover:text-[#00AEEF] hover:font-medium "
+                >
+                  Finance
                 </Link>
               </li>
             </ul>
@@ -226,25 +274,10 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          <div className="space-y-4 col-span-2 ">
-            <h3 className="text-lg font-semibold">Subscribe</h3>
-            <form onSubmit={handleSubmit} className="space-y-2">
-              <div className="flex space-x-2">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="flex-grow rounded-full"
-                />
-                <Button className="btn" type="submit">
-                  Subscribe
-                </Button>
-              </div>
-            </form>
-          </div>
+        <div className=" col-span-2 flex  justify-center ">
+            
+        <FooterForm /> 
+        </div>
         </div>
         <div className="mt-8 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-white">

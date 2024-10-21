@@ -59,12 +59,16 @@ const menuItems = [
       { title: "Cloud Consultant ", href: "/cloud-consultant" },
       { title: "Computer Vision", href: "/computer-vision" },
       { title: "Deep Learning", href: "/deep-learning" },
+      { title: "Next-Gen Data Solutions", href: "/next-gen" },
+      { title: "IDP", href: "/idp" },
+
+      
      
 
      
     ],
   },
-  { title: "Case Studies", href: "/case-studies" },
+  { title: "Case Studies", href: "/" },
   { title: "Blogs", href: "/blogs" },
   { title: "About Us", href: "/about-us" },
 ];
