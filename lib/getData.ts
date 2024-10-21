@@ -23,6 +23,10 @@ export async function getData(
       const items = await client.fetch<Item[]>(
         `
         *[_type == "blog" && category == $category] | order(title asc) [${start}...${end}] {
+        _type,
+
+         "slug": slug.current,
+    _updatedAt,
           _id,
           title,
           publishedAt,
@@ -47,6 +51,9 @@ export async function getData(
       const items = await client.fetch<Item[]>(
         `
         *[_type == "blog" ] | order(title asc) [${start}...${end}] {
+        _type,
+              "slug": slug.current,
+    _updatedAt,
           _id,
           title,
           publishedAt,

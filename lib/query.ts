@@ -34,6 +34,7 @@ export const dsQuery = `*[_type == "dataScience"][0]{
 export const landingQuery = `*[_type == "landingPage"][0]{
     title,
     slug,
+    _type,
     hero{
       heading,
       subheading,

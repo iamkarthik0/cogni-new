@@ -15,6 +15,8 @@ import HeroSection from "@/components/shared/landingPage/HeroSection";
 export default async function Home() {
   const data = await client.fetch(landingQuery);
 
+
+
   return (
     <div className="w-full h-full">
       <HeroSection
