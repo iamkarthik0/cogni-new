@@ -17,7 +17,7 @@ const ComputerMainSection = () => {
         "Sentiment analysis models analyze customer data from a variety of sources including social media, customer reviews, drone footage, mass media and data. They achieve a visual representation of customers’ opinions and sentiments about your brand, based on text data.",
       variant: "gray",
     },
-    { 
+    {
       title: "Video analytics",
       description:
         "Detect and extract objects from video based on trained AI models. then classify each object to enable intelligent video analysis to empower users with granular search, smart alerting and comprehensive reporting.",
@@ -274,6 +274,37 @@ const ComputerMainSection = () => {
                   />
                 </>
               ))}
+            </div>
+          </div>
+        </div>
+
+        <div className=" space-y-16 lg:pt-20 pt-16">
+          <h1 className="h1 text-center">Explore more services</h1>
+
+          <div className=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
+            <div className=" group lg:w-[271px] h-[271px] bg-[#D9D9D9] hover:bg-[#0055A7] flex justify-center items-center text-center p-6 cursor-pointer">
+              <p className=" group-hover:text-white">
+                Have a large set of documents that need thorough analysis?
+              </p>
+            </div>
+
+            <div className=" group lg:w-[271px]  h-[271px] bg-[#D9D9D9] hover:bg-[#0055A7] flex justify-center items-center text-center p-6 cursor-pointer">
+              <p className=" group-hover:text-white">
+                Looking to detect common topics across a collection of texts?
+              </p>
+            </div>
+
+            <div className=" group lg:w-[271px]  h-[271px] bg-[#D9D9D9] hover:bg-[#0055A7] flex justify-center items-center text-center p-6 cursor-pointer">
+              <p className=" group-hover:text-white">
+                Need assistance in organizing and prioritizing emails?
+              </p>
+            </div>
+
+            <div className=" group lg:w-[271px]  h-[271px] bg-[#D9D9D9] hover:bg-[#0055A7] flex justify-center items-center text-center p-6 cursor-pointer">
+              <p className=" group-hover:text-white">
+                Want to identify leading experts in a scientific field based
+                their publication output?
+              </p>
             </div>
           </div>
         </div>
