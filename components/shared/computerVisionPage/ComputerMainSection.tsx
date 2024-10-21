@@ -1,18 +1,55 @@
+import FeatureCard from "@/components/layout/FeatureCard";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 
 const ComputerMainSection = () => {
+  const features = [
+    {
+      title: "Face recognition",
+      description:
+        "Facial recognition services extend beyond security to enhance the user experience. Identify and authenticate a specific person by their facial features in an image or video. With our trained AI models and face detection service, we measure and calculate several facial representations to accurately confirm the identity of individuals.",
+      variant: "gray",
+    },
+    {
+      title: "Emotion recognition",
+      description:
+        "Sentiment analysis models analyze customer data from a variety of sources including social media, customer reviews, drone footage, mass media and data. They achieve a visual representation of customers’ opinions and sentiments about your brand, based on text data.",
+      variant: "gray",
+    },
+    { 
+      title: "Video analytics",
+      description:
+        "Detect and extract objects from video based on trained AI models. then classify each object to enable intelligent video analysis to empower users with granular search, smart alerting and comprehensive reporting.",
+      variant: "gray",
+    },
+    {
+      title: "Optical character recognition",
+      description:
+        "OCR services convert data into machine-editable text. It is the most-effective solution to capture data from printed or written text from a scanned document or image file. OCR ensures high-quality data conversion that is fast, accurate and efficient.",
+      variant: "gray",
+    },
+    {
+      title: "Image annotation",
+      description:
+        "Label your images and take control of your training data while powering your computer vision apps with large data sets. Our image annotation services support image classification, object detection and recognition using tools like bounding box, polygon, polyline and key point annotation.",
+      variant: "gray",
+    },
+
+    {
+      title: "Object detection",
+      description:
+        "Identify multiple objects in an image and receive information about the location of the object in the image. Empower your enterprise-level apps with custom models that are capable of detecting individual objects in a given image along with their bounding box and label using our object detection service.",
+      variant: "gray",
+    },
+  ];
   return (
     <div>
       <div className=" pt-10 lg:pt-20">
-     
-
         <div className=" space-y-12 ">
-
-        <h2 className="h2  lg:max-w-3xl mx-auto lg:py-8 ">
-          Some of the business use cases of Computer Vision AI services
-        </h2>
+          <h2 className="h2  lg:max-w-3xl mx-auto lg:py-8 ">
+            Some of the business use cases of Computer Vision AI services
+          </h2>
           {/* ------------------------------------------ */}
           <div className=" relative flex  flex-col lg:flex-row">
             <div className=" flex-1 space-y-4 ">
@@ -39,12 +76,7 @@ const ComputerMainSection = () => {
             </div>
 
             <div className=" flex-1">
-              <Image
-                src="/cv1.png"
-                alt="business "
-                width={539}
-                height={396}
-              />
+              <Image src="/cv1.png" alt="business " width={539} height={396} />
             </div>
           </div>
 
@@ -77,12 +109,7 @@ const ComputerMainSection = () => {
             </div>
 
             <div className=" flex-1">
-              <Image
-                src="/cv2.png"
-                alt="business "
-                width={539}
-                height={396}
-              />
+              <Image src="/cv2.png" alt="business " width={539} height={396} />
             </div>
           </div>
 
@@ -121,12 +148,7 @@ const ComputerMainSection = () => {
             </div>
 
             <div className=" flex-1">
-              <Image
-                src="/cv3.png"
-                alt="business "
-                width={539}
-                height={396}
-              />
+              <Image src="/cv3.png" alt="business " width={539} height={396} />
             </div>
           </div>
 
@@ -158,12 +180,7 @@ const ComputerMainSection = () => {
             </div>
 
             <div className=" flex-1">
-              <Image
-                src="/cv4.png"
-                alt="business "
-                width={539}
-                height={396}
-              />
+              <Image src="/cv4.png" alt="business " width={539} height={396} />
             </div>
           </div>
 
@@ -199,12 +216,7 @@ const ComputerMainSection = () => {
             </div>
 
             <div className=" flex-1">
-              <Image
-                src="/cv5.png"
-                alt="business "
-                width={539}
-                height={396}
-              />
+              <Image src="/cv5.png" alt="business " width={539} height={396} />
             </div>
           </div>
 
@@ -239,16 +251,31 @@ const ComputerMainSection = () => {
             </div>
 
             <div className=" flex-1">
-              <Image
-                src="/cv6.png"
-                alt="business "
-                width={539}
-                height={396}
-              />
+              <Image src="/cv6.png" alt="business " width={539} height={396} />
             </div>
           </div>
 
           {/* ------------------------------------------ */}
+        </div>
+
+        <div>
+          <div className="  space-y-10 pt-16 lg:pt-20">
+            <h1 className="h1  lg:max-w-1/2">
+              Some of our computer vision consulting services include
+            </h1>
+            <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 ">
+              {features.map((data, index) => (
+                <>
+                  <FeatureCard
+                    key={index}
+                    variant={data.variant}
+                    title={data.title}
+                    description={data.description}
+                  />
+                </>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
