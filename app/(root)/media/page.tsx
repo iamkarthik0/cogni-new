@@ -1,3 +1,4 @@
+"use client"
 
 import FeatureCard from "@/components/layout/FeatureCard";
 import MediaCard from "@/components/layout/MediaCard";
@@ -7,6 +8,8 @@ import { landingQuery } from "@/lib/query";
 import { client } from "@/lib/sanity";
 import Link from "next/link";
 import React from "react";
+import { motion, useInView } from "framer-motion";
+import { useInView as useReactUseInView } from "react-intersection-observer";
 
 const page = async () => {
   const features = [
@@ -47,30 +50,46 @@ const page = async () => {
     <>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* --------------------------Hero Section------------------- */}
-
-        <div className=" space-y-6 pt-16 lg:pt-24">
-        <h1 className="h1 lg:max-w-6xl">Transforming Media & Entertainment with Advanced Data Science and AI Solutions</h1>
-
- 
-        <Button className="btn">CONSULT  WITH AN AI EXPERT</Button>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className=" space-y-6 pt-16 lg:pt-24"
+        >
+          <h1 className="h1 lg:max-w-6xl">Transforming Media & Entertainment with Advanced Data Science and AI Solutions</h1>
+          <Link href="/contact-us"><Button className="btn">CONSULT  WITH AN AI EXPERT</Button></Link>
+        </motion.div>
 
         {/* --------------------------Media Card------------------- */}
-        <div className="pt-12 ">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="pt-12 "
+        >
           <h1 className=" h1">Best Services for Media and Entertainment</h1>
-
           <MediaCard services={data.consultingServices} />
-        </div>
+        </motion.div>
         {/* --------------------------Best AI Techniques------------------- */}
-        <div className=" pt-16 lg:pt-20 ">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className=" pt-16 lg:pt-20 "
+        >
           <h1 className="h1 text-center pb-7">
             Best AI Techniques for Media and Entertainment
           </h1>
           <MediaEntertainment />
-        </div>
+        </motion.div>
 
         {/* --------------------------Media and Entertainment------------------- */}
-        <div className=" pt-16 lg:pt-20">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className=" pt-16 lg:pt-20"
+        >
           <h1 className="h1 max-w-4xl ">
             Why Choose Cogninest AI for Media and Entertainment
           </h1>
@@ -88,12 +107,17 @@ const page = async () => {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* ------------------------------let us solve---------------- */}
 
-      <div className="bg-[#D9D9D9] md:rounded-3xl p-8 text-center lg:max-w-5xl mx-auto my-10 lg:my-16  ">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-[#D9D9D9] md:rounded-3xl p-8 text-center lg:max-w-5xl mx-auto my-10 lg:my-16  "
+      >
         <div className="space-y-6">
           <h2 className="h2  mx-auto w-3/4">
             Ready to Transform Your Media Business?
@@ -110,7 +134,7 @@ const page = async () => {
           </Button>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

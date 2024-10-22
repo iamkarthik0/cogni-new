@@ -21,6 +21,7 @@ const FeatureCard = ({
         variant === 'gray' ? "bg-[#F2F2F2]" : "bg-[#EEF6FF]",
         className
       )}
+      style={{ width: '100%', height: '100%' }}
     >
       <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
         {title}

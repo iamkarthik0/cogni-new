@@ -1,34 +1,80 @@
+"use client"
 import Image from "next/image";
 import React from "react";
+import { motion, useInView } from "framer-motion";
+import { useInView as useReactUseInView } from "react-intersection-observer";
 
 export const BusinessBenefits = () => {
-  return (
-    <div className=" space-y-6">
-      <h1 className="h1 text-center">Business benefits</h1>
+  const [ref, inView] = useReactUseInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
 
-      <p className=" text-center paragraph font-semibold">
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.5 }}
+      className=" space-y-6"
+    >
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        transition={{ duration: 0.5 }}
+        className="h1 text-center"
+      >
+        Business benefits
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        transition={{ duration: 0.5 }}
+        className=" text-center paragraph font-semibold"
+      >
         How AI supports finance and insurance industry
-      </p>
+      </motion.p>
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className=" space-y-4 bg-[#EEEEEE] rounded-[23px] p-4 lg:p-8">
-          <p className=" paragraph font-bold">
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+            className=" paragraph font-bold"
+          >
             Increased Efficiency and Productivity
-          </p>
+          </motion.p>
 
-          <p>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+          >
             AI automates repetitive and time-consuming tasks, allowing employees
             to focus on higher-value activities. This automation streamlines
             operations, reduces human error, and accelerates processes such as
             claims management and underwriting. As a result, organizations
             experience improved efficiency and productivity, ultimately leading
             to cost savings and enhanced operational performance...
-          </p>
+          </motion.p>
         </div>
 
         <div className=" space-y-4 bg-[#EEEEEE] rounded-[23px] p-4 lg:p-8">
-          <p className=" paragraph font-bold">Cost Reduction</p>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+            className=" paragraph font-bold"
+          >
+            Cost Reduction
+          </motion.p>
 
-          <p>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+          >
             The integration of AI technologies helps organizations reduce
             operational costs by optimizing processes and minimizing resource
             requirements. For instance, AI-driven automation in claims
@@ -36,15 +82,24 @@ export const BusinessBenefits = () => {
             need for manual labor and expediting claim resolutions. These cost
             efficiencies enable companies to allocate resources more effectively
             and invest in innovation...
-          </p>
+          </motion.p>
         </div>
 
         <div className=" space-y-4 bg-[#EEEEEE] rounded-[23px] p-4 lg:p-8">
-          <p className=" paragraph font-bold">
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+            className=" paragraph font-bold"
+          >
             Regulatory Compliance and Reporting
-          </p>
+          </motion.p>
 
-          <p>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+          >
             AI can streamline compliance processes by automating the monitoring
             and reporting required to adhere to regulatory standards. Machine
             learning algorithms can analyze transactions and customer
@@ -52,13 +107,24 @@ export const BusinessBenefits = () => {
             reducing the risk of fines and penalties. By improving accuracy and
             efficiency in compliance reporting, organizations can focus more on
             strategic initiatives while maintaining regulatory integrity...
-          </p>
+          </motion.p>
         </div>
 
         <div className=" space-y-4 bg-[#EEEEEE] rounded-[23px] p-4 lg:p-8">
-          <p className=" paragraph font-bold">Data-Driven Decision Making</p>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+            className=" paragraph font-bold"
+          >
+            Data-Driven Decision Making
+          </motion.p>
 
-          <p>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+          >
             AI empowers organizations to make informed, data-driven decisions by
             providing deep insights and predictive analytics. By analyzing
             historical data and market trends, AI systems can identify
@@ -66,23 +132,33 @@ export const BusinessBenefits = () => {
             capability enables finance and insurance companies to refine their
             strategies, optimize product offerings, and enhance overall business
             performance...
-          </p>
+          </motion.p>
         </div>
       </div>
 
       {/* ---------------------------------------------------- */}
 
       <div className=" space-y-8">
-        <h1 className="h1   ">
+        <motion.h1
+          initial={{ opacity: 0, y: 50 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          transition={{ duration: 0.5 }}
+          className="h1   "
+        >
           AI in Finance and Insurance: Implementation challenges
-        </h1>
+        </motion.h1>
 
         {/* ------------------------------------ */}
         <div className=" flex flex-col lg:flex-row  gap-4 lg:gap-0 lg:pt-8 pt-6">
           <div className=" flex  justify-center items-center flex-col lg:flex-row gap-4 lg:w-2/5 order-last lg:order-first ">
-            <p className=" paragraph order-last lg:order-first bg-[#EEEEEE] py-3 px-6 rounded-[23px] text-center">
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5 }}
+              className=" paragraph order-last lg:order-first bg-[#EEEEEE] py-3 px-6 rounded-[23px] text-center"
+            >
               Insufficient or Low-Quality Data
-            </p>
+            </motion.p>
             <Image
               src="/arrow.png"
               alt="arrow"
@@ -93,7 +169,11 @@ export const BusinessBenefits = () => {
           </div>
 
           <div className=" bg-[#EEEEEE] px-7 py-3 rounded-[23px] lg:w-3/5">
-            <p>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5 }}
+            >
               Data quality is essential for the success of AI implementations.
               Many organizations face challenges in providing sufficient,
               high-quality data for training AI models, which can result in
@@ -103,7 +183,7 @@ export const BusinessBenefits = () => {
               results. At Cogninest AI, we focus on enhancing data quality to
               deliver accurate and unbiased AI-driven solutions that empower
               your business.
-            </p>
+            </motion.p>
           </div>
         </div>
         {/* ------------------------------------ */}
@@ -111,9 +191,14 @@ export const BusinessBenefits = () => {
         {/* ------------------------------------ */}
         <div className=" flex flex-col lg:flex-row  gap-4 lg:gap-0">
           <div className=" flex  justify-center items-center flex-col lg:flex-row gap-4 lg:w-2/5 order-last lg:order-first ">
-            <p className=" paragraph order-last lg:order-first bg-[#EEEEEE] py-3 px-6 rounded-[23px] text-center">
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5 }}
+              className=" paragraph order-last lg:order-first bg-[#EEEEEE] py-3 px-6 rounded-[23px] text-center"
+            >
               Outdated Infrastructure
-            </p>
+            </motion.p>
             <Image
               src="/arrow.png"
               alt="arrow"
@@ -124,7 +209,11 @@ export const BusinessBenefits = () => {
           </div>
 
           <div className=" bg-[#EEEEEE] px-7 py-3 rounded-[23px] lg:w-3/5">
-            <p>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5 }}
+            >
               Implementing AI requires advanced infrastructure that can rapidly
               process large volumes of data. Many companies still rely on
               outdated systems that lack the capacity to support the demands of
@@ -133,7 +222,7 @@ export const BusinessBenefits = () => {
               process data efficiently and gain valuable insights. At Cogninest
               AI, we help organizations modernize their infrastructure, ensuring
               they are ready to fully leverage the power of AI.
-            </p>
+            </motion.p>
           </div>
         </div>
         {/* ------------------------------------ */}
@@ -141,9 +230,14 @@ export const BusinessBenefits = () => {
         {/* ------------------------------------ */}
         <div className=" flex flex-col lg:flex-row  gap-4 lg:gap-0">
           <div className=" flex  justify-center items-center flex-col lg:flex-row gap-4 lg:w-2/5 order-last lg:order-first ">
-            <p className=" paragraph order-last lg:order-first bg-[#EEEEEE] py-3 px-6 rounded-[23px] text-center">
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5 }}
+              className=" paragraph order-last lg:order-first bg-[#EEEEEE] py-3 px-6 rounded-[23px] text-center"
+            >
               Ethical and Regulatory Concerns
-            </p>
+            </motion.p>
             <Image
               src="/arrow.png"
               alt="arrow"
@@ -154,7 +248,11 @@ export const BusinessBenefits = () => {
           </div>
 
           <div className=" bg-[#EEEEEE] px-7 py-3 rounded-[23px] lg:w-3/5">
-            <p>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5 }}
+            >
               The adoption of AI brings forth a range of ethical and regulatory
               challenges, such as data privacy, bias, and accountability.
               Organizations must carefully navigate complex legal frameworks
@@ -163,7 +261,7 @@ export const BusinessBenefits = () => {
               helping businesses build solutions that not only meet regulatory
               standards but also foster trust and accountability in their
               operations.
-            </p>
+            </motion.p>
           </div>
         </div>
         {/* ------------------------------------ */}
@@ -171,9 +269,14 @@ export const BusinessBenefits = () => {
         {/* ------------------------------------ */}
         <div className=" flex flex-col lg:flex-row  gap-4 lg:gap-0">
           <div className=" flex  justify-center items-center flex-col lg:flex-row gap-4 lg:w-2/5 order-last lg:order-first ">
-            <p className=" paragraph order-last lg:order-first bg-[#EEEEEE] py-3 px-6 rounded-[23px] text-center">
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5 }}
+              className=" paragraph order-last lg:order-first bg-[#EEEEEE] py-3 px-6 rounded-[23px] text-center"
+            >
               Lack of AI Talent
-            </p>
+            </motion.p>
             <Image
               src="/arrow.png"
               alt="arrow"
@@ -184,7 +287,11 @@ export const BusinessBenefits = () => {
           </div>
 
           <div className=" bg-[#EEEEEE] px-7 py-3 rounded-[23px] lg:w-3/5">
-            <p>
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5 }}
+            >
               The rapid evolution of AI technologies has led to a significant
               skills gap in the workforce. Many organizations face challenges in
               finding qualified professionals with the expertise required to
@@ -193,11 +300,11 @@ export const BusinessBenefits = () => {
               expert consulting and training, ensuring your team is equipped to
               harness the full potential of AI technologies and drive innovation
               within your organization.
-            </p>
+            </motion.p>
           </div>
         </div>
         {/* ------------------------------------ */}
       </div>
-    </div>
+    </motion.div>
   );
 };

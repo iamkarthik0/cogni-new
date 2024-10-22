@@ -1,23 +1,40 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Image from "next/image";
 import { urlFor } from "@/lib/sanity";
+import { motion } from "framer-motion"; // Import motion from framer-motion
+import { useInView } from 'react-intersection-observer'; // Import useInView from react-intersection-observer
 
-const ServiceCard = ({ paragraph, heading, image }:any) => (
-  <div className="bg-white overflow-hidden">
-    <div className="relative h-48">
-      <Image
-        src={urlFor(image).url()}
-        alt="heading"
-        layout="fill"
-        objectFit="cover"
-      />
-    </div>
-    <div className="p-4">
-      <h3 className="h4 mb-2">{heading}</h3>
-      <p className="text-sm text-gray-600">{paragraph}</p>
-    </div>
-  </div>
-);
+const ServiceCard = ({ paragraph, heading, image }:any) => {
+  const [inView, setInView] = useState(false); // State to track if the component is in view
+  const { ref, inView: isNowInView } = useInView({
+    triggerOnce: true,
+    onChange: (inView) => setInView(inView),
+  });
+
+  return (
+    <motion.div 
+      ref={ref}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.95 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white overflow-hidden"
+    >
+      <div className="relative h-48">
+        <Image
+          src={urlFor(image).url()}
+          alt="heading"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+      <div className="p-4">
+        <h3 className="h4 mb-2">{heading}</h3>
+        <p className="text-sm text-gray-600">{paragraph}</p>
+      </div>
+    </motion.div>
+  );
+};
 
 const DsServices = (props:any) => {
   const { title, ServicesCard } = props.data;

@@ -7,19 +7,17 @@ const page = () => {
   return (
     <>
       <div className=" container mx-auto px-4 md:px-6 lg:px-8">
+        <div className=" pt-8 lg:pt-14">
+          <GptHero />
+        </div>
 
-            <div className=" pt-8 lg:pt-14">
-                <GptHero/>
-            </div>
+        <div>
+          <BlogsAndUseCases />
+        </div>
 
-      <div>
-        <BlogsAndUseCases/>
-      </div>
-
-<div className=" py-16 lg:py-20">
-    <ContactCard/>
-
-</div>
+        <div className=" py-16 lg:py-20">
+          <ContactCard />
+        </div>
       </div>
     </>
   );
