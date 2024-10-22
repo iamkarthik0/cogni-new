@@ -35,12 +35,11 @@ const menuItems = [
     dropdown: [
       { title: "Healthcare", href: "/healthcare" },
       { title: "Pharma", href: "/pharma" },
-      { title: " CPG-Industry", href: "/cpg-industry" },
-      { title: " Media", href: "/media" },
+      { title: "CPG-Industry", href: "/cpg-industry" },
+      { title: "Media", href: "/media" },
       { title: " Retail", href: "/retail" },
       { title: "Manufacturing", href: "/ai-manufacturing" },
-
-      { title: "Energy", href: "/energy-industry" },
+       { title: "Energy", href: "/energy-industry" },
       { title: "Finance", href: "/ai-finance" },
     ],
   },
@@ -61,11 +60,6 @@ const menuItems = [
       { title: "Deep Learning", href: "/deep-learning" },
       { title: "Next-Gen Data Solutions", href: "/next-gen" },
       { title: "IDP", href: "/idp" },
-
-      
-     
-
-     
     ],
   },
   { title: "Case Studies", href: "/" },

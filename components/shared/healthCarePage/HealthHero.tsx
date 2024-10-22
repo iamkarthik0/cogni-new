@@ -54,7 +54,7 @@ const HealthHero = () => {
         </AnimatedSection>
 
         <div>
-          {['Healthcare Sales', 'Commercial Marketing', 'Healthcare Sales'].map((title, index) => (
+          {['Healthcare Sales', 'Commercial Marketing', 'Advanced Analytics '].map((title, index) => (
             <AnimatedSection key={index}>
               <motion.div
                 className="p-12 bg-[#F2F2F2] rounded-[50px] space-y-5 mt-14"

@@ -13,33 +13,33 @@ const page = async () => {
 
   const features = [
     {
-      title: "Data-Driven Innovation",
+      title: "Machine Learning & Predictive Analytics",
       description:
-        "We empower CPG businesses with cutting-edge, data-driven solutions that maximize the value of your data assets, driving strategic growth and operational efficiency.",
+        "Critical for asset management, demand forecasting, and operational optimization. These techniques enable precise predictions and proactive management strategies.",
       variant: "gray",
     },
     {
-      title: "Comprehensive Revenue Growth Management (RGM)",
+      title: "Deep Learning & Computer Vision",
       description:
-        "Our RGM solutions leverage advanced AI and Connected Intelligence to optimize pricing, promotions, and assortment strategies, boosting profitability and market competitiveness.",
+        "Essential for analyzing complex data, such as seismic exploration in oil and gas or drone-based inspections of remote infrastructure.",
       variant: "blue",
     },
     {
-      title: "Tailored, Industry-Focused Solutions",
+      title: "Reinforcement Learning",
       description:
-        "From optimized marketing mix analysis to advanced product assortment and distribution strategies, our specialized tools are designed to meet the unique challenges of the CPG industry.",
+        "Used in real-time grid management and energy storage optimization to dynamically adjust to changing conditions.",
       variant: "blue",
     },
     {
-      title: "Proven Demand Forecasting Expertise",
+      title: "Natural Language Processing (NLP)",
       description:
-        "Our adaptive forecasting systems provide real-time insights, allowing businesses to respond swiftly to market shifts, minimize disruptions, and enhance accuracy in decision-making.",
+        "Facilitates the integration of unstructured data from maintenance records, sensor logs, and environmental reports into actionable insights.",
       variant: "gray",
     },
     {
-      title: "Generative AI Leadership",
+      title: "Comprehensive Data Security",
       description:
-        "Stay ahead of the curve with our GenAI-powered tools that revolutionize your business growth, offering seamless automation and innovative solutions for a competitive edge in today's fast-evolving market.",
+        "We prioritize the security of your data. Our solutions are designed with robust security protocols to ensure that all sensitive information is protected, giving you peace of mind while driving your business forward.",
       variant: "gray",
     },
     {
@@ -94,23 +94,21 @@ const page = async () => {
         {/* ---------------------------- */}
 
         <div className="bg-[#D9D9D9] md:rounded-3xl p-8 text-center lg:max-w-5xl mx-auto my-10 lg:my-16  ">
-        <div className="space-y-6">
-          <h2 className="h2  mx-auto w-3/4">
-            Ready to Transform Your Media Business?
-          </h2>
-          <p className=" paragraph lg:mx-8">
-            Leverage the power of data science and AI to stay ahead in the
-            competitive media and entertainment industry. Whether you want to
-            boost viewer engagement, streamline operations, or unlock new
-            revenue streams, Cogninest AI is your partner in innovation.
-          </p>
-          <Link href="/contact-us">
-          <Button className="btn text-center text-wrap py-7 lg:py-0 my-4">
-            Contact us today to start your transformation journey!
-          </Button>
-          </Link>
+          <div className="space-y-6">
+            <h2 className="h2  mx-auto w-3/4">
+              Ready to Transform Your Energy Business?
+            </h2>
+            <p className=" paragraph lg:mx-8">
+              Discover the Future of Energy Management with Cogninest AI!
+            </p>
+            <Link href="/contact-us">
+              <Button className="btn text-center text-wrap py-7 lg:py-0 my-4">
+                Schedule a consultation to see how our solutions can drive your
+                energy business forward.
+              </Button>
+            </Link>
+          </div>
         </div>
-      </div>
       </div>
     </>
   );

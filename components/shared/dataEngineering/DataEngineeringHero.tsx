@@ -35,7 +35,7 @@ const DataEngineeringHero = () => {
             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
             transition={{ duration: 0.5 }}
           >
-            <Link href="contact-us"><Button className="btn">Discuss your business case</Button></Link>
+            <Link href="/contact-us"><Button className="btn">Discuss your business case</Button></Link>
           </motion.div>
         </div>
 
@@ -122,7 +122,7 @@ const DataEngineeringHero = () => {
                 animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
                 transition={{ duration: 0.5 }}
               >
-                <Button className="btn"> Make your data reliable now...</Button>
+           <Link href="/contact-us">     <Button className="btn"> Make your data reliable now...</Button></Link>
               </motion.div>
             </div>
           </div>

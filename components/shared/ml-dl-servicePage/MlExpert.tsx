@@ -28,7 +28,7 @@ const MlExpert = () => {
           className="lg:w-2/3 flex"
         >
           <Image
-            src="/serviceso.png"
+            src="/mlExpert.png"
             alt="Person using computer with data visualizations"
             width={759}
             height={494}

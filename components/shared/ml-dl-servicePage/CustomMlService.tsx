@@ -51,7 +51,7 @@ const CustomMlService = () => {
           className="lg:w-1/2 flex"
         >
           <Image
-            src="/serviceso.png"
+            src="/mldlG.png"
             alt="Person using computer with data visualizations"
             width={539}
             height={340}

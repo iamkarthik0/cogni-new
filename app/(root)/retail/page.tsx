@@ -1,3 +1,5 @@
+import BlogsAndUseCases from "@/components/layout/BlogAndUseCase";
+import ContactCard from "@/components/layout/ContactCard";
 import FeatureCard from "@/components/layout/FeatureCard";
 import RetailHero from "@/components/shared/retailPage/RetailHero";
 import RetailStrategy from "@/components/shared/retailPage/RetailStrategy";
@@ -9,33 +11,33 @@ import React from "react";
 const page = () => {
   const features = [
     {
-      title: "Data-Driven Innovation",
+      title: "Proven Track Record",
       description:
-        "We empower CPG businesses with cutting-edge, data-driven solutions that maximize the value of your data assets, driving strategic growth and operational efficiency.",
+        "With a portfolio of successful projects across the retail sector, Cogninest AI has consistently delivered measurable results. From boosting sales and enhancing customer engagement to optimizing supply chains, our solutions have transformed businesses and driven growth.",
       variant: "gray",
     },
     {
-      title: "Comprehensive Revenue Growth Management (RGM)",
+      title: "Tailored Strategies for Every Business",
       description:
-        "Our RGM solutions leverage advanced AI and Connected Intelligence to optimize pricing, promotions, and assortment strategies, boosting profitability and market competitiveness.",
+        "We understand that every retail business is unique. That’s why we offer customized AI solutions that align with your specific goals, whether it’s improving in-store experiences, optimizing e-commerce platforms, or enhancing operational efficiency.",
       variant: "blue",
     },
     {
-      title: "Tailored, Industry-Focused Solutions",
+      title: "End-to-End Support",
       description:
-        "From optimized marketing mix analysis to advanced product assortment and distribution strategies, our specialized tools are designed to meet the unique challenges of the CPG industry.",
+        "Our commitment doesn’t end at implementation. Cogninest AI provides comprehensive support and training to ensure that your team can fully leverage our solutions. We work closely with your team to monitor performance, make necessary adjustments, and continuously improve outcomes.",
       variant: "blue",
     },
     {
-      title: "Proven Demand Forecasting Expertise",
+      title: "Innovation at the Core",
       description:
-        "Our adaptive forecasting systems provide real-time insights, allowing businesses to respond swiftly to market shifts, minimize disruptions, and enhance accuracy in decision-making.",
+        "We stay ahead of the curve by integrating the latest AI advancements into our offerings. Whether it’s deploying cutting-edge NLP models or incorporating AR for enhanced customer engagement, Cogninest AI ensures your business benefits from the most innovative technologies available.",
       variant: "gray",
     },
     {
-      title: "Generative AI Leadership",
+      title: "Comprehensive Data Security",
       description:
-        "Stay ahead of the curve with our GenAI-powered tools that revolutionize your business growth, offering seamless automation and innovative solutions for a competitive edge in today's fast-evolving market.",
+        "We prioritize the security of your data. Our solutions are designed with robust security protocols to ensure that all sensitive information is protected, giving you peace of mind while driving your business forward.",
       variant: "gray",
     },
     {
@@ -83,6 +85,9 @@ const page = () => {
         {/* ------------------------------Growth----------------- */}
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12  pt-16 lg:pt-24">
+          <h4 className=" paragraph text-[#0055A7] font-semibold text-center">
+            Generative AI
+          </h4>
           <h1 className="text-center h1 max-w-5xl mx-auto ">
             Revolutionize Your Business Growth with GenAI
           </h1>
@@ -124,11 +129,19 @@ const page = () => {
               your goals.
             </p>
             <Link href="/contact-us">
-            <Button className="btn text-center text-wrap py-7 lg:py-0">
-            Contact us today to start your transformation journey!
-            </Button>
+              <Button className="btn text-center text-wrap py-7 lg:py-0 my-7">
+                Contact us today to start your transformation journey!
+              </Button>
             </Link>
           </div>
+        </div>
+
+        <div>
+          <BlogsAndUseCases />
+        </div>
+
+        <div>
+          <ContactCard />
         </div>
       </div>
     </>
