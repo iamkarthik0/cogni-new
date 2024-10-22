@@ -10,6 +10,12 @@ const DeepMain = () => {
       title: "Business value exploration",
       description: "Cogninest AI experts in deep learning consulting will define your business problem and come up with an appropriate way to solve it with deep learning — or an alternative AI subset. We will assess the viability of deep learning implementation with the specifics of your business in mind...",
     },
+
+    {
+      title: "Deep learning readiness assessment",
+      description: "We will evaluate your infrastructure data to understand if your organization is ready to adopt deep learning. Our consultants will nail down recommendations to improve your data-maturity and infrastructure — or recommend an alternative technology route...",
+    },
+
     {
       title: "Exploratory data analysis",
       description: "We will dig into your data to validate it’s a good fit for training algorithms. If you don’t have enough data points, no worries. An experienced deep learning consulting services vendor, we will develop an optimum strategy to compensate for the lack, as well as help clean, process, and label data...",

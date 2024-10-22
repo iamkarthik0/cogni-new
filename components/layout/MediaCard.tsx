@@ -26,7 +26,7 @@ export default function MediaCard(props: any) {
           >
             <Card
               key={index}
-              className={`group bg-[#D9D9D9]  hover:bg-[#0055A7] transition-all duration-300 ease-in-out cursor-pointer rounded-none h-[100%] w-[100%]`}
+              className={`group bg-[#D9D9D9]  hover:bg-[#0055A7] transition-all duration-300 ease-in-out cursor-pointer rounded-none h-[100%] w-[100%] pb-24`}
             >
               <CardHeader>
                 <CardTitle className="text-xl font-semibold group-hover:text-white transition-colors duration-300 ease-in-out">

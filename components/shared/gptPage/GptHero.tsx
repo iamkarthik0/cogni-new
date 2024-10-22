@@ -21,6 +21,30 @@ const GptHero = () => {
       controls.start("visible")
     }
   }, [controls, inView])
+  const card = [
+    {
+      heading: "Analysis and research",
+      paragraph:
+        "Integrating ChatGPT into analysis and research processes empowers businesses to extract valuable insights from vast amounts of data. ChatGPT can conduct market research, sentiment analysis, trend forecasting, and other analytical tasks, enabling data-driven decision-making and strategic planning.",
+    },
+    {
+      heading: "Content creation",
+      paragraph:
+        "Integrating ChatGPT into analysis and research processes empowers businesses to extract valuable insights from vast amounts of data. ChatGPT can conduct market research, sentiment analysis, trend forecasting, and other analytical tasks, enabling data-driven decision-making and strategic planning.",
+    },
+    {
+      heading: "Virtual assistants ",
+      paragraph:
+        "With ChatGPT integration services, businesses can leverage intelligent chatbots equipped with human-like abilities. These virtual assistants provide round-the-clock customer support, assisting customers with their queries, providing product recommendations, and facilitating seamless transactions. By ensuring 24/7 availability and personalized assistance,",
+    },
+    {
+      heading: "Business process automation",
+      paragraph:
+        "ChatGPT integration services enable businesses to automate key processes, reducing manual intervention and streamlining workflows. By automating repetitive tasks and workflows, businesses can optimize their resources, increase operational efficiency, and allocate their workforce to more strategic initiatives.",
+    },
+   
+    
+  ];
 
   const features = [
     {
@@ -30,33 +54,33 @@ const GptHero = () => {
       variant: "gray",
     },
     {
-      title: "Comprehensive Revenue Growth Management (RGM)",
+      title: "Custom application development with ChatGPT",
       description:
-        "Our RGM solutions leverage advanced AI and Connected Intelligence to optimize pricing, promotions, and assortment strategies, boosting profitability and market competitiveness.",
+        "We specialize in developing custom applications tailored to your specific needs and requirements. By incorporating ChatGPT into these applications, we ensure maximum effectiveness and efficiency, empowering your business to achieve its goals.",
       variant: "gray",
     },
     {
-      title: "Tailored, Industry-Focused Solutions",
+      title: "GPT application development services",
       description:
-        "From optimized marketing mix analysis to advanced product assortment and distribution strategies, our specialized tools are designed to meet the unique challenges of the CPG industry.",
+        "With our expertise in application development, we create native or cross-platform apps that leverage the latest technology. By integrating ChatGPT into your applications, we enhance the user experience and drive greater user engagement, ensuring your software stands out in the market.",
       variant: "gray",
     },
     {
-      title: "Proven Demand Forecasting Expertise",
+      title: "Chat GPT API integration",
       description:
-        "Our adaptive forecasting systems provide real-time insights, allowing businesses to respond swiftly to market shifts, minimize disruptions, and enhance accuracy in decision-making.",
+        "Our team of experts analyzes your product, identifies opportunities for integration with the latest Chat GPT API, and creates a roadmap for implementation. By integrating the API into your product, you can deliver a higher level of functionality and user experience, gaining a competitive edge in your industry.",
       variant: "gray",
     },
     {
-      title: "Generative AI Leadership",
+      title: "Chatbot integration",
       description:
-        "Stay ahead of the curve with our GenAI-powered tools that revolutionize your business growth, offering seamless automation and innovative solutions for a competitive edge in today's fast-evolving market.",
+        "Leveraging the power of GPT-powered chatbots, we enable your business to generate natural and contextually relevant responses. ChatGPT integration services allow you to reduce your workforce while maintaining efficient processes, ensuring smooth customer interactions and improved operational efficiency.",
       variant: "gray",
     },
     {
-      title: "Generative AI Leadership",
+      title: "Voice assistant integration",
       description:
-        "Stay ahead of the curve with our GenAI-powered tools that revolutionize your business growth, offering seamless automation and innovative solutions for a competitive edge in today's fast-evolving market.",
+        "Our expertise extends to ChatGPT integration with voice-first applications, enabling seamless voice commands and responses. By integrating ChatGPT with voice assistants, your users can interact with your applications using voice inputs, adding a layer of convenience and efficiency.",
       variant: "gray",
     },
   ]
@@ -103,7 +127,7 @@ const GptHero = () => {
           </motion.p>
           <Link href="contact-us">
             <motion.div variants={itemVariants}>
-              <Button className="btn">Let's Talk</Button>
+              <Button className="btn">Talk to our experts</Button>
             </motion.div>
           </Link>
         </div>
@@ -159,7 +183,7 @@ const GptHero = () => {
           variants={containerVariants}
         >
           <AnimatePresence mode="wait">
-            {[1, 2, 3, 4].map((_, index) => (
+            {card.map((data, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -176,17 +200,12 @@ const GptHero = () => {
                 >
                   <CardHeader>
                     <CardTitle className="text-xl font-semibold group-hover:text-white transition-colors duration-300 ease-in-out">
-                      Analysis and research
+                     {data.heading}
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <p className="text-sm group-hover:text-white transition-colors duration-300 ease-in-out">
-                      Integrating ChatGPT into analysis and research processes
-                      empowers businesses to extract valuable insights from vast
-                      amounts of data. ChatGPT can conduct market research,
-                      sentiment analysis, trend forecasting, and other analytical
-                      tasks, enabling data-driven decision-making and strategic
-                      planning.
+         {data.paragraph}
                     </p>
                   </CardContent>
                 </motion.div>

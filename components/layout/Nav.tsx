@@ -59,7 +59,11 @@ const menuItems = [
       { title: "Computer Vision", href: "/computer-vision" },
       { title: "Deep Learning", href: "/deep-learning" },
       { title: "Next-Gen Data Solutions", href: "/next-gen" },
+      { title: "AI-Strategy", href: "/ai-strategy" },
       { title: "IDP", href: "/idp" },
+     
+
+     
     ],
   },
   { title: "Case Studies", href: "/" },
