@@ -183,7 +183,7 @@ const PharmaHero = () => {
       <AnimatedSection>
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-9 pt-16 lg:pt-20">
           <motion.div
-            className="lg:w-1/2"
+            className="lg:w-1/2 "
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
@@ -195,7 +195,7 @@ const PharmaHero = () => {
               className="aspect-square h-[400px] lg:h-[503px]"
             />
           </motion.div>
-          <div className="order-first lg:order-last lg:w-1/2 space-y-4 lg:space-y-6 flex justify-center flex-col">
+          <div className="order-first  lg:w-1/2 space-y-4 lg:space-y-6 flex justify-center flex-col">
             <motion.h1
               className="h1"
               initial={{ opacity: 0, y: -20 }}

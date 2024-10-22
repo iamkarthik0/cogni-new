@@ -1,13 +1,19 @@
+import Link from "next/link";
+import React from "react";
 import FeatureCard from "@/components/layout/FeatureCard";
 import MediaCard from "@/components/layout/MediaCard";
-import ManufacturingHero from "@/components/shared/manufacturingPage/ManufacturingHero";
+
 import WhyCogninest from "@/components/shared/manufacturingPage/WhyCogninest";
 import { Button } from "@/components/ui/button";
 import { landingQuery } from "@/lib/query";
 import { client } from "@/lib/sanity";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+
+const ManufacturingHero = dynamic(
+  () => import("@/components/shared/manufacturingPage/ManufacturingHero"),
+  { ssr: false }
+);
 
 const page = async () => {
   const data = await client.fetch(landingQuery);
@@ -46,13 +52,9 @@ const page = async () => {
   return (
     <>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div>
-          <ManufacturingHero />
-        </div>
+        <div><ManufacturingHero /></div>
 
-        <div className=" pt-16 lg:pt-20">
-          <WhyCogninest />
-        </div>
+        <div className=" pt-16 lg:pt-20"><WhyCogninest /></div>
 
         <div className=" pt-10 lg:pt-16">
           <h1 className="h1 text-center">Best Services for Manufacturing</h1>
@@ -95,7 +97,9 @@ const page = async () => {
 
               <div>
                 {" "}
-                <Button className=" btn ">CONTACT US</Button>
+                <Link href="/contact-us">
+                  <Button className=" btn ">CONTACT US</Button>
+                </Link>
               </div>
             </div>
             <div className=" lg:w-1/2 flex  justify-center items-center">

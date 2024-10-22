@@ -56,10 +56,7 @@ export const landingQuery = `*[_type == "landingPage"][0]{
         ServicesCard[] {
           heading,
           paragraph,
-          serviceAction {
-            text,
-            link
-          }
+          link
         }
       },
    consultingServices {

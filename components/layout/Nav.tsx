@@ -66,7 +66,7 @@ const menuItems = [
      
     ],
   },
-  { title: "Case Studies", href: "/" },
+  { title: "Case Studies", href: "/case-studies" },
   { title: "Blogs", href: "/blogs" },
   { title: "About Us", href: "/about-us" },
 ];

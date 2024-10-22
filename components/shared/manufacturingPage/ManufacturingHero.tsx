@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView as useReactUseInView } from "react-intersection-observer";
 
 const ManufacturingHero = () => {
@@ -57,15 +57,13 @@ const ManufacturingHero = () => {
           transition={{ duration: 0.5 }}
           className="lg:w-1/2 flex justify-end items-center pt-6"
         >
-          <div className="relative w-full aspect-[4/3] lg:aspect-square overflow-hidden shadow-xl">
-            <Image
-              src="/ai-manufacturing.png"
-              alt="Business professionals analyzing data"
-              fill
-              className="object-cover rounded-[24px]"
-              sizes="(max-width: 768px) 100vw, 50vw "
-            />
-          </div>
+          <Image
+            src="/ai-manufacturing.png"
+            alt="manu"
+            width={441}
+            height={487}
+            className="rounded-[24px]"
+          />
         </motion.div>
       </div>
     </div>

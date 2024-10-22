@@ -1,20 +1,19 @@
 import BlogsAndUseCases from "@/components/layout/BlogAndUseCase";
 import ContactCard from "@/components/layout/ContactCard";
-import DataScienceConsulting from "@/components/layout/DataScienceConsulting";
+
 import CustomPredictive from "@/components/shared/predictiveModelingPage/CustomPredictive";
 import PredictiveHero from "@/components/shared/predictiveModelingPage/PredictiveHero";
 import { Button } from "@/components/ui/button";
-import { landingQuery } from "@/lib/query";
-import { client } from "@/lib/sanity";
-import Image from "next/image";
+
+
 import Link from "next/link";
 import React from "react";
 
 const page = async () => {
-  const data = await client.fetch(landingQuery);
+  
   return (
     <>
-      <PredictiveHero data={data}/>
+      <PredictiveHero />
 
       {/* ---------------  Our Experts Section--------------- */}
 

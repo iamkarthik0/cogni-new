@@ -7,10 +7,12 @@ import { useInView } from "react-intersection-observer";
 interface ServiceCardProps {
   heading: string;
   paragraph: any;
+  link:string
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ heading, paragraph }) => {
-  const [ref, inView] = useInView({
+const ServiceCard: React.FC<ServiceCardProps> = ({ heading, paragraph,link }) => {
+
+  const [ref, inView] = useInView({ 
     triggerOnce: true,
     threshold: 0.1,
   });
@@ -45,7 +47,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ heading, paragraph }) => {
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <Link href="/">
+        <Link href={link}>
           <Button className="btn group-hover:from-white-500  group-hover:from-[#ffff] group-hover:to-[#ffff]   group-hover:text-[#0055A7] transition-all duration-300">
             EXPLORE MORE
           </Button>

@@ -1,14 +1,14 @@
-"use client";
+
 
 import FeatureCard from "@/components/layout/FeatureCard";
 import MediaCard from "@/components/layout/MediaCard";
 import MediaEntertainment from "@/components/shared/mediaPage/MediaEntertainment";
+import MediaHero from "@/components/shared/mediaPage/MediaHero";
 import { Button } from "@/components/ui/button";
 import { landingQuery } from "@/lib/query";
 import { client } from "@/lib/sanity";
 import Link from "next/link";
 import React from "react";
-import { motion } from "framer-motion";
 
 const page = async () => {
   const features = [
@@ -48,107 +48,51 @@ const page = async () => {
   return (
     <>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* --------------------------Hero Section------------------- */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="pt-16 lg:pt-24 "
-        >
-          <h1 className="h1 lg:max-w-6xl">
-            Transforming Media & Entertainment with Advanced Data Science and AI
-            Solutions
-          </h1>
+       
 
-          <Link href="/contact-us" className=" my-5">
-            <Button className="btn my-6">CONSULT WITH AN AI EXPERT</Button>
-          </Link>
-        </motion.div>
+      <MediaHero/>
 
-        <div className=" pt-6 lg:pt-10">
-          <div className=" p-10 lg:p-20 space-y-5 bg-[#EEEEEE]  rounded-[23px] ">
-            <h1 className=" h3">
-              Introduction of Company and Why Cogninest AI is the Best for Media
-              and Entertainment
-            </h1>
-            <p>
-              Cogninest AI is a leading provider of data science and artificial
-              intelligence solutions tailored to the dynamic needs of the media
-              and entertainment industry. Our mission is to empower
-              organizations with cutting-edge AI technologies that revolutionize
-              content creation, audience engagement, and operational efficiency.
-            </p>
 
-            <p>
-              We offer a comprehensive suite of services, including predictive
-              analytics, machine learning, and natural language processing, that
-              enable media companies to unlock new revenue streams, optimize
-              content strategies, and enhance viewer experiences. Partner with
-              Cogninest AI to harness the power of data and AI for a competitive
-              edge in the ever-evolving media landscape.
-            </p>
-          </div>
-        </div>
+
+
 
         {/* --------------------------Media Card------------------- */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="pt-12 "
-        >
+        <div className="pt-12 ">
           <h1 className=" h1">Best Services for Media and Entertainment</h1>
           <MediaCard services={data.consultingServices} />
-        </motion.div>
+        </div>
         {/* --------------------------Best AI Techniques------------------- */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className=" pt-16 lg:pt-20 "
-        >
+        <div className=" pt-16 lg:pt-20 ">
           <h1 className="h1 text-center pb-7">
             Best AI Techniques for Media and Entertainment
           </h1>
           <MediaEntertainment />
-        </motion.div>
+        </div>
 
         {/* --------------------------Media and Entertainment------------------- */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className=" pt-16 lg:pt-20"
-        >
+        <div className=" pt-16 lg:pt-20">
           <h1 className="h1 max-w-4xl ">
             Why Choose Cogninest AI for Media and Entertainment
           </h1>
           <div className="pt-7">
             <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
               {features.map((data, index) => (
-                <>
-                  <FeatureCard
-                    key={index}
-                    variant={data.variant}
-                    title={data.title}
-                    description={data.description}
-                  />
-                </>
+                <FeatureCard
+                  key={index}
+                  variant={data.variant}
+                  title={data.title}
+                  description={data.description}
+                />
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* ------------------------------let us solve---------------- */}
 
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="bg-[#D9D9D9] md:rounded-3xl p-8 text-center lg:max-w-5xl mx-auto my-10 lg:my-16  "
-      >
+      <div className="bg-[#D9D9D9] md:rounded-3xl p-8 text-center lg:max-w-5xl mx-auto my-10 lg:my-16  ">
         <div className="space-y-7">
           <h2 className="h2  mx-auto w-3/4">
             Ready to Transform Your Media Business?
@@ -165,7 +109,7 @@ const page = async () => {
             </Button>
           </Link>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };

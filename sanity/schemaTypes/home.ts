@@ -135,21 +135,9 @@ export default defineType({
                   type: "text",
                 }),
                 defineField({
-                  name: "serviceAction",
-                  title: "Service Button",
-                  type: "object",
-                  fields: [
-                    defineField({
-                      name: "text",
-                      title: "Button Text",
-                      type: "string",
-                    }),
-                    defineField({
-                      name: "link",
-                      title: "Button Link",
-                      type: "url",
-                    }),
-                  ],
+                  name: "link",
+                  title: "Redirect Link",
+                  type: "string",
                 }),
               ],
             },
