@@ -28,7 +28,7 @@ const ManufacturingHero = () => {
               transition={{ duration: 0.5 }}
               className="h1"
             >
-              Unlock the Power of Data to Drive Your CPG Success.
+              Revolutionizing Manufacturing with Data Science: Cogninest AI
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 50 }}
@@ -36,15 +36,13 @@ const ManufacturingHero = () => {
               transition={{ duration: 0.5 }}
               className="text-gray-600 text-lg leading-relaxed max-w-xl"
             >
-              Leverage the power of data-driven innovation to help your CPG
-              business thrive. Our specialized business-focused application
-              accelerators provide the tools and strategies needed to maximize
-              value from your data assets. By integrating a connected
-              infrastructure, we enable clients to fully capitalize on critical
-              business functions like Revenue Growth Management (RGM) and
-              Marketing. Our tailored solutions are built to overcome complex
-              challenges, empowering businesses to create long-term success and
-              operational efficiencies.
+              Cogninest AI is at the forefront of transforming the manufacturing
+              industry through cutting-edge data science solutions. By
+              leveraging advanced analytics, artificial intelligence (AI), and
+              machine learning, we help manufacturers optimize their operations,
+              reduce costs, and achieve sustainable growth. Our innovative
+              approach empowers manufacturing businesses to overcome complex
+              challenges and stay competitive in a rapidly evolving market.
             </motion.p>
           </div>
         </motion.div>

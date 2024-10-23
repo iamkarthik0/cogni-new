@@ -38,7 +38,7 @@ const page = async () => {
         "Optimize production processes and resources with intelligent scheduling tools that adapt to changing demands.",
     },
     {
-      heading: "Demand Forecastin",
+      heading: "Demand Forecasting",
       paragraph:
         "Leverage data science to accurately predict product demand and align production with market needs.",
     },
