@@ -68,9 +68,9 @@ const SecondSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="flex-1 flex flex-col items-center justify-center space-y-6"
+          className="flex-1 flex flex-col  justify-center space-y-6"
         >
-          <h1 className="h1">Shape Your Proven AI Strategy</h1>
+          <h1 className="h3">Shape Your Proven AI Strategy</h1>
           <p className="subtle-text">
             At Cogninest AI, we strongly believe that Vertical AI Strategy has
             become a crucial element in today’s technology-driven businesses. By
@@ -90,7 +90,7 @@ const SecondSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="h1 text-center"
+          className="h2 text-center"
         >
           Best Services for Manufacturing
         </motion.h1>

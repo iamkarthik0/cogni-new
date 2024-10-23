@@ -70,7 +70,7 @@ const DeepHero = () => {
       </motion.div>
 
       <div className=" space-y-8 pt-10 lg:pt-20">
-        <h1 className=" h1">
+        <h1 className=" h2">
           A full spectrum of deep learning consulting services
         </h1>
         <p>

@@ -81,7 +81,7 @@ const DocumentHero = () => {
           effectively.
         </motion.p>
 
-        <motion.h1 className="h1 text-center" variants={itemVariants}>
+        <motion.h1 className="h2 text-center" variants={itemVariants}>
           About Document AI
         </motion.h1>
 

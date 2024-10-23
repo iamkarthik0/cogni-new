@@ -59,7 +59,7 @@ const IdpMain = () => {
             <div className={`relative flex flex-col lg:flex-row gap-6 ${section.reverse ? 'lg:flex-row-reverse' : ''}`}>
               <div className="flex-1 space-y-4">
                 <motion.h1
-                  className="h1"
+                  className="h2"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2, duration: 0.5 }}

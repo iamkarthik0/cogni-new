@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 import { groq } from "next-sanity";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "http://localhost:3000";
+  const baseUrl = "https://cogninest.ai";
 
   // Sanity se saare documents fetch karo jinme slug defined hai
   const query = groq`*[defined(slug.current)] {

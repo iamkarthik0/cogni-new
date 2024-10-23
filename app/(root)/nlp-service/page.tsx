@@ -78,7 +78,7 @@ const page = async () => {
         {/* ---------------------------Hero Section--------------------- */}
 
         <div className=" flex flex-col gap-8  text-left lg:pt-14">
-          <h1 className=" h1">
+          <h1 className=" h2">
             Convert your unstructured data into insights with NLP techniques...
           </h1>
           <p className=" subtle-text">
@@ -106,7 +106,7 @@ const page = async () => {
       {/* ---------------DataScienceConsulting Component--------------- */}
 
       <div className=" pt-10 lg:pt-16">
-          <h1 className="h1 text-center">Best Services for Manufacturing</h1>
+          <h1 className="h3 text-center">Best Services for Manufacturing</h1>
           <div>
             <MediaCard services={{card}} />
           </div>

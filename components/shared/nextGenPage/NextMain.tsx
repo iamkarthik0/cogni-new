@@ -87,7 +87,7 @@ export const NextMain = () => {
     <div>
       <AnimatedSection>
         <div className="space-y-8">
-          <h1 className="h1">
+          <h1 className="h2">
             We Consult and Partner With Our Clients In their Journey to Become a
             Data-driven Organization, Providing Specific or End-to-end Data
             Services and Expertise:
@@ -130,7 +130,7 @@ export const NextMain = () => {
 
       <AnimatedSection>
         <div className="space-y-8 pt-8 lg:pt-16">
-          <h1 className="h1">Our Big Data Service Capabilities</h1>
+          <h1 className="h2">Our Big Data Service Capabilities</h1>
           <p>
             We partner with businesses anywhere they are in their journey to
             extract value from data and turn them into actionable insights –
@@ -179,7 +179,7 @@ export const NextMain = () => {
       <AnimatedSection>
         <div className="space-y-6 pt-8 lg:pt-14">
           <div className="space-y-8">
-            <h1 className="h1">
+            <h1 className="h2">
               See How our Next-Gen Data Solutions can Help your Business Grow
             </h1>
             <p>
@@ -213,7 +213,7 @@ export const NextMain = () => {
 
       <AnimatedSection>
         <div className="pt-10 lg:pt-20 space-y-6">
-          <h1 className="h1">Get The Cogninest AI Advantage</h1>
+          <h1 className="h2">Get The Cogninest AI Advantage</h1>
           <p>
             We help you to break down siloes, use boilerplates to reduce
             security risks, and optimize your data storage and processing costs.

@@ -61,7 +61,7 @@ const DeepMain = () => {
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className=" h4 group-hover:text-white">{section.title}</h2>
+                <h2 className=" paragraph font-bold text-center group-hover:text-white">{section.title}</h2>
                 <p className=" group-hover:text-white">{section.description}</p>
               </motion.div>
             );
@@ -73,7 +73,7 @@ const DeepMain = () => {
           <div className=" flex justify-center">
             <Button className=" btn">Discuss your need with our team...</Button>
           </div>
-          <h1 className=" h1">Deep learning solutions in focus</h1>
+          <h1 className=" h2">Deep learning solutions in focus</h1>
 
           <p>
             Deep learning practitioners ourselves, we know how to craft powerful

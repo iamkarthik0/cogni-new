@@ -31,7 +31,7 @@ const CustomMlService = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="h1 text-left"
+            className="h2 text-left"
           >
             Custom ML Services Tailored To Your Unique Business Needs:
           </motion.h1>

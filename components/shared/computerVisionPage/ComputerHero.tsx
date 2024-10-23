@@ -76,7 +76,7 @@ const ComputerHero = () => {
       </motion.div>
 
       <div className=" space-y-8 pt-10 lg:pt-20">
-        <h1 className=" h1">
+        <h1 className=" h2">
           Improve your business process efficiency with custom-built computer
           vision solutions
         </h1>

@@ -144,7 +144,7 @@ const GptHero = () => {
 
       <motion.div className="space-y-10 pt-16 lg:pt-20" variants={containerVariants}>
         <motion.h1
-          className="h1 lg:max-w-1/2"
+          className="h2 lg:max-w-1/2"
           variants={itemVariants}
         >
           Cogninest AI ChatGPT Integration services include
@@ -172,7 +172,7 @@ const GptHero = () => {
 
       <motion.div className="space-y-16 pt-16 lg:pt-20" variants={containerVariants}>
         <motion.h1
-          className="h1 text-center"
+          className="h2 text-center"
           variants={itemVariants}
         >
           Unlocking the vast potential of ChatGPT integration

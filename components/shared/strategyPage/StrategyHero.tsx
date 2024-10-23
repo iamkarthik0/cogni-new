@@ -65,17 +65,17 @@ const StrategyHero = () => {
         </div>
       </div>
 
-      <div className="p-8 lg:p-16 space-y-8">
+      <div className="p-8 lg:p-24 space-y-8">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="h1"
+          className="h2"
         >
           Artificial Intelligence & Machine Learning Strategy
         </motion.h1>
 
-        <div className="flex flex-col lg:flex-row w-full overflow-hidden space-y-8 lg:space-y-0">
+        <div className="flex flex-col lg:flex-row w-full overflow-hidden space-y-8 lg:space-y-0 lg:pt-24 ">
           <div className="space-y-3 lg:max-w-xl">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -109,13 +109,13 @@ const StrategyHero = () => {
             </motion.p>
           </div>
 
-          <div className="md:translate-x-8">
-            <div className="p-8 lg:p-14 rounded-[23px] md:rounded-[52px] space-y-5 bg-[#D9D9D9] lg:translate-x-10">
+          <div className="md:translate-x-8 ">
+            <div className=" p-10 lg:py-24  lg:pl-16  rounded-[23px] md:rounded-[52px] space-y-5 bg-[#D9D9D9] lg:translate-x-32 ">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="h1"
+                className="h3 lg:max-w-xl"
               >
                 Ready to discuss your requirements?
               </motion.h1>

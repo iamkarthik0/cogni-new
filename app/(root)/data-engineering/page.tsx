@@ -63,12 +63,12 @@ const page = async () => {
               Actionable insights with right data strategy and robust platform
             </h4>
 
-            <h1 className=" h2 text-[#0055A7]">SERVICES</h1>
+            <h1 className=" h3 text-[#0055A7]">SERVICES</h1>
 
             <BlogCard data={blogContent} />
           </div>
           <div className="pt-12 md:pt-18 lg:pt-20 text-center space-y-8">
-            <h1 className=" h2 text-[#0055A7]">SOLUTIONS</h1>
+            <h1 className=" h3 text-[#0055A7]">SOLUTIONS</h1>
 
             <BlogCard data={blogContent} />
           </div>
@@ -104,7 +104,7 @@ const page = async () => {
         {/* -------------------------Why Choose us Section ---------------- */}
 
         <div className=" pt-16 lg:pt-24  pb-8 lg:pb-16">
-          <div className="py-16 lg:py-24 text-center  bg-[#F2F2F2] max-w-5xl mx-auto rounded-[50px]  space-y-8 h2 ">
+          <div className="py-16 lg:py-24 text-center  bg-[#F2F2F2] max-w-5xl mx-auto rounded-[50px]  space-y-8 h3 ">
             <h1>Engineer a robust data foundation with us</h1>
 
             <div>

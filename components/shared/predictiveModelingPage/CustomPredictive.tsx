@@ -35,7 +35,7 @@ const CustomPredictive = () => {
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="h1">
+        <h1 className="h2">
           Custom Predictive Analytics Software Can Support Your Business in Many
           Ways
         </h1>

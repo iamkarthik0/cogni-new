@@ -67,15 +67,15 @@ export const MainSection = () => {
       {/* Header Section */}
       <motion.div
         ref={headerRef}
-        className="flex flex-col lg:flex-row p-20 bg-[#EEEEEE] rounded-[23px] gap-8"
+        className="flex flex-col lg:flex-row p-16 bg-[#EEEEEE] rounded-[23px] gap-12"
         initial="hidden"
         animate={headerInView ? "visible" : "hidden"}
       >
         <motion.div 
-          className="flex text-center lg:text-left lg:items-center"
+          className="flex text-center lg:text-left lg:items-center  "
           variants={slideIn('left')}
         >
-          <h1 className="h1 lg:max-w-xl">
+          <h1 className="h2 lg:max-w-xl">
             What types of <span className="text-[#0055A7]">consulting</span> is
             offered?
           </h1>
@@ -130,7 +130,7 @@ export const MainSection = () => {
             className="flex-1 space-y-4"
             variants={slideIn('left')}
           >
-            <h1 className="h1">Digital business strategy and transformation</h1>
+            <h1 className="h3">Digital business strategy and transformation</h1>
             <p>
               Align IT strategy and capabilities with business direction to help
               ensure your organization can perform at its best.
@@ -176,7 +176,7 @@ export const MainSection = () => {
             className="flex-1 space-y-4 order-first lg:order-last"
             variants={slideIn('right')}
           >
-            <h1 className="h1">Enterprise architecture and digital integration</h1>
+            <h1 className="h3">Enterprise architecture and digital integration</h1>
             <p>
               Simplify your enterprise architecture with a workload
               modernization and smart migration plan that helps your tech
@@ -224,7 +224,7 @@ export const MainSection = () => {
             className="flex-1 space-y-4"
             variants={slideIn('left')}
           >
-            <h1 className="h1">Digital business strategy and transformation</h1>
+            <h1 className="h3">Digital business strategy and transformation</h1>
             <p>
               Align IT strategy and capabilities with business direction to help
               ensure your organization can perform at its best.
@@ -278,7 +278,7 @@ export const MainSection = () => {
             className="flex-1 space-y-4 order-first lg:order-last"
             variants={slideIn('right')}
           >
-            <h1 className="h1">Digital business strategy and transformation</h1>
+            <h1 className="h3">Digital business strategy and transformation</h1>
             <p>
               Align IT strategy and capabilities with business direction to help
               ensure your organization can perform at its best.

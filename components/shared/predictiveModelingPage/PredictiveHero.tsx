@@ -122,7 +122,7 @@ const PredictiveHero = (props: any) => {
 
         <div className=" flex flex-col gap-8  pt-10 text-left lg:pt-14">
           <motion.h1
-            className=" h1"
+            className=" h2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
             transition={{ duration: 0.5 }}

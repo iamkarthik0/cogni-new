@@ -31,7 +31,7 @@ const TransformBusiness = () => {
   return (
     <motion.div ref={ref} initial="hidden" animate={controls} variants={containerVariants} className="space-y-16">
       <div className="space-y-14">
-        <motion.h1 className="h1" variants={containerVariants}>Transform Business Operations with Document AI</motion.h1>
+        <motion.h1 className="h2" variants={containerVariants}>Transform Business Operations with Document AI</motion.h1>
         <motion.p className="subtle-text" variants={containerVariants}>
           Using Cogninest Document AI, businesses can decrease workflow
           redundancies and free up staff to concentrate on higher-value work by

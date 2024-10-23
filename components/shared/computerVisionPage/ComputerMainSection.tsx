@@ -83,12 +83,12 @@ const ComputerMainSection = () => {
   return (
     <div>
       <div className=" pt-10 lg:pt-20 ">
-        <div className=" space-y-12 ">
-          <h2 className="h2  lg:max-w-3xl mx-auto lg:py-8 ">
+        <div className=" space-y-16 ">
+          <h2 className="h2  lg:max-w-3xl  lg:py-8 ">
             Some of the business use cases of Computer Vision AI services
           </h2>
 
-          <div>
+          <div className=" space-y-24">
             {/* ------------------------------------------ */}
             <motion.div
               className=" relative flex  flex-col lg:flex-row"
@@ -100,7 +100,7 @@ const ComputerMainSection = () => {
               transition={{ duration: 0.5 }}
             >
               <div className=" flex-1 space-y-4 ">
-                <h1 className=" h1">Computer vision in manufacturing</h1>
+                <h1 className=" h4">Computer vision in manufacturing</h1>
                 <p>
                   Images from cameras placed on the assembly line of 7 factories
                   helped detect and prevent 112 component failures. No human
@@ -146,7 +146,7 @@ const ComputerMainSection = () => {
               transition={{ duration: 0.5 }}
             >
               <div className=" flex-1 space-y-4 order-first lg:order-last">
-                <h1 className=" h1">Computer vision for the FMCG industry</h1>
+                <h1 className=" h4">Computer vision for the FMCG industry</h1>
                 <p>
                   Ensure better customer engagement with computer vision.
                   Improve efficiency, accuracy and profitability in the
@@ -192,7 +192,7 @@ const ComputerMainSection = () => {
               transition={{ duration: 0.5 }}
             >
               <div className=" flex-1 space-y-4 ">
-                <h1 className=" h1">
+                <h1 className=" h4">
                   Computer Vision for Quality Control in Electronics
                 </h1>
                 <p>
@@ -247,7 +247,7 @@ const ComputerMainSection = () => {
               transition={{ duration: 0.5 }}
             >
               <div className=" flex-1 space-y-4 order-first lg:order-last">
-                <h1 className=" h1">Smart leak detection</h1>
+                <h1 className=" h4">Smart leak detection</h1>
                 <p>
                   Constant monitoring and maintenance make the best use of
                   remote assets. Factors like outside force, corrosion, operator
@@ -292,7 +292,7 @@ const ComputerMainSection = () => {
               transition={{ duration: 0.5 }}
             >
               <div className=" flex-1 space-y-4 ">
-                <h1 className=" h1">
+                <h1 className=" h4">
                   Computer vision-powered facility management
                 </h1>
                 <p>
@@ -341,7 +341,7 @@ const ComputerMainSection = () => {
               transition={{ duration: 0.5 }}
             >
               <div className=" flex-1 space-y-4 order-first lg:order-last">
-                <h1 className=" h1">Computer vision apps in retail</h1>
+                <h1 className=" h4">Computer vision apps in retail</h1>
                 <p>
                   Using computer vision for retail facility management can
                   improve efficiency and customer satisfaction. The use of
@@ -381,7 +381,7 @@ const ComputerMainSection = () => {
 
         <div>
           <div className="  space-y-10 pt-16 lg:pt-20">
-            <h1 className="h1  lg:max-w-1/2">
+            <h1 className="h3  lg:max-w-1/2">
               Some of our computer vision consulting services include
             </h1>
             <div
@@ -420,7 +420,7 @@ const ComputerMainSection = () => {
                  transition={{ duration: 0.5 }}
         
         >
-          <h1 className="h1 text-center">Explore more services</h1>
+          <h1 className="h2 text-center">Explore more services</h1>
 
           <div className=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6">
             <div className=" group lg:w-[271px] h-[271px] bg-[#D9D9D9] hover:bg-[#0055A7] flex justify-center items-center text-center p-6 cursor-pointer">

@@ -45,7 +45,7 @@ const OurDocument = () => {
       animate={controls}
       variants={containerVariants}
     >
-      <h1 className="h1 text-center pb-8 lg:pb-16">OUR Document AI SERVICES</h1>
+      <h1 className="h2 text-center pb-8 lg:pb-16">OUR Document AI SERVICES</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* --------------------------------- */}
@@ -55,7 +55,7 @@ const OurDocument = () => {
         >
           <div className="w-[102px] h-[94px] bg-[#1B255E]"></div>
           <div className="text-center space-y-8">
-            <h1 className="h3">Comprehensive document processing</h1>
+            <h1 className="h4">Comprehensive document processing</h1>
             <p>
               Using optical character recognition, deep learning, machine
               learning, and natural language processing, Cogninest AI Document
@@ -76,7 +76,7 @@ const OurDocument = () => {
         >
           <div className="w-[102px] h-[94px] bg-[#1B255E]"></div>
           <div className="text-center space-y-8">
-            <h1 className="h3">Automated data labeling</h1>
+            <h1 className="h4">Automated data labeling</h1>
             <p>
               With the help of Cogninest AI Document AI, data scientists and
               business users can easily annotate documents by using an easy user
@@ -97,7 +97,7 @@ const OurDocument = () => {
         >
           <div className="w-[102px] h-[94px] bg-[#1B255E]"></div>
           <div className="text-center space-y-8">
-            <h1 className="h3">Intelligent information extraction</h1>
+            <h1 className="h4">Intelligent information extraction</h1>
             <p>
               Results from Cogninest Document AI are rapid and incredibly
               accurate. Cogninest Document AI was created with input from a wide
@@ -118,7 +118,7 @@ const OurDocument = () => {
         >
           <div className="w-[102px] h-[94px] bg-[#1B255E]"></div>
           <div className="text-center space-y-8">
-            <h1 className="h3">Comprehensive document processing</h1>
+            <h1 className="h4">Comprehensive document processing</h1>
             <p>
               Through a REST API that can process documents, train, and score
               models, Cogninest Document AI seamlessly integrates with current
@@ -137,7 +137,7 @@ const OurDocument = () => {
       <div className="pt-16 lg:pt-20">
         <div className="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-0">
           <motion.div className="space-y-5" variants={itemVariants}>
-            <h4 className="h3 text-center lg:text-left">Data Extraction</h4>
+            <h4 className="h4 text-center lg:text-left">Data Extraction</h4>
             <Image
               alt="data-extraction"
               src="/data-extraction.png"
@@ -147,7 +147,7 @@ const OurDocument = () => {
           </motion.div>
 
           <motion.div className="space-y-5" variants={itemVariants}>
-            <h4 className="h3 text-center lg:text-left">Data Management</h4>
+            <h4 className="h4 text-center lg:text-left">Data Management</h4>
             <Image
               alt="data-management"
               src="/data-management.png"
@@ -159,7 +159,7 @@ const OurDocument = () => {
       </div>
 
       <div className="lg:pt-24 pt-16 space-y-8">
-        <h1 className="h3 text-center">
+        <h1 className="h4 text-center">
           Data Extraction AI for Insurance Claims
         </h1>
         <div className="flex justify-center">
