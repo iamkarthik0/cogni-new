@@ -152,16 +152,16 @@ const Nav = () => {
           <div className="flex items-center py-4">
             <Link href="/" className="flex-shrink-0">
               <motion.div
-                whileHover={{ scale: 1.1, rotate: 5 }}
-                whileTap={{ scale: 0.9, rotate: -5 }}
-                transition={{ type: "spring", stiffness: 300, damping: 10 }}
+                // whileHover={{ scale: 1.1, rotate: 5 }}
+                // whileTap={{ scale: 0.9, rotate: -5 }}
+                // transition={{ type: "spring", stiffness: 300, damping: 10 }}
               >
                 <Image
                   src="/logo.png"
                   alt="Logo"
-                  width={182}
-                  height={100}
-                  className="w-auto h-[50px] md:h-[100px]"
+                  width={185}
+                  height={50}
+                  className="w-auto h-[50px] md:h-[65px] "
                 />
               </motion.div>
             </Link>

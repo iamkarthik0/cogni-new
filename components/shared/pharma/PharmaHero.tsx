@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Button } from "@/components/ui/button";
+import MediaCard from "@/components/layout/MediaCard";
 
 const AnimatedSection = ({ children }: { children: React.ReactNode }) => {
   const [ref, inView] = useInView({
@@ -26,6 +27,38 @@ const AnimatedSection = ({ children }: { children: React.ReactNode }) => {
 };
 
 const PharmaHero = () => {
+  const card = [
+    {
+      heading: "Boosting Efficiency and Speed",
+      paragraph:
+        "Generative AI algorithms generate vast libraries of virtual compounds and predict their properties, helping researchers focus on the most promising candidates. This optimizes both time and resources.",
+    },
+    {
+      heading: "Expanding the Chemical Space",
+      paragraph:
+        "These algorithms explore novel chemical structures that might not have been considered by human researchers, opening up new possibilities for developing drugs with improved efficacy and fewer side effects.",
+    },
+    {
+      heading: "Targeting Specific Diseases ",
+      paragraph:
+        "By analyzing known drug-target interactions, generative AI models predict potential drug candidates for specific diseases, improving the chances of success in treating various conditions.",
+    },
+    {
+      heading: "Overcoming Data Limitations",
+      paragraph:
+        "Generative AI generates synthetic data points from existing data, overcoming traditional drug discovery challenges caused by limited high-quality data. This leads to better drug discovery outcomes",
+    },
+    {
+      heading: "Facilitating Collaboration",
+      paragraph:
+        "Generative AI algorithms facilitate knowledge sharing among researchers, fostering collaborative breakthroughs in drug discovery.",
+    },
+    {
+      heading: "Overcoming Drug Resistance",
+      paragraph:
+        "AI-designed drugs can target drug-resistant strains, offering new solutions to combat antibiotic resistance and other drug-resistant diseases.",
+    },
+  ];
   return (
     <>
       <AnimatedSection>
@@ -45,7 +78,7 @@ const PharmaHero = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
             >
-              AI consultants for pharma
+              Pharma AI Solutions: Transforming Healthcare through Innovation
             </motion.h1>
             <motion.p
               className="subtle-text lg:w-3/4"
@@ -68,7 +101,7 @@ const PharmaHero = () => {
             </motion.div>
           </div>
           <motion.div
-            className="lg:w-1/2 flex justify-end items-end"
+            className="lg:w-1/2 flex   justify-end"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6 }}
@@ -90,19 +123,19 @@ const PharmaHero = () => {
             <Image
               src="/unlock.png"
               alt="unlock"
-              width={610}
+              width={550}
               height={100}
-              className="aspect-square h-[400px] lg:h-[503px]"
+              className="aspect-square h-[400px] lg:h-[400px]"
             />
           </motion.div>
           <div className="order-first lg:order-last lg:w-1/2 space-y-4 lg:space-y-6 flex justify-center flex-col">
             <motion.h1
-              className="h1"
+              className="h3"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              Unlock the Potential of Healthcare AI
+              Driving Innovation in Drug Discovery and Development
             </motion.h1>
             <motion.div
               className="space-y-6"
@@ -111,29 +144,49 @@ const PharmaHero = () => {
               transition={{ delay: 0.3 }}
             >
               <p className="subtle-text">
-                Harness the power of AI to streamline and enhance the work of
-                healthcare professionals by automating routine tasks with
-                precision and efficiency. AI not only matches human accuracy but
-                also accomplishes these tasks faster and at a significantly
-                lower cost.
-              </p>
-              <p className="subtle-text">
-                Implement AI in your healthcare, pharmaceutical, or life
-                sciences business to uncover new connections within medical
-                data, identify patterns and trends, detect anomalies, and
-                predict outcomes with greater accuracy. Embrace AI to drive
-                innovation and achieve better results in your organization.
+                At Cogninest AI, we leverage cutting-edge AI and Machine
+                Learning technologies to revolutionize the pharmaceutical
+                industry. By streamlining the drug discovery and development
+                process, we help pharma companies reduce time-to-market,
+                optimize R&D, and enhance the accuracy of drug formulation. With
+                our advanced solutions, pharmaceutical firms can identify
+                promising compounds faster and with greater precision,
+                ultimately improving patient outcomes.
               </p>
             </motion.div>
           </div>
         </div>
       </AnimatedSection>
 
-      <div className=" h1 text-center my-16">
-        <h1>How we can help solve Healthcare problems</h1>
+      <div className=" text-center my-16 space-y-6">
+        <h1 className=" h2">What are Generative AI Drugs?</h1>
+        <p>
+          Generative AI drugs are pharmaceutical compounds designed and
+          developed using generative AI algorithms, which are trained on
+          extensive datasets, including chemical structures, biological
+          interactions, and clinical trial results. These algorithms analyze the
+          data to generate novel drug candidates that meet specific criteria,
+          target mechanisms, and desired properties.
+        </p>
       </div>
-
+      <div>
+        <div>
+          <div className=" space-y-4">
+            <h3 className="h3">Harnessing Generative AI for Drug Discovery</h3>
+            <p>
+              Generative AI is transforming how new drugs are discovered by
+              accelerating the process and expanding the range of possibilities.
+            </p>
+          </div>
+          <MediaCard services={{ card }} />
+        </div>
+      </div>
       <AnimatedSection>
+        <div className=" pt-8 lg:pt-16">
+          <h2 className=" text-center h2 lg:max-w-3xl mx-auto">
+            How we can help solve Healthcare problems
+          </h2>
+        </div>
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-9 pt-16 lg:pt-20">
           <motion.div
             className="lg:w-1/2"
@@ -141,21 +194,21 @@ const PharmaHero = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <Image
-              src="/unlock.png"
+              src="/risk.png"
               alt="unlock"
-              width={610}
+              width={550}
               height={100}
-              className="aspect-square h-[400px] lg:h-[503px]"
+              className=" h-[400px] lg:h-[350px]"
             />
           </motion.div>
           <div className="order-first lg:order-last lg:w-1/2 space-y-4 lg:space-y-6 flex justify-center flex-col">
             <motion.h1
-              className="h1"
+              className="h3"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              Enhance Health Insurance Customer and Risk Profiling
+              Personalized Medicine through AI-Driven Insights
             </motion.h1>
             <motion.div
               className="space-y-6"
@@ -164,16 +217,15 @@ const PharmaHero = () => {
               transition={{ delay: 0.3 }}
             >
               <p className="subtle-text">
-                Accelerate the processing of health data to streamline
-                onboarding for new customers.
+                Cogninest AI’s solutions enable personalized medicine by
+                analyzing genomic, clinical, and lifestyle data. This leads to
+                tailored treatment plans, improving patient outcomes through:
               </p>
               <p className="subtle-text">
-                Leverage Natural Language Processing (NLP) and Machine Learning
-                to create a comprehensive view of clients' health by
-                aggregating, cleaning, and analyzing historical patient data.
-                This approach enables more accurate customer profiling and
-                refined insurance risk assessment, helping you make informed
-                decisions and improve service delivery.
+                Biomarker Discovery: AI identifies biomarkers predicting disease
+                progression and treatment response.Patient Stratification: AI
+                models group patients by treatment response, optimizing
+                therapies for each individual.
               </p>
             </motion.div>
           </div>
@@ -188,21 +240,21 @@ const PharmaHero = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <Image
-              src="/unlock.png"
+              src="/risk.png"
               alt="unlock"
-              width={610}
+              width={550}
               height={100}
-              className="aspect-square h-[400px] lg:h-[503px]"
+              className=" h-[400px] lg:h-[350px]"
             />
           </motion.div>
           <div className="order-first  lg:w-1/2 space-y-4 lg:space-y-6 flex justify-center flex-col">
             <motion.h1
-              className="h1"
+              className="h3"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              Accelerate Medical Image and Clinical Trial Data Processing
+              AI in Clinical Trials: Improving Efficiency and Reducing Costs
             </motion.h1>
             <motion.div
               className="space-y-6"
@@ -211,19 +263,55 @@ const PharmaHero = () => {
               transition={{ delay: 0.3 }}
             >
               <p className="subtle-text">
-                Streamline the processing of medical images, from X-Rays to CT
-                Scans, by extracting critical features that can be used to train
-                AI models. These models support early diagnosis and provide
-                real-time assistance to physicians in operating or diagnostic
-                settings.
+                Our AI-driven solutions optimize clinical trial designs, predict
+                patient outcomes, and reduce the time and cost of trials
+                by:Patient Recruitment and Retention: Analyzing patient records
+                and historical data to find the best-suited participants for
+                clinical trials. Predictive Analytics: Forecasting trial success
+                rates to improve decision-making and reduce trial costs.
               </p>
+            </motion.div>
+          </div>
+        </div>
+      </AnimatedSection>
+
+
+
+      <AnimatedSection>
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-9 pt-16 lg:pt-20">
+          <motion.div
+            className="lg:w-1/2 "
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <Image
+              src="/risk.png"
+              alt="unlock"
+              width={550}
+              height={100}
+              className=" h-[400px] lg:h-[350px]"
+            />
+          </motion.div>
+          <div className="order-first  lg:w-1/2 space-y-4 lg:space-y-6 flex justify-center flex-col">
+            <motion.h1
+              className="h3"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+            AI-Powered Pharmacovigilance
+            </motion.h1>
+            <motion.div
+              className="space-y-6"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+            >
               <p className="subtle-text">
-                Efficiently aggregate and automatically extract clinical trial
-                data, including Statistical Analysis Plans and Tables, Figures,
-                and Lists (TFLs) provided by laboratories. This approach enables
-                you to quickly access the results you need, empowering you to
-                make informed decisions faster.
+              Ensuring post-market drug safety is critical. Our AI-driven pharmacovigilance models analyze real-world data to detect adverse drug reactions early, helping ensure compliance and patient safety by:
               </p>
+              <p>Adverse Event Detection: AI models analyze data to detect side effects earlier.
+              Signal Detection and Management: Our algorithms manage safety signals effectively.</p>
             </motion.div>
           </div>
         </div>
@@ -232,26 +320,26 @@ const PharmaHero = () => {
       <AnimatedSection>
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-9 pt-16 lg:pt-20">
           <motion.div
-            className="lg:w-1/2"
+            className="lg:w-1/2 "
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <Image
-              src="/unlock.png"
+              src="/tiral-data.png"
               alt="unlock"
-              width={610}
+              width={550}
               height={100}
-              className="aspect-square h-[400px] lg:h-[503px]"
+              className=" h-[400px] lg:h-[350px]"
             />
           </motion.div>
           <div className="order-first lg:order-last lg:w-1/2 space-y-4 lg:space-y-6 flex justify-center flex-col">
             <motion.h1
-              className="h1"
+              className="h3"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              Enhance Health Insurance Customer and Risk Profiling
+         Generative AI in Pharma Manufacturing
             </motion.h1>
             <motion.div
               className="space-y-6"
@@ -260,25 +348,20 @@ const PharmaHero = () => {
               transition={{ delay: 0.3 }}
             >
               <p className="subtle-text">
-                Accelerate the processing of health data to streamline
-                onboarding for new customers.
+              AI enhances manufacturing processes, predicting equipment failures, optimizing workflows, and ensuring high-quality production by:
               </p>
-              <p className="subtle-text">
-                Leverage Natural Language Processing (NLP) and Machine Learning
-                to create a comprehensive view of clients' health by
-                aggregating, cleaning, and analyzing historical patient data.
-                This approach enables more accurate customer profiling and
-                refined insurance risk assessment, helping you make informed
-                decisions and improve service delivery.
-              </p>
+
+      <p>Predictive Maintenance: Preventing costly downtime by detecting equipment failures before they occur. Process Optimization: Streamlining manufacturing processes and ensuring compliance with Good Manufacturing Practices (GMP).</p>
+
             </motion.div>
           </div>
         </div>
       </AnimatedSection>
+
       <AnimatedSection>
         <div className="pt-16 lg:pt-20">
           <motion.h1
-            className="h1 text-center"
+            className="h2 text-center"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -293,7 +376,7 @@ const PharmaHero = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="relative aspect-square h-[250px] w-full">
-              <Image src="/pharma-choose.png" alt="pharma" fill />
+                <Image src="/pharma-choose.png" alt="pharma" fill />
               </div>
               <div className="space-y-6">
                 <h4 className="font-bold">Knowledge</h4>
@@ -314,8 +397,7 @@ const PharmaHero = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="relative aspect-square h-[250px] w-full">
-              <Image src="/Healthtechnology.png" alt="pharma" fill />
-                
+                <Image src="/Healthtechnology.png" alt="pharma" fill />
               </div>
               <div className="space-y-6">
                 <h4 className="font-bold">Technology</h4>
@@ -335,9 +417,7 @@ const PharmaHero = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="relative aspect-square h-[250px] w-full">
-
-              <Image src="/HealthPartnership.png" alt="pharma" fill />
-            
+                <Image src="/HealthPartnership.png" alt="pharma" fill />
               </div>
               <div className="space-y-6">
                 <h4 className="font-bold">Partnership</h4>

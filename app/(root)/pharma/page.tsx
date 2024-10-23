@@ -15,7 +15,7 @@ const page = () => {
 
         <div className="bg-[#D9D9D9] md:rounded-3xl p-8 text-center max-w-5xl mx-auto my-10 lg:my-16  ">
           <div className="space-y-6">
-            <h2 className="h2  mx-auto w-3/4">
+            <h2 className="h3  mx-auto w-3/4">
               Let us solve your impossible problem
             </h2>
             <p className=" paragraph lg:mx-8">
@@ -23,7 +23,7 @@ const page = () => {
               Intelligence can help solve your impossible problem
             </p>
             <Link href="/contact-us">
-            <Button className="btn  ">CONTACT US</Button></Link>
+            <Button className="btn my-4  ">CONTACT US</Button></Link>
           </div>
         </div>
       </div>
