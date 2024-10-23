@@ -26,7 +26,7 @@ const EnergyHero = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold "
+              className="h1 "
             >
               Unlock the Future of Energy with Data Science & AI Solutions from Cogninest AI
             </motion.h1>
@@ -58,7 +58,7 @@ const EnergyHero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="h1 text-center"
+          className="h2 text-center"
         >
           Cogninest AI is Best for Energy
         </motion.h1>

@@ -47,7 +47,7 @@ const CpgMain = () => {
     <>
       {" "}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 space-y-12  pt-16 lg:pt-24">
-        <h1 className="text-center h1 max-w-5xl mx-auto ">
+        <h1 className="text-center h2 max-w-5xl mx-auto ">
           Revolutionize Your Business Growth with GenAI
         </h1>
         <div className=" w-full aspect-square relative h-[220px] md:h-[320px] lg:h-[516px]">
@@ -56,7 +56,7 @@ const CpgMain = () => {
       </div>
       <div className=" py-12 lg:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className=" h1 pb-16 ">Why Choose Cogninest AI? </h1>
+          <h1 className=" h2 pb-16 ">Why Choose Cogninest AI? </h1>
           <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
             {features.map((data, index) => (
               <>

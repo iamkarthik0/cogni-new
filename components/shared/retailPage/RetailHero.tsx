@@ -27,7 +27,7 @@ const RetailHero = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight"
+              className="h1"
             >
               In a world where retail is evolving rapidly, understanding and anticipating customer behavior is key to success. 
             </motion.h1>

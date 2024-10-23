@@ -18,7 +18,7 @@ const WhyChoose = () => {
       transition={{ duration: 0.5 }}
       className=" space-y-10 lg:space-y-24"
     >
-      <h1 className="h1 text-center">Why Choose Cogninest AI for Energy</h1>
+      <h1 className="h2 text-center">Why Choose Cogninest AI for Energy</h1>
 
       <div className=" flex flex-col lg:flex-row gap-6">
         {/* ------------------- */}

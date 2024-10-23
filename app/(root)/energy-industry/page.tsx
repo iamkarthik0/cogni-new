@@ -59,14 +59,14 @@ const page = async () => {
         </div>
         {/* ------------hero------------- */}
         <div className=" pt-16 lg:pt-20 space-y-12">
-          <h1 className=" text-center h1  ">
+          <h1 className=" text-center h2  ">
             Best Services for the Energy Industry{" "}
           </h1>
           <MediaCard services={data.consultingServices} />
           {/* --------------------------------- */}
           <div className=" py-12 lg:py-16">
             <div>
-              <h1 className=" h1 pb-16 ">
+              <h1 className=" h2 pb-16 ">
                 Best AI Techniques for the Energy Industry
               </h1>
               <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -95,7 +95,7 @@ const page = async () => {
 
         <div className="bg-[#D9D9D9] md:rounded-3xl p-8 text-center lg:max-w-5xl mx-auto my-10 lg:my-16  ">
           <div className="space-y-6">
-            <h2 className="h2  mx-auto w-3/4">
+            <h2 className="h3  mx-auto w-3/4">
               Ready to Transform Your Energy Business?
             </h2>
             <p className=" paragraph lg:mx-8">

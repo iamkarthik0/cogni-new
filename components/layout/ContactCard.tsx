@@ -20,7 +20,7 @@ export default function ContactCard() {
     >
       <div className="space-y-6">
         <motion.h2 
-          className="h2"
+          className="h3"
           initial={{ y: 20, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
           transition={{ delay: 0.2, duration: 0.5 }}
@@ -28,7 +28,7 @@ export default function ContactCard() {
           What we can do for you?
         </motion.h2>
         <motion.p 
-          className="md:text-2xl"
+          className="paragraph"
           initial={{ y: 20, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
           transition={{ delay: 0.4, duration: 0.5 }}

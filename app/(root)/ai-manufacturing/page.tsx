@@ -16,7 +16,38 @@ const ManufacturingHero = dynamic(
 );
 
 const page = async () => {
-  const data = await client.fetch(landingQuery);
+  const card = [
+    {
+      heading: "Predictive Maintenance",
+      paragraph:
+        "Reduce downtime and maintenance costs by predicting equipment failures before they occur using AI and machine learning.",
+    },
+    {
+      heading: "Supply Chain Optimization",
+      paragraph:
+        "Improve supply chain resilience and efficiency through advanced analytics, digital twins, and real-time tracking.",
+    },
+    {
+      heading: "Quality Control & Assurance",
+      paragraph:
+        "Utilize computer vision and AI algorithms to detect defects in production lines, ensuring high-quality output.",
+    },
+    {
+      heading: "Production Planning & Scheduling",
+      paragraph:
+        "Optimize production processes and resources with intelligent scheduling tools that adapt to changing demands.",
+    },
+    {
+      heading: "Demand Forecastin",
+      paragraph:
+        "Leverage data science to accurately predict product demand and align production with market needs.",
+    },
+    {
+      heading: "Sustainability Analytics",
+      paragraph:
+        "Implement strategies to reduce carbon footprint and enhance sustainability across the manufacturing value chain.",
+    },
+  ];
   const features = [
     {
       title: "Data-Driven Innovation",
@@ -52,19 +83,23 @@ const page = async () => {
   return (
     <>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div><ManufacturingHero /></div>
+        <div>
+          <ManufacturingHero />
+        </div>
 
-        <div className=" pt-16 lg:pt-20"><WhyCogninest /></div>
+        <div className=" pt-16 lg:pt-20">
+          <WhyCogninest />
+        </div>
 
         <div className=" pt-10 lg:pt-16">
-          <h1 className="h1 text-center">Best Services for Manufacturing</h1>
+          <h1 className="h2 text-center">Best Services for Manufacturing</h1>
           <div>
-            <MediaCard services={data.consultingServices} />
+            <MediaCard services={{ card }} />
           </div>
         </div>
 
         <div className="  space-y-10 pt-16 lg:pt-20">
-          <h1 className="h1  lg:max-w-1/2">
+          <h1 className="h2  lg:max-w-1/2">
             Why Choose Cogninest AI for Manufacturing
           </h1>
           <div className=" grid grid-cols-1 lg:grid-cols-2 gap-8 ">
@@ -84,7 +119,7 @@ const page = async () => {
         <div className=" pt-10 lg:pt-20">
           <div className=" flex lg:flex-row flex-col gap-6 space-y-6 p-8 bg-[#F2F2F2] rounded-[50px] ">
             <div className="px-4 lg:px-12 lg:w-1/2 flex  justify-center flex-col space-y-6">
-              <h1 className="h1">
+              <h1 className="h3">
                 Ready to Transform Your Manufacturing Business?
               </h1>
 
@@ -109,7 +144,7 @@ const page = async () => {
         </div>
         <div className="bg-[#F2F2F2] md:rounded-3xl p-8 text-center max-w-5xl mx-auto my-10 lg:my-16  py-8 lg:py-16">
           <div className="space-y-10">
-            <h2 className="h2  mx-auto w-3/4">
+            <h2 className="h3  mx-auto w-3/4">
               Ready to Elevate Your Manufacturing?
             </h2>
             <p className=" paragraph lg:mx-8">

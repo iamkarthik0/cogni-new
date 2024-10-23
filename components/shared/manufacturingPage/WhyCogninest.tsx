@@ -18,7 +18,7 @@ export default function WhyCogninest() {
     >
       <div className="space-y-8">
         <h1
-          className="h1 text-center transition-transform duration-500 ease-out"
+          className="h2 text-center transition-transform duration-500 ease-out"
           style={{
             transform: inView ? "translateY(0)" : "translateY(50px)",
           }}

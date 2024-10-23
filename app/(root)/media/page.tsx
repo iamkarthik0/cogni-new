@@ -11,6 +11,39 @@ import Link from "next/link";
 import React from "react";
 
 const page = async () => {
+  const card = [
+    {
+      heading: "Content Recommendation Systems",
+      paragraph:
+        "Enhance viewer engagement by delivering personalized content recommendations based on user preferences and viewing history.",
+    },
+    {
+      heading: "Audience Analytics",
+      paragraph:
+        "Gain deep insights into audience behavior, preferences, and demographics to refine content strategies and marketing efforts.",
+    },
+    {
+      heading: "Sentiment Analysis",
+      paragraph:
+        "Monitor and analyze public sentiment and social media trends to better understand audience perceptions and brand impact.",
+    },
+    {
+      heading: "Predictive Analytics for Box Office Success",
+      paragraph:
+        "Use advanced predictive models to forecast box office performance, viewership trends, and the success of new releases.",
+    },
+    {
+      heading: "Automated Content creation and Curation",
+      paragraph:
+        "Leverage AI to generate, edit, and curate content efficiently, reducing time and cost while maintaining high-quality standards.",
+    },
+    {
+      heading: "Digital Rights Management (DRM)",
+      paragraph:
+        "Implement AI-powered solutions for managing and protecting digital assets, ensuring compliance and minimizing piracy risks.",
+    },
+  ];
+
   const features = [
     {
       title: "Industry Expertise",
@@ -59,12 +92,12 @@ const page = async () => {
         {/* --------------------------Media Card------------------- */}
 
         <div className="pt-12 ">
-          <h1 className=" h1">Best Services for Media and Entertainment</h1>
-          <MediaCard services={data.consultingServices} />
+          <h1 className=" h2">Best Services for Media and Entertainment</h1>
+          <MediaCard services={{card}} />
         </div>
         {/* --------------------------Best AI Techniques------------------- */}
         <div className=" pt-16 lg:pt-20 ">
-          <h1 className="h1 text-center pb-7">
+          <h1 className="h2 text-center pb-7">
             Best AI Techniques for Media and Entertainment
           </h1>
           <MediaEntertainment />
@@ -72,7 +105,7 @@ const page = async () => {
 
         {/* --------------------------Media and Entertainment------------------- */}
         <div className=" pt-16 lg:pt-20">
-          <h1 className="h1 max-w-4xl ">
+          <h1 className="h2 max-w-4xl ">
             Why Choose Cogninest AI for Media and Entertainment
           </h1>
           <div className="pt-7">
@@ -94,10 +127,10 @@ const page = async () => {
 
       <div className="bg-[#D9D9D9] md:rounded-3xl p-8 text-center lg:max-w-5xl mx-auto my-10 lg:my-16  ">
         <div className="space-y-7">
-          <h2 className="h2  mx-auto w-3/4">
+          <h2 className="h3  mx-auto w-3/4">
             Ready to Transform Your Media Business?
           </h2>
-          <p className=" paragraph lg:mx-8">
+          <p className="  paragraph lg:mx-6">
             Leverage the power of data science and AI to stay ahead in the
             competitive media and entertainment industry. Whether you want to
             boost viewer engagement, streamline operations, or unlock new

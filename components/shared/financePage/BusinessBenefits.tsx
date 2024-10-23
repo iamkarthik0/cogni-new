@@ -22,7 +22,7 @@ export const BusinessBenefits = () => {
         initial={{ opacity: 0, y: 50 }}
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.5 }}
-        className="h1 text-center"
+        className="h2 text-center"
       >
         Business benefits
       </motion.h1>
@@ -143,7 +143,7 @@ export const BusinessBenefits = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
-          className="h1   "
+          className="h2   "
         >
           AI in Finance and Insurance: Implementation challenges
         </motion.h1>

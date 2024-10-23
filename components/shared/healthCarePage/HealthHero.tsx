@@ -41,7 +41,7 @@ const HealthHero = () => {
 
         <AnimatedSection>
           <div className="space-y-6 pt-8 lg:pt-14">
-            <h4 className="h3 text-center">Our Expertise</h4>
+            <h4 className="h2 text-center">Our Expertise</h4>
             <p className="text-center lg:mx-7">
               With deep industry knowledge, we help businesses thrive in the
               ever-evolving Healthcare and Life Sciences sectors. Our solutions
@@ -49,7 +49,7 @@ const HealthHero = () => {
               Generative AI, and Data Engineering, empower clients to achieve
               operational self-sufficiency and drive innovation.
             </p>
-            <h1 className="h1 text-center">Solutions</h1>
+            <h1 className="h3 text-center">Solutions</h1>
           </div>
         </AnimatedSection>
 
@@ -61,7 +61,7 @@ const HealthHero = () => {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: 'spring', stiffness: 300 }}
               >
-                <h1 className="h3">{title}</h1>
+                <h1 className="h4">{title}</h1>
                 <p className="subtle-text">
                   {/* Content for each section */}
                   {index === 0 && (
@@ -122,7 +122,7 @@ const HealthHero = () => {
       <AnimatedSection>
         <div className="flex flex-col lg:flex-row pt-16 lg:pt-24">
           <div className="lg:w-1/2 space-y-8">
-            <h1 className="h1">What is AI for healthcare?</h1>
+            <h1 className="h2">What is AI for healthcare?</h1>
             <p>
               AI for healthcare involves applying advanced algorithms and machine
               learning models to diagnose, predict, and treat medical conditions.
@@ -154,7 +154,7 @@ const HealthHero = () => {
 
       <AnimatedSection>
         <div className="pt-16">
-          <h1 className="h1 max-w-4xl">Why Choose Cogninest AI for Retail?</h1>
+          <h1 className="h2 max-w-4xl">Why Choose Cogninest AI for Retail?</h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8">
             {[
               {

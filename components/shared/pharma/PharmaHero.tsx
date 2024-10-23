@@ -267,7 +267,7 @@ const PharmaHero = () => {
                 patient outcomes, and reduce the time and cost of trials
                 by:Patient Recruitment and Retention: Analyzing patient records
                 and historical data to find the best-suited participants for
-                clinical trials. Predictive Analytics: Forecasting trial success
+                clinical trials.Predictive Analytics: Forecasting trial success
                 rates to improve decision-making and reduce trial costs.
               </p>
             </motion.div>
@@ -351,7 +351,7 @@ const PharmaHero = () => {
               AI enhances manufacturing processes, predicting equipment failures, optimizing workflows, and ensuring high-quality production by:
               </p>
 
-      <p>Predictive Maintenance: Preventing costly downtime by detecting equipment failures before they occur. Process Optimization: Streamlining manufacturing processes and ensuring compliance with Good Manufacturing Practices (GMP).</p>
+      <p>Predictive Maintenance: Preventing costly downtime by detecting equipment failures before they occur.Process Optimization: Streamlining manufacturing processes and ensuring compliance with Good Manufacturing Practices (GMP).</p>
 
             </motion.div>
           </div>
